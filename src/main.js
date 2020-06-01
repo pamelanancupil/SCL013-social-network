@@ -1,8 +1,7 @@
 // Este es el punto de entrada de tu aplicacion
 
-import { myFunction, signInUser } from './lib/index.js';
+import { signInUser } from './lib/index.js';
 
-myFunction();
 
 
 const signInBtn = document.getElementById("signIn");
