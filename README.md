@@ -1,48 +1,61 @@
-# Creando una Red Social
+# YUG, Únete al mundo del Yoga
+
+![Logo del proyecto]()
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Entrega](#7-entrega)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [1. Presentación del Producto](#1-presentación-del-producto)
+* [2. Definición del Producto](#2-definición-del-producto)
+* [3. Diseño de la Interfaz de Usuario](#3-diseño-de-la-interfaz-de-usuario)
+* [4. Testeos de Usabilidad con Maze](#4-testeos-de-usabilidad-con-maze)
+* [5. Imagen Final del Producto](#5-imagen-final-del-producto)
+
 
 ***
 
-## 1. Preámbulo
+## 1. Presentación del Producto
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+Las redes sociales han invadido nuestras vidas, que mejor manera de sacarle provecho que con perteneciendo a una red donde puedes sociabilizar con otras personas interesadas en el Yoga y los beneficios que su práctica puede brindar a tu vida.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
+**YUG** es `Tú` red social por excelencia, donde podrás encontrar y compartir contenido sobre el mundo del Yoga, desde tips que desees descubrir, imagenes de tus avances que desees compartir, hasta recomendaciones sobre como mejorar tus habilidades en esta disciplina tan importante y relajante.
+
+<!--Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
 en una ronda de financiamiento con inversionistas, se presentó una red social
 para químicos en la que los usuarios podían publicar artículos sobre sus
 investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
 de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+más comentado.-->
 
-## 2. Resumen del proyecto
+## 2. Definición del Producto
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [Empanadas](https://es.wikipedia.org/wiki/Empanada)
-o de los [Tacos de Canasta](https://es.wikipedia.org/wiki/Taco), de la
-[Feijoada](https://es.wikipedia.org/wiki/Feijoada), o de lo que sea.
+#### 2.1. Principales Usuarios :woman: :man:
 
-Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de
-acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
+Los usuarios principales a los que va dirigido YUG son todas aquellas personas que tengan algún interés en compartir o conseguir cualquier información referente al Yoga, sin distinción de sexo o experticia. Solo necesitan sentir atraccion hacia esta hermosa disciplina física y mental. Apunta a mayores de 18 años de edad ya que les interesa mas buscar este estado de relajación y meditación
 
-## 3. Objetivos de aprendizaje
+#### 2.2. Uso y Aplicación 
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
+En la actualidad, con la situación que se vive a nivel mnundial, los usuarios necesitan encontrar personas que compartan su mismo interés, donde puedan obtener cualquier tip/comentario sobre el Yoga y ampliar sus conocimientos sobre este mundo tan amplío. De igual forma, pueden compartir sus experiencias o avances alcanzados y sentirse acompañados desde sus hogares mientras práctican esta disciplina. 
+
+#### 2.3. Historias de Usuario
+
+* H.U.1.- **Yo** como usuario interesado en yoga **quiero** registrarme en YUG con un correo electrónico y contraseña **para** pertenecer a la Red Social.
+* H.U.2.- **Yo** como usuario de YUG **quiero** iniciar sesión **para** ingresar a la página.
+* H.U.3.- **Yo** como usuario de YUG **quiero** crear y publicar contenido **para** aportar a la comunidad.
+* H.U.4.- **Yo** como usuario de YUG **quiero** editar el contenido que publique en la página **para** poder confirmar lo publicado.
+* H.U.5.- **Yo** como usuario de YUG **quiero** un botón de eliminar en las publicaciones **para** poder borrar contenido que divulgue.
+* H.U.6.- **Yo** como usuario de YUG **quiero** leer publicaciones de otros miembros **para** descubrir información interesante.
+* H.U.7.- **Yo** como usuario de YUG **quiero** dar like a publicaciones de otros miembros **para** demostrar que es un buen contenido.
+* H.U.8.- **Yo** como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.
+
+Nota: cada Historia de Usuario cuenta con sus Criterios de Aceptación y Definición de Terminado, los cuales fueron agregados dentro de cada tarjeta de H.U. en la planificación de TRELLO junto con las tareas a realizar para implementar la Historia en sí.
+
+
+
+
+
+
+
+
 
 ### HTML y CSS
 
@@ -91,7 +104,7 @@ El objetivo principal de aprendizaje de este proyecto es construir una
 
 ***
 
-## 4. Consideraciones generales
+## 4. Consideraciones generales 
 
 * Este proyecto se debe trabajar en equipos de tres.
 
