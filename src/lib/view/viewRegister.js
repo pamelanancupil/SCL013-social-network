@@ -2,6 +2,7 @@
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
     divRegister.innerHTML = `
+    <div id="containerForm">
         <a href='#/home' id="arrowBack">
             <i class="fas fa-chevron-left">
             </i>
@@ -18,10 +19,11 @@ export const viewRegister = () => {
                 <div id="logoG">
                 <img src="http://imgfz.com/i/Cvlu08A.png">
                 </div>
-                <p id="question">¿Ya tienes una cuenta? <span>Iniciar sesión</span></p>
+                <p class="question">¿Ya tienes una cuenta? <span>Iniciar sesión</span></p>
             </div>
+    </div>
     `;
-    divRegister.setAttribute('id', 'containerForm');  
+    divRegister.setAttribute('id', 'containerRegister');  
     return divRegister;
 };
 

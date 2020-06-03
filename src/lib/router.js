@@ -1,5 +1,6 @@
 import { viewHome } from './view/viewHome.js';
 import { viewRegister } from './view/viewRegister.js';
+import { viewLogin } from './view/viewLogin.js';
 import { viewError } from './view/viewError.js';
 
 export const changeRoute = (hash) => {

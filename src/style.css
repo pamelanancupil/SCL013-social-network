@@ -1,139 +1,148 @@
-*{
-	margin:0px;
-	padding: 0px;
-	box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat';
-    color:white;
+    color: white;
 }
 
-/*Home*/
-#containerSignIn{
+/*HOME*/
+#containerHome {
     background-color: white;
     background-image: url("https://i.ibb.co/7Xytj0g/Fondo-celular.jpg");
     background-repeat: no-repeat;
-    height:640px;
-    width:100%;
-    display:flex;
-    justify-content: center; 
+    height: 640px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#signIn{
-    /*background-color: rgb(252, 207, 151);*/
+#home {
     background: rgba(0, 0, 0, 0.3);
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-#logo img{
-    width:190px;
-    margin-bottom: 10px;
-}
-#textYug{
+#textYug {
     /*background:rgba(115, 241, 255, 0.283);*/
-    height:65%;
-    padding:20%;
+    height: 65%;
+    padding: 20%;
     font-size: 1rem;
     font-weight: 300;
     line-height: 24px;
     text-align: center;
 }
 
-#containerBtn{
-   /* background:rgba(255, 115, 234, 0.283);*/
-    width:100%;
+#logo img {
+    width: 190px;
+    margin-bottom: 10px;
+}
+
+#containerBtn {
+    /* background:rgba(255, 115, 234, 0.283);*/
+    width: 100%;
     height: 35%;
     margin-top: 30px;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.btns{
+.btns {
     background: linear-gradient(90deg, #F3A674 0%, #25394A 97.33%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.249);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.249);
     border-radius: 40px;
-    color:rgba(255, 255, 255, 0.762);
-    width:190px;
-    height:48px;
+    color: rgba(255, 255, 255, 0.762);
+    width: 190px;
+    height: 48px;
     font-size: 0.9rem;
     font-weight: 300;
-    margin:10px;
-    display:flex;
-    flex-direction:column;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
 }
 
-/*Register*/
+/*REGISTER*/
 #arrowBack {
-    display:flex;
+    display: flex;
     align-self: flex-start;
-    margin: 20px 0 0 20px ;
+    margin: 20px 0 0 20px;
     font-weight: 700;
     font-size: 2rem;
-    text-decoration: none;   
+    text-decoration: none;
 }
-#logo2 img{
+#logo2 img {
     width: 80px;
-    margin: 0 30px 15px 30px;
+    margin: 0 30px 15px;
 }
-#containerForm{
+#containerRegister {
+    background-image: url("http://imgfz.com/i/aqc1IS5.jpeg");
+    height: 640px;
+    width: 100%;
+}
+
+#containerForm {
     background: rgba(0, 0, 0, 0.249);
-    height:640px;
-    width:100%;
-    display:flex;
-    flex-direction:column;
+    height: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#form{
-    display:flex;
-    flex-direction:column;
+#form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-input{
+input {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 40px;
-    width:240px;
-    height:48px;
-    margin:12px; 
-    border:none;
+    width: 240px;
+    height: 48px;
+    margin: 12px;
+    border: none;
     font-size: 0.9rem;
-    
+
 }
 
-.textInput{
+.textInput {
     padding: 20px;
-    
 }
 
-::placeholder{
-    color:white;
+::placeholder {
+    color: white;
     font-weight: 300;
     font-style: italic;
 }
 
-p{
-    margin-top:8px;
-    
+p {
+    margin-top: 8px;
 }
 
-#logoG img{
+#logoG img {
     width: 70px;
     margin: 15px;
 }
 
-#question{
+.question {
     font-size: 0.95rem;
-    margin-top:0;
+    margin-top: 0;
 }
 
-span{
+span {
     font-weight: 600;
 }
 
-
+/*LOGIN*/
+#containerLogin {
+    background-image: url("http://imgfz.com/i/aqc1IS5.jpeg");
+    height: 640px;
+    width: 100%;
+}
 

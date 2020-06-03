@@ -1,7 +1,7 @@
 export const viewHome = () => {
     const containerHome = `
-        <div id= "containerSignIn">
-          <div id="signIn">
+        <div id= "containerHome">
+          <div id="home">
             <div id="textYug">
               <div id="logo">
               <img src="http://imgfz.com/i/i2tPzH4.png">
