@@ -1,8 +1,6 @@
 // aqui exportaras las funciones que necesites
 
-
-
-export const signInUser= (email, password)=> {
+/*export const signInUser= (email, password)=> {
   firebase.auth().createUserWithEmailAndPassword(email, password)
   
   .catch(function(error) {
@@ -14,4 +12,4 @@ export const signInUser= (email, password)=> {
     console.log(errorMessage);
   });
   
-};
+};*/
