@@ -1,4 +1,3 @@
-//const container = document.getElementById('root');
 export const viewHome = () => {
     const containerHome = `
         <div id= "containerSignIn">
@@ -18,14 +17,3 @@ export const viewHome = () => {
     `;
     return containerHome;
 };
-viewHome();
-//document.getElementById('root').appendChild(viewRegister());
-
-/*const btnRegister = document.getElementById("btnRegister");
-const showRegister = () => {
-    btnRegister.addEventListener("click", () => {
-
-        document.getElementById('root').innerHTML = viewRegister();
-    });
-    return viewRegister();
-}*/

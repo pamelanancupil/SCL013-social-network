@@ -68,11 +68,19 @@
 }
 
 /*Register*/
+#arrowBack {
+    display:flex;
+    align-self: flex-start;
+    margin: 20px 0 0 20px ;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;   
+}
 #logo2 img{
     width: 80px;
-    margin-top: 30px;
+    margin: 0 30px 15px 30px;
 }
-#containerform{
+#containerForm{
     background: rgba(0, 0, 0, 0.249);
     height:640px;
     width:100%;
@@ -91,23 +99,40 @@ input{
     border-radius: 40px;
     width:240px;
     height:48px;
+    margin:12px; 
+    border:none;
+    font-size: 0.9rem;
+    
+}
+
+.textInput{
+    padding: 20px;
+    
+}
+
+::placeholder{
     color:white;
     font-weight: 300;
-    margin:15px; 
+    font-style: italic;
 }
 
 p{
     margin-top:8px;
+    
 }
 
 #logoG img{
     width: 70px;
-    margin: 20px;
+    margin: 15px;
 }
 
 #question{
     font-size: 0.95rem;
     margin-top:0;
+}
+
+span{
+    font-weight: 600;
 }
 
 
