@@ -3,7 +3,6 @@
 import { viewHome } from './lib/view/viewHome.js';
 //import { viewRegister } from './lib/view/viewRegister.js';
 import { changeRoute } from './lib/router.js';
-import { registerUser } from './lib/index.js';
 
 //inicializa app
 const init = () => {
@@ -19,15 +18,7 @@ const init = () => {
 //cuando la pantalla se cargue va ejecutar init
 window.addEventListener('load', init);
 
-//evento btn Register
-/*const btnSignUp = document.getElementById("btnSignUp");
-btnSignUp.addEventListener("click",() => {
-    console.log('holi');
-   let name= document.getElementById("name").value;
-    let email= document.getElementById("email").value;
-    let password= document.getElementById("password").value;
-    registerUser(email, password);
-});*/
+
 
 
 

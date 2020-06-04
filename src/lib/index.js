@@ -1,5 +1,5 @@
 export const db = firebase.firestore();
-export const auth = firebase.auth();
+//export const auth = firebase.auth();
 
 //registrarse con correo y contraseña
 export const registerUser = (email, password)=> {
