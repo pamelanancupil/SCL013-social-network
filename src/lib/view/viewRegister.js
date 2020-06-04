@@ -1,3 +1,4 @@
+import { registerUser } from '../index.js';
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
@@ -14,7 +15,7 @@ export const viewRegister = () => {
                 <input type="text" id="name" class="textInput" autocomplete= "off" placeholder="Nombre de usuario">
                 <input type="email" id="email" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password" class="textInput" placeholder="Contraseña">
-                <div id="btnSignUp" class="btns">Registrarse</div>
+                <button id="btnSignUp" class="btns">Registrarse</button>
                 <p>o ingresa con con</p>
                 <div id="logoG">
                 <img src="http://imgfz.com/i/Cvlu08A.png">
@@ -24,6 +25,16 @@ export const viewRegister = () => {
     </div>
     `;
     divRegister.setAttribute('id', 'containerRegister');  
+
+    const btnSignUp = divRegister.querySelector("#btnSignUp");
+    btnSignUp.addEventListener("click",() => {
+    console.log('holi');
+    let name= document.getElementById("name").value;
+    let email= document.getElementById("email").value;
+    let password= document.getElementById("password").value;
+    registerUser(email, password);
+});
+
     return divRegister;
 };
 
