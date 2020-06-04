@@ -1,5 +1,4 @@
 // Este es el punto de entrada de tu aplicacion
-//import { firebaseConfig } from './lib/firebase/firebaseConfig.js';
 import { viewHome } from './lib/view/viewHome.js';
 //import { viewRegister } from './lib/view/viewRegister.js';
 import { changeRoute } from './lib/router.js';

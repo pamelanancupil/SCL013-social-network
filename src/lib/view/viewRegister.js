@@ -1,4 +1,5 @@
-import { registerUser } from '../index.js';
+import { registerUser } from '../firebase/firebase.js';
+import { authState } from '../firebase/firebase.js'
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
@@ -33,10 +34,12 @@ export const viewRegister = () => {
     let email= document.getElementById("email").value;
     let password= document.getElementById("password").value;
     registerUser(email, password);
+    authState();
 });
 
     return divRegister;
 };
+
 
 
 
