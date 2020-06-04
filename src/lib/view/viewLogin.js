@@ -14,11 +14,13 @@ export const viewLogin = () => {
                 <input type="email" id="email2" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password2" class="textInput" placeholder="Contraseña">
                 <button id="btnLogin" class="btns">Iniciar sesión</button>
-                <p>o ingresa con con</p>
+                <p>o ingresa con</p>
                 <div id="logoG">
                 <img src="http://imgfz.com/i/Cvlu08A.png">
                 </div>
-                <p class="question">¿No tienes una cuenta? <span>Regístrate</span></p>
+                <p class="question">¿No tienes una cuenta? 
+                <a href="#/register"><span>Regístrate</span></a>
+                </p>
             </div>
     </div>
     `;

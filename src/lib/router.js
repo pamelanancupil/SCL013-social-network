@@ -26,7 +26,7 @@ const showViews = (hash) => {
             container.appendChild(viewLogin());
             break;
         case '#/home':
-            container.innerHTML= viewHome();
+            container.appendChild(viewHome());
             break;
         default:
             container.appendChild(viewError());

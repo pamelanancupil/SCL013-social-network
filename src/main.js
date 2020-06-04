@@ -5,7 +5,7 @@ import { changeRoute } from './lib/router.js';
 
 //inicializa app
 const init = () => {
-  document.getElementById('root').innerHTML = viewHome();
+  document.getElementById('root').appendChild(viewHome());
     //window. cuando cargue la pantalla
     window.addEventListener('hashchange', () => {
       console.log(window.location.hash)

@@ -17,11 +17,14 @@ export const viewRegister = () => {
                 <input type="email" id="email" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password" class="textInput" placeholder="Contraseña">
                 <button id="btnSignUp" class="btns">Registrarse</button>
-                <p>o ingresa con con</p>
+                <p>o ingresa con</p>
                 <div id="logoG">
                 <img src="http://imgfz.com/i/Cvlu08A.png">
                 </div>
-                <p class="question">¿Ya tienes una cuenta? <span>Iniciar sesión</span></p>
+                <p class="question">¿Ya tienes una cuenta? 
+                <a href="#/login"><span>Iniciar sesión</span>
+                </a>
+                </p>
             </div>
     </div>
     `;

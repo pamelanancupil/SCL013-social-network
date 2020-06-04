@@ -1,6 +1,7 @@
 export const viewHome = () => {
-    const containerHome = `
-        <div id= "containerHome">
+  const divHome = document.createElement('div');
+    divHome.innerHTML = `
+       
           <div id="home">
             <div id="textYug">
               <div id="logo">
@@ -13,7 +14,8 @@ export const viewHome = () => {
             <a href="#/register" id="btnRegister" class="btns">Registrarse</a>
             </div>
           </div>
-        </div>
+        
     `;
-    return containerHome;
+    divHome.setAttribute('id', 'containerHome');  
+    return divHome;
 };

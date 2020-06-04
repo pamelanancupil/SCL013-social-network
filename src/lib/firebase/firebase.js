@@ -26,13 +26,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       console.log('usuario registrado')
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+      const displayName = user.displayName;
+      const email = user.email;
+      const emailVerified = user.emailVerified;
+      const photoURL = user.photoURL;
+      const isAnonymous = user.isAnonymous;
+      const uid = user.uid;
+      const providerData = user.providerData;
       // ...
     } else {
         console.log('usuario no registrado')
@@ -44,7 +44,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 //enviar correo de verificación
 const verificationEmail = () => {
-    var user = firebase.auth().currentUser;
+  const user = firebase.auth().currentUser;
 
     user.sendEmailVerification()
     .then(function() {
@@ -53,6 +53,6 @@ const verificationEmail = () => {
     .catch(function(error) {
     // An error happened.
     });
-    console.log('email verificacion')
+    console.log('envio email verificacion')
 
 };
