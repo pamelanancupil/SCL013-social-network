@@ -280,7 +280,8 @@ span {
         height: 100vh;
         margin-top: 0px;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
+ 
     }
     
     #home {
