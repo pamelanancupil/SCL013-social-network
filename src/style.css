@@ -144,6 +144,126 @@ span {
     width: 100%;
 }
 
+/*___________________________*/
+/*MENU*/
+#containerMenu{
+    background: #FFFDFC;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 640px;
+    width: 100%;
+}
+
+#headerMenu{
+    background: #FFFDFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu{
+    background: #25394A;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    justify-content: space-around;
+    position: fixed;
+    box-shadow:  4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#start, #create, #profile{
+    border: none;
+    background: #25394A;
+}
+
+/*modal nueva publicación*/
+.newPost{
+    background: #FFFDFC;
+    position: fixed;
+    display: none;
+    flex-flow: column nowrap;
+    height: 640px;
+    width: 100%;
+}
+
+.title{
+    background: #FFFDFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title p{
+    color: #000000;
+    font-weight: 400;
+    font-size: 0.95rem;
+
+}
+
+#share{
+    border: none;
+    color: #25394A;
+    background: #FFFDFC;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.title i{
+    color: #25394A;
+    font-size: 1.5rem; 
+}
+
+.title .btnClosePost{
+    background: #FFFDFC;
+    border: none;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFDFC;
+    width: 100%;
+    height: 100%;
+}
+
+#writeText{
+    color: #25394A;
+    background: #FFFDFC;
+    margin-top: 100px;
+    width: 88%;
+    height: 250px;
+    padding: 10px;
+    border-radius: 3px;
+    align-self: center;
+}
+
+.text i{
+    color: #EFA373;
+    font-size: 2.5rem; 
+}
+
+.text .btnImage{
+    background: #ffffff;
+    border: none;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin: 25px;
+}
+
 
 
 
@@ -153,14 +273,14 @@ span {
 
 
 /*____________________________*/
+/*HOME*/
 @media (min-width: 420px) {
     #containerHomeFlex {
         background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
         height: 100vh;
         margin-top: 0px;
         display: flex;
-        justify-content: center;
-        
+        justify-content: center; 
     }
     
     #home {
