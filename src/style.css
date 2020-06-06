@@ -6,16 +6,13 @@
     color: white;
     text-decoration:none;
 }
-
+/*____________________________*/
 /*HOME*/
-#containerHome {
-    background-color: white;
+#containerHomeFlex {
     background-image: url("https://i.ibb.co/7Xytj0g/Fondo-celular.jpg");
     background-repeat: no-repeat;
     height: 640px;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 #home {
@@ -26,7 +23,7 @@
     flex-direction: column;
 }
 
-#textYug {
+#containerTextYug {
     /*background:rgba(115, 241, 255, 0.283);*/
     height: 65%;
     padding: 20%;
@@ -68,7 +65,7 @@
     text-decoration: none;
     border: none;
 }
-
+/*____________________________*/
 /*REGISTER*/
 #arrowBack {
     display: flex;
@@ -110,7 +107,6 @@ input {
     margin: 12px;
     border: none;
     font-size: 0.9rem;
-
 }
 
 .textInput {
@@ -123,7 +119,7 @@ input {
     font-style: italic;
 }
 
-p {
+#textYug {
     margin-top: 8px;
 }
 
@@ -140,11 +136,85 @@ p {
 span {
     font-weight: 600;
 }
-
+/*____________________________*/
 /*LOGIN*/
 #containerLogin {
     background-image: url("http://imgfz.com/i/aqc1IS5.jpeg");
     height: 640px;
     width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*____________________________*/
+@media (min-width: 420px) {
+    #containerHomeFlex {
+        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+        height: 100vh;
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    #home {
+       /* background: rgba(0, 0, 0, 0.3);*/
+        width: 450px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+    }
+    
+    #containerTextYug {
+        /*background:rgba(115, 241, 255, 0.283);*/
+        width:75%;
+        height: 65%;
+        margin:5% 15% 0 15%;
+        padding: 10%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+    }
+
+    #textYug{
+        /*background:rgba(255, 180, 115, 0.42);*/
+        width:100%;
+    }
+    
+    #containerBtn {
+        margin-top: 10px;
+    }
+/*___________________________*/
+/*REGISTER*/
+    #containerRegister {
+        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #containerForm {
+        width: 450px;
+        height: 100vh;
+    }
+/*___________________________*/
+/*LOGIN*/
+#containerLogin {
+    background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    }
+
+
+
+
 }
 
