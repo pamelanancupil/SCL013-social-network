@@ -1,5 +1,9 @@
-import { registerUser } from '../firebase/firebase.js';
-import { authState } from '../firebase/firebase.js'
+import {
+    registerUser,
+    db,
+    
+} from '../firebase/firebase.js';
+//import { authState } from '../index.js';
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
@@ -28,17 +32,22 @@ export const viewRegister = () => {
             </div>
     </div>
     `;
-    divRegister.setAttribute('id', 'containerRegister');  
+    divRegister.setAttribute('id', 'containerRegister');
 
     const btnSignUp = divRegister.querySelector("#btnSignUp");
-    btnSignUp.addEventListener("click",() => {
-    console.log('holi');
-    let name= document.getElementById("name").value;
-    let email= document.getElementById("email").value;
-    let password= document.getElementById("password").value;
-    registerUser(email, password);
-    authState();
-});
+    btnSignUp.addEventListener("click", () => {
+        event.preventDefault();
+        let userName = divRegister.querySelector("#name").value;
+        let email = divRegister.querySelector("#email").value;
+        let password = divRegister.querySelector("#password").value;
+
+        if (userName === null || userName === '') {
+            alert('Favor ingrese su nombre');
+        } else {
+            registerUser(email, password);
+            //addingData(userName,email);
+        }
+    });
 
     return divRegister;
 };
@@ -52,4 +61,3 @@ export const viewRegister = () => {
 
 
 //window.onload = showRegister();
-

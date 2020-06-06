@@ -1,16 +1,32 @@
-export const db = firebase.firestore();
-//export const auth = firebase.auth();
+
 
 //registrarse con correo y contraseña
-export const registerUser = (email, password)=> {
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .catch(function(error) {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    
-    console.log(errorCode);
-    console.log(errorMessage);
-  });
-};
+/*export const validateloginUser = (email, password) => {
+  const regEx = /\S+@\S+\.\S+/;
+  if (password !== '' & email !== '') {
+    if (regEx.test(email)) {
+      if (password.length >= 6) {
+        return {
+          condition: true,
+          message:  'correcta'
+        };
+      } else {
+        return {
+          condition: false,
+          message: 'Contraseña debe ser mayor a 6 carácteres'
+        };
+      }
+    } else {
+      return {
+        condition: false,
+        message: 'Ingrese su email correcto'
+      };
+    }
+  } else {
+    return {
+      condition: false,
+      message: 'Ingrese un email y un password'
+    };
+  };
+};*/
 
