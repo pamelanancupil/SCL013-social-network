@@ -4,6 +4,7 @@ import { viewLogin } from './view/viewLogin.js';
 import { viewError } from './view/viewError.js';
 import { viewMenu } from './view/viewMenu.js';
 
+
 export const changeRoute = (hash) => {
     if (hash === '#/register'){
         return showViews (hash)
@@ -13,7 +14,7 @@ export const changeRoute = (hash) => {
         return showViews (hash)
     } else if    (hash === '#/menu'){
         return showViews (hash)
-    }else {
+    } else {
         return showViews(hash)
     }
 }

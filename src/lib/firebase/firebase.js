@@ -61,7 +61,7 @@ export const loginUser = (email, password) => {
       let errorCode = error.code;
       let errorMessage = error.message;
       // ...
-      alert(errorMessage);
+      alert('Ingresa correctamente tus datos');
       console.log(errorCode);
     });
 };

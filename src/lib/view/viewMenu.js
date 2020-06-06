@@ -17,22 +17,11 @@ export const viewMenu = () => {
               </button>
             </div>
 
-  <div class="newPost" id="newPost">
-    <div class="title">
-      <button id="btnClosePost" class="btnClosePost"> <i class="fas fa-times"></i> </button> 
-      <p>Crear publicación</p>
-      <button id="share">Compartir</button>
-    </div>
-    <div class="text">
-      <textarea id="writeText">Escribe tu publicación</textarea>
-      <button id="btnImage" class="btnImage"> <i class="far fa-images"></i> </button>
-    </div>
-  </div>
-
       `;
 
   divMenu.setAttribute('id', 'containerMenu');
   return divMenu;
+  
 
 };
 
@@ -47,7 +36,7 @@ export const viewMenu = () => {
 
 
 
-/*function modalNewPost(){
+/*function modalNewPost(contentModal){
   const contentModal= document.getElementById("contentModal");
   const openModal = document.getElementById("create");
   const closeModal = document.getElementById("btnClosePost");
@@ -79,3 +68,16 @@ export const viewMenu = () => {
 
   });
 }*/
+
+
+/*  <div class="newPost" id="newPost">
+    <div class="title">
+      <button id="btnClosePost" class="btnClosePost"> <i class="fas fa-times"></i> </button> 
+      <p>Crear publicación</p>
+      <button id="share">Compartir</button>
+    </div>
+    <div class="text">
+      <textarea id="writeText">Escribe tu publicación</textarea>
+      <button id="btnImage" class="btnImage"> <i class="far fa-images"></i> </button>
+    </div>
+  </div>*/

@@ -15,7 +15,7 @@ export const viewLogin = () => {
             <div id="form">
                 <input type="email" id="email2" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password2" class="textInput" placeholder="Contraseña">
-                <button id="btnLogin" class="btns">Iniciar sesión</button>
+                <button href="#/loginMenu" id="btnLogin" class="btns">Iniciar sesión</button>
                 <p>o ingresa con</p>
                 <div id="logoG">
                 <img src="http://imgfz.com/i/Cvlu08A.png">
