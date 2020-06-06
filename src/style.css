@@ -119,6 +119,10 @@ input {
     font-style: italic;
 }
 
+#form p {
+  margin-top:8px;
+}
+
 #textYug {
     margin-top: 8px;
 }
