@@ -1,31 +1,25 @@
 export const db = firebase.firestore();
 
-//registrarse con correo y contraseña
-export const registerUser = (email, password)=> {
+//registrarse con correo y contraseña un nuevo usuario
+export const registerUser = (email, password) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then (() => {
-    verificationEmail();
-    alert ('¡Éxito! verifica tu cuenta en tu bandeja de entrada')
-    console.log('email verificación')
-  })
-
-  .catch ((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert ('Error')
-    
-    console.log(errorCode);
-    console.log(errorMessage);
-  });
+    .then(() => {
+      verificationEmail();
+      alert('¡Éxito! verifica tu cuenta en la bandeja de entrada de tu correo')
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
 };
 
-//observador auth
+//observador auth de estado de autenticación para obtener datos del usuario, se llama cada vez que cambia el estado de acceso del usuario 
 export const authState = () => {
-firebase.auth().onAuthStateChanged(function(user) {
+  firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // User is signed in.
-      console.log('usuario registrado')
       const displayName = user.displayName;
       const email = user.email;
       const emailVerified = user.emailVerified;
@@ -33,26 +27,55 @@ firebase.auth().onAuthStateChanged(function(user) {
       const isAnonymous = user.isAnonymous;
       const uid = user.uid;
       const providerData = user.providerData;
+      if (user.emailVerified === true) {
+        alert('Usuario inicio sesión correctamente');
+        //como hacemos para pasar a la pagina de publicaciones
+      } else {
+        alert('Por favor revisa tu correo y verifica tu cuenta');
+      }
       // ...
     } else {
-        console.log('usuario no registrado')
+      alert('Usuario esta registrado o no ha iniciado sesión');
       // User is signed out.
-      // ...
     }
   });
 };
 
-//enviar correo de verificación
+//enviar correo de verificación al crear nueva cuenta con correo y usuario
 const verificationEmail = () => {
   const user = firebase.auth().currentUser;
-
-    user.sendEmailVerification()
-    .then(function() {
-    // Email sent.
+  user.sendEmailVerification()
+    .then(() => {
+      // Email sent.
     })
-    .catch(function(error) {
-    // An error happened.
+    .catch((error) => {
+      // An error happened.
     });
-    console.log('envio email verificacion')
-
 };
+
+//función para inicio de sesión de usuarios ya registrados
+export const loginUser = (email, password) => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .catch((error) => {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      // ...
+      alert(errorMessage);
+      console.log(errorCode);
+    });
+};
+
+//creando colecciones y documentos de data
+/*export const addingData = (userName, email) => {
+  db.collection('users').add({
+      name: userName,
+      email: email
+    })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
+};*/

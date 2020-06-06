@@ -1,3 +1,5 @@
+import { loginUser } from '../firebase/firebase.js';
+import { authState } from '../firebase/firebase.js';
 
 export const viewLogin = () => {
     const divLogin = document.createElement('div');
@@ -24,6 +26,15 @@ export const viewLogin = () => {
             </div>
     </div>
     `;
-    divLogin.setAttribute('id', 'containerLogin');  
+    divLogin.setAttribute('id', 'containerLogin'); 
+    
+    const btnLogIn = divLogin.querySelector("#btnLogin");
+    btnLogIn.addEventListener("click",() => {
+    let email = divLogin.querySelector("#email2").value;
+    let password = divLogin.querySelector("#password2").value;
+    loginUser(email, password);
+    authState();
+});
+
     return divLogin;
 };
