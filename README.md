@@ -9,15 +9,16 @@
 * [3. Diseño de la Interfaz de Usuario](#3-diseño-de-la-interfaz-de-usuario)
 * [4. Testeos de Usabilidad con Maze](#4-testeos-de-usabilidad-con-maze)
 * [5. Imagen Final del Producto](#5-imagen-final-del-producto)
+* [6. Objetivos de aprendizaje](#6-objetivos-de-aprendizaje)
 
 
 ***
 
 ## 1. Presentación del Producto
 
-Las redes sociales han invadido nuestras vidas, que mejor manera de sacarle provecho que con perteneciendo a una red donde puedes sociabilizar con otras personas interesadas en el Yoga y los beneficios que su práctica puede brindar a tu vida.
+Las redes sociales han invadido nuestras vidas, qué mejor manera de sacarle provecho que con perteneciendo a una red donde puedes socializar con otras personas interesadas en el Yoga y los beneficios que su práctica puede brindar a tu vida.
 
-**YUG** es `Tú` red social por excelencia, donde podrás encontrar y compartir contenido sobre el mundo del Yoga, desde tips que desees descubrir, imagenes de tus avances que desees compartir, hasta recomendaciones sobre como mejorar tus habilidades en esta disciplina tan importante y relajante.
+**Yug** es `Tú` red social por excelencia, donde podrás encontrar y compartir contenido sobre el mundo del Yoga, desde tips que desees descubrir, imágenes de tus avances que desees compartir, hasta recomendaciones sobre cómo mejorar tus habilidades en esta disciplina tan importante y relajante.
 
 <!--Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
 en una ronda de financiamiento con inversionistas, se presentó una red social
@@ -30,42 +31,119 @@ más comentado.-->
 
 #### 2.1. Principales Usuarios :woman: :man:
 
-Los usuarios principales a los que va dirigido YUG son todas aquellas personas que tengan algún interés en compartir o conseguir cualquier información referente al Yoga, sin distinción de sexo o experticia. Solo necesitan sentir atraccion hacia esta hermosa disciplina física y mental. Apunta a mayores de 18 años de edad ya que les interesa mas buscar este estado de relajación y meditación
+Los usuarios principales a los que va dirigido YUG son todas aquellas personas que tengan algún interés en compartir o conseguir cualquier información referente al yoga, sin distinción de sexo o experticia. Solo necesitan sentir atracción hacia esta hermosa disciplina física y mental. Apunta a mayores de 18 años de edad ya que les interesa más buscar este estado de relajación y meditación.
 
 #### 2.2. Uso y Aplicación 
 
-En la actualidad, con la situación que se vive a nivel mnundial, los usuarios necesitan encontrar personas que compartan su mismo interés, donde puedan obtener cualquier tip/comentario sobre el Yoga y ampliar sus conocimientos sobre este mundo tan amplío. De igual forma, pueden compartir sus experiencias o avances alcanzados y sentirse acompañados desde sus hogares mientras práctican esta disciplina. 
+En la actualidad, con la situación que se vive a nivel mundial, los usuarios necesitan encontrar personas que compartan su mismo interés, donde puedan obtener cualquier tip/comentario sobre el Yoga y ampliar sus conocimientos sobre este mundo tan amplío. De igual forma, pueden compartir sus experiencias o avances alcanzados y sentirse acompañados desde sus hogares mientras practican esta disciplina. 
 
 #### 2.3. Historias de Usuario
 
-* H.U.1.- **Yo** como usuario interesado en yoga **quiero** registrarme en YUG con un correo electrónico y contraseña **para** pertenecer a la Red Social.
-* H.U.2.- **Yo** como usuario de YUG **quiero** iniciar sesión **para** ingresar a la página.
-* H.U.3.- **Yo** como usuario de YUG **quiero** crear y publicar contenido **para** aportar a la comunidad.
-* H.U.4.- **Yo** como usuario de YUG **quiero** editar el contenido que publique en la página **para** poder confirmar lo publicado.
-* H.U.5.- **Yo** como usuario de YUG **quiero** un botón de eliminar en las publicaciones **para** poder borrar contenido que divulgue.
-* H.U.6.- **Yo** como usuario de YUG **quiero** leer publicaciones de otros miembros **para** descubrir información interesante.
-* H.U.7.- **Yo** como usuario de YUG **quiero** dar like a publicaciones de otros miembros **para** demostrar que es un buen contenido.
-* H.U.8.- **Yo** como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.
+**Historia 1**
+“**Yo** como usuario interesado en yoga **quiero** registrarme en YUG con un correo electrónico y contraseña **para** pertenecer a la Red Social.”
+**Criterios de aceptación:**
+El usuario puede registrarse usando cuenta de correo electrónico y contraseña válidos. Recibe un correo de confirmación en el que debe hacer click para activar su cuenta, de lo contrario no puede ingresar.
 
-Nota: cada Historia de Usuario cuenta con sus Criterios de Aceptación y Definición de Terminado, los cuales fueron agregados dentro de cada tarjeta de H.U. en la planificación de TRELLO junto con las tareas a realizar para implementar la Historia en sí.
+**Historia 2**
+“Yo como usuario de YUG **quiero** iniciar sesión **para** ingresar a la página.”
+**Criterios de aceptación:**
+El usuario, ya registrado, puede iniciar sesión mediante un correo electrónico y contraseña, dirigiendolo al “muro”.
+
+**Historia 3**
+“Yo como usuario de YUG **quiero** crear y publicar contenido **para** aportar a la comunidad.”
+**Criterios de aceptación:**
+A través del menú el usuario puede crear y publicar contenido que se subirá al “muro” de la aplicación.
+
+**Historia 4**
+“Yo como usuario de YUG **quiero** editar el contenido que publique en la página **para** poder confirmar lo publicado.”
+**Criterios de aceptación:** 
+El usuario mediante un botón puede acceder a editar la publicación, para volver a publicarla.
+
+**Historia 5**
+“Yo como usuario de YUG **quiero** un botón de eliminar en las publicaciones **para** poder borrar contenido que divulgue.”
+**Criterios de aceptación:**
+El usuario mediante el botón de editar contenido puede optar por eliminar su publicación y guardar los cambios.
+
+**Historia 6**
+“Yo como usuario de YUG **quiero** leer publicaciones de otros miembros **para** descubrir información interesante.”
+**Criterios de aceptación:**
+En el menú el usuario puede acceder a Inicio donde estarán todas las publicaciones.
+
+**Historia 7**
+“Yo como usuario de YUG **quiero** un botón de dar y quitar “like” en una publicación, que los contabilice en tiempo real, **para** demostrar que es un buen contenido.”
+**Criterios de aceptación:**
+En la parte inferior de cada publicación se encuentra un icono de una flor de loto el cual el usuario puede hacer click para sumar un “like” y apretarlo nuevamente para quitar el “like”, los cuales se contabilizan en tiempo real.
+
+**Historia 8**
+“Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
+**Criterios de aceptación:** 
+En el home de la aplicación el usuario puede registrarse haciendo click en el logo de Google. Recibe un correo de confirmación en el que debe hacer click para activar su cuenta, de lo contrario no puede ingresar.
+
+**Historia 9**
+“Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
+**Criterios de aceptación:** 
+En el home de la aplicación el usuario puede iniciar sesión haciendo click en el logo de Google, dirigiendolo al “muro”.
 
 
+## 3. Diseño de la Interfaz de Usuario
+
+**Nombre:** **”Yug”**. La palabra **YOGA** proviene de la palabra sánscrita Yug, que significa integración, unión. El yoga considera al ser humano como un ente holístico,  integral es decir cuerpo físico, mente, intelecto y alma en armonía con la naturaleza.
+**Colores:** Se utilizó un color naranjo tono claro, y un azul tono oscuro.
+**Tipografía:** "Montserrat Family" en color blanco. Los cuerpos utilizados son Light, Regular, Medium, Semibold y Bold.
 
 
+![imgDiseño](https://i.ibb.co/rc8qGZr/tipo-color.jpg)
 
+### 3.1 Flujograma
 
+![imgFlujo](https://i.ibb.co/Mf10gPH/flujo.png)
 
+[Link de InVision](https://alekristen791978.invisionapp.com/freehand/Flujo-App-773rpKgiU)
 
+### 3.2 Prototipos
+
+#### 3.2.1 Baja fidelidad
+
+![imgBaja](https://i.ibb.co/yQGTVz0/prototipo-baja-fidelidad.png)
+
+[Link de InVision](https://pamela319941.invisionapp.com/freehand/YUG-NCcW0cnSd)
+
+#### 3.2.2 Alta fidelidad
+
+![imgBaja1](https://i.ibb.co/zJFyBV9/alta1.png)
+![imgBaja2](https://i.ibb.co/XDjbsqH/alta2.png)
+![imgBaja3](https://i.ibb.co/gM6XGvP/alta3.png)
+![imgBaja4](https://i.ibb.co/PZ5hbL7/alta4.png)
+
+[Link de Figma](https://www.figma.com/file/HPmBOpnPCSy0U6xNkPvl6J/Yug?node-id=0%3A1)
+
+## 4. Testeos de Usabilidad con Maze
+
+![imgMaze1](https://i.ibb.co/Jr97HR5/reporte-maze1.png)
+![imgMaze2](https://i.ibb.co/dpqjfyH/reporte-maze2.png)
+![imgMaze2](https://i.ibb.co/LY8x2Y1/reporte-maze3.png)
+
+[Link de reporte en Maze](https://maze.design/r/4m8fhikatrubmw)
+
+## 5. Imagen Final del Producto
+
+![imgMaze1]()
+![imgMaze2]()
+![imgMaze2]()
+
+[Link de Yug]()
+
+## 6. Objetivos de aprendizaje
 
 ### HTML y CSS
 
-* [ ] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [x] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+* [x] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [x] Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### DOM y Web APIs
 
-* [ ] [Manipulación dinámica del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+* [x] [Manipulación dinámica del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 * [ ] [History API](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
 * [ ] [`localStorage`](https://lms.laboratoria.la/cohorts/scl-2020-03-bc-core-scl013/courses/browser/03-browser-apis/03-web-storage)
 
@@ -73,14 +151,14 @@ Nota: cada Historia de Usuario cuenta con sus Criterios de Aceptación y Definic
 
 * [ ] [Uso de callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
 * [ ] [Consumo de Promesas](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
-* [ ] Uso ES modules
+* [x] Uso ES modules
 ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 
 ### Firebase
 
-* [ ] [Firestore](https://firebase.google.com/docs/firestore)
-* [ ] [Firebase Auth](https://firebase.google.com/docs/auth/web/start)
+* [x] [Firestore](https://firebase.google.com/docs/firestore)
+* [x] [Firebase Auth](https://firebase.google.com/docs/auth/web/start)
 * [ ] [Firebase security rules](https://firebase.google.com/docs/rules)
 * [ ] [Uso de onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen)
 | [onAuthStateChanged](https://firebase.google.com/docs/auth/web/start#set_an_authentication_state_observer_and_get_user_data)
@@ -93,230 +171,16 @@ Nota: cada Historia de Usuario cuenta con sus Criterios de Aceptación y Definic
 
 ### Git y Github
 
-* [ ] Colaboración en Github
+* [x] Colaboración en Github
 * [ ] Organización en Github
 
 ### Buenas prácticas de desarrollo
 
 * [ ] Modularización
-* [ ] Nomenclatura / Semántica
-* [ ] Linting
+* [x] Nomenclatura / Semántica
+* [x] Linting
 
 ***
 
-## 4. Consideraciones generales 
 
-* Este proyecto se debe trabajar en equipos de tres.
 
-* La lógica del proyecto debe estar implementada completamente en JavaScript
-  (ES6+), HTML y CSS :smiley:. Para este proyecto **no está permitido** utilizar
-  _frameworks_ o librerías de CSS y JS.
-
-* La división y organización del trabajo debe permitir, sin excepciones, que
-  **cada integrante** del equipo practique el aprendizaje de todo lo involucrado
-  en **cada historia**. _No se dividan el trabajo como en una fábrica._
-  - ¿Hasta acá has avanzado en tus proyectos con cierta fluidez y sin mayores
-    problemas? Sé generosa con tus compañeras, permíteles aprender y practicar
-    sin restricciones, aunque tome un poco más de tiempo. Aproveha de
-    _coachearlas_, de hacer _pair programming_, una de las mejores maneras de
-    aprender es explicando verbalmente.
-
-  - ¿Se te está haciendo difícil y te cuesta un poco más avanzar? No te quedes
-    con las partes "fáciles" del proyecto, conversa, negocia, exige tu oportunidad
-    para practicar y aprender lo que se te hace más difícil.
-
-* Solamente pueden trabajar en una única historia por vez, no pueden avanzar a
-  la siguiente sin haber completado la anterior. La historia se completa cuando
-  se cumplen **todos** sus Criterios de Aceptación + **toda** su Definición
-  de Terminado.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-### 5.1 Boilerplate
-
-Este proyecto no incluye un _boilerplate_, así es que tendrás que definir la
-estructura de carpetas y escribir tus propias Pruebas Unitarias (_tests_). Para
-hacerlo, puedes guiarte de los proyectos anteriores.
-
-### 5.2 Definición del producto
-
-En el `README.md` cuéntanos brevemente cómo descubriste las necesidades de los
-usuarios y cómo llegaste a la definición final de tu producto. Es importante
-que detalles:
-
-* Quiénes son los principales usuarios de producto.
-* Qué problema resuelve el producto / para qué le servirá a estos usuarios.
-
-### 5.3 Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
-Usuario que representen todo lo que necesitan hacer/ver en la Red Social. Cada
-una de tus Historias de Usuario debe tener:
-
-* **Criterios de Aceptación:** todo lo que debe ocurrir para satisfacer las
-  necesidades del usuario.
-
-* **Definición de terminado:** todos los aspectos técnicos que deben cumplirse
-  para que, como equipo, sepan que esa historia está terminada y lista
-  para publicarse. **Todas** tus Historias de Usuario (salvo excepciones), deben
-  incluir estos aspectos en su Definición de Terminado (más todo lo que
-  necesiten agregar):
-
-  - Debe ser una SPA.
-  - Debe ser _responsive_.
-  - Deben haber recibido _code review_ de al menos una compañera de otro equipo.
-  - Hicieron los _test_ unitarios
-  - Testearon manualmente buscando errores e imperfecciones simples.
-  - Hicieron _pruebas_ de usabilidad e incorporaron el _feedback_ de los
-    usuarios como mejoras.
-  - Desplegaron su aplicación y etiquetaron la versión (git tag).
-
-### 5.4 Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
-
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu aplicación
-y, con eso, diseña la Interfaz de Usuario (UI por sus siglas en inglés) que
-siga este flujo.
-
-### 5.5 Responsive
-
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (_tablets_, celulares, etc.). Te
-sugerimos seguir la técnica de _`mobile first`_ (más detalles sobre esta técnica
-al final).
-
-### 5.6 Consideraciones del comportamiento de la interfaz de usuario (UI)
-
-Estas consideraciones te ayudarán a escribir las Definiciones de Terminado de
-tus H.U.:
-
-#### Creación de cuenta de usuario e inicio de sesión
-
-* _Login_ con Firebase:
-  - Para el _login_ y las publicaciones en el muro puedes utilizar [Firebase](https://firebase.google.com/products/database/)
-  - Creación de cuenta de acceso y autenticación con cuenta de correo y
-    contraseña, y también con una cuenta de Google.
-* Validaciones:
-  - Solamente se permite el acceso a usuarios con cuentas válidas.
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo (_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse el formulario de registro o inicio de sesión, debe validarse.
-  - Si hay errores, se deben mostrar mensajes descriptivos para ayudar al
-  usuario a corregirlos.
-
-#### Muro/timeline
-
-* Validaciones:
-  - Al publicar, se debe validar que exista contenido en el _input_.
-* Comportamiento:
-  - Al recargar la aplicación, se debe verificar si el usuario está _logueado_
-    antes de mostrar contenido.
-  - Poder publicar un _post_.
-  - Poder dar y quitar _like_ a una publicación. Máximo uno por usuario.
-  - Llevar un conteo de los _likes_.
-  - Poder eliminar un post específico.
-  - Pedir confirmación antes de eliminar un _post_.
-  - Al dar _click_ para editar un _post_, debe cambiar el texto por un _input_
-    que permita editar el texto y luego guardar los cambios.
-  - Al guardar los cambios debe cambiar de vuelta a un texto normal pero con la
-    información editada.
-  - Al recargar la página debo de poder ver los textos editados.
-
-### 5.7 Consideraciones técnicas Front-end
-
-* Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Contar con múltiples vistas. Para esto, tu aplicación debe ser una
- [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Alterar y persistir datos. Los datos que agregues o modifiques deberán
-  persistir a lo largo de la aplicación. Te recomendamos que uses
-  [Firebase](https://firebase.google.com/) para eso también.
-
-#### Pruebas unitarias (unit tests)
-
-* Recuerda que no hay un _setup_ de **tests** definido, dependerá de
-  la estructura de tu proyecto. Algo que no debes de olvidar es pensar en estas
-  pruebas, te pueden ayudar a definir la estructura y nomenclatura de tu lógica.
-
-* Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-  _lines_, y _branches_.
-
-### 5.8 Consideraciones técnicas UX
-
-* Hacer al menos 2 entrevistas con usuarios.
-* Hacer un  prototipo de baja fidelidad.
-* Asegurarte de que la implementación en código siga los lineamientos del
-  diseño.
-* Hacer sesiones de _testing de usabilidad_ con el producto en HTML.
-
-## 6. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-* Permite crear posts con imágenes.
-* Permite buscar usuarios, agregar y eliminar "amigos".
-* Permite definir la privacidad de los _posts_ (público o solamente para amigos).
-* Permite ver el muro de cualquier usuario "no-amigo" (solamente los
-  posts _públicos_).
-* Permite comentar o responder una publicación.
-* Permite editar perfil.
-
-## 7. Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting que
-puedas haber encontrado en el camino.
-
-***
-
-## 8. Pistas, tips y Lecturas complementarias
-
-### Mobile first
-
-El concepto de [_mobile first_](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-hace referencia a un proceso de diseño y desarrollo donde partimos de cómo se ve
-y cómo funciona la aplicación en un dispositivo móvil primero, y más adelante se
-ve cómo adaptar la aplicación a pantallas progresivamente grandes y
-características específicas del entorno desktop. Esto es en contraposición al
-modelo tradicional, donde primero se diseñaban los websites (o webapps) para
-desktop y después se trataba de _arrugar_ el diseño para que entre en pantallas
-más chicas. La clave acá es asegurarse de que desde el principio diseñan usando
-la vista _responsive_ de las herramientas de desarrollador (developer tools) del
-navegador. De esa forma, partimos de cómo se ve y comporta la aplicación en una
-pantalla y entorno móvil.
-
-### Múltiples vistas
-
-En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
-sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
-y ofrecer una manera de navegar entre estas vistas. Este problema se puede
-afrontar de muchas maneras: con archivos HTML independientes (cada uno con su
-URL) y links tradicionales, manteniendo estado en memoria y rederizando
-condicionalmente (sin refrescar la página), [manipulando el historial del
-navegador](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-con [`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history).
-En este proyecto te invitamos a explorar opciones y decidir una opción
-de implementación.
-
-### Escritura de datos
-
-En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
-modificar datos existentes. Estos datos se podrán guardar de forma remota
-usando [Firebase](https://firebase.google.com/).
-
-Otras:
-
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-* [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-* [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
-* [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
-* [Mobile First - ZURB](https://zurb.com/word/mobile-first)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
