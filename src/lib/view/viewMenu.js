@@ -6,15 +6,15 @@ export const viewMenu = () => {
             <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
             </header>  
             <div id="menu">
-              <button id="start" >
+              <a href="#/menu" id="start" >
                 <img src="http://imgfz.com/i/GPUk4f1.png" width="60%">
-              </button>
-              <button id="create" >
+              </a>
+              <a href="#/create" id="create">
                 <img src="http://imgfz.com/i/x6904W7.png" width="60%">   
-              </button>
-              <button id="profile" >
+              <a/>
+              <a href="#/profile" id="profile" >
                 <img src="http://imgfz.com/i/druAwJ2.png" width="60%">
-              </button>
+              </a>
             </div>
 
             <div class="newPost" id="newPost">
@@ -33,8 +33,6 @@ export const viewMenu = () => {
 
   divMenu.setAttribute('id', 'containerMenu');
   return divMenu;
-  
-
 };
 
   /*const modal= document.getElementById("newPost");
@@ -81,15 +79,3 @@ export const viewMenu = () => {
   });
 }*/
 
-
-/*  <div class="newPost" id="newPost">
-    <div class="title">
-      <button id="btnClosePost" class="btnClosePost"> <i class="fas fa-times"></i> </button> 
-      <p>Crear publicación</p>
-      <button id="share">Compartir</button>
-    </div>
-    <div class="text">
-      <textarea id="writeText">Escribe tu publicación</textarea>
-      <button id="btnImage" class="btnImage"> <i class="far fa-images"></i> </button>
-    </div>
-  </div>*/
