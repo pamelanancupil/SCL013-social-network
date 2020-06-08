@@ -29,7 +29,7 @@ export const authState = () => {
       const providerData = user.providerData;
       if (emailVerified === true) {
         alert('Usuario inicio sesión correctamente');
-        window.location.hash = '#/menu';
+        window.location.hash = '#/feed';
         //como hacemos para pasar a la pagina de publicaciones
       } else {
         alert('Por favor revisa tu correo y verifica tu cuenta');

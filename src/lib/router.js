@@ -2,7 +2,6 @@ import { viewHome } from './view/viewHome.js';
 import { viewRegister } from './view/viewRegister.js';
 import { viewLogin } from './view/viewLogin.js';
 import { viewError } from './view/viewError.js';
-import { viewMenu } from './view/viewMenu.js';
 import { viewCreate } from './view/viewCreate.js';
 import { viewFeed } from './view/viewFeed.js';
 import { viewProfile} from './view/viewProfile.js';
@@ -14,8 +13,6 @@ export const changeRoute = (hash) => {
     } else if (hash === '#/login'){
         return showViews (hash)
     } else if    (hash === '#/home'){
-        return showViews (hash)
-    } else if    (hash === '#/menu'){
         return showViews (hash)
     } else if    (hash === '#/create'){
         return showViews (hash)
@@ -40,9 +37,6 @@ const showViews = (hash) => {
             break;
         case '#/home':
             container.appendChild(viewHome());
-            break;
-        case '#/menu':
-            container.appendChild(viewMenu());
             break;
         case '#/create':
             container.appendChild(viewCreate());

@@ -1,3 +1,5 @@
+import { showMenu } from './viewMenu.js';
+
 export const viewProfile = () => {
     const divProfile = document.createElement('div');
     divProfile.innerHTML = `
@@ -15,11 +17,15 @@ export const viewProfile = () => {
             <div class="description">
                 <h4>Descripción</h4>
                 <p>Profesora de yoga y medicina alternativa en Narayan Estudio Chile</p>
-            </div>
+            </div>       
     </div>
+            <footer id="footerMenu">
+            </footer>
   
         `;
-  
-        divProfile.setAttribute('id', 'containerProfile');
+
+    divProfile.setAttribute('id', 'containerProfile');
+    const footer = divProfile.querySelector("#footerMenu");
+    footer.appendChild(showMenu());
     return divProfile;
-  };
+};
