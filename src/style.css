@@ -200,6 +200,14 @@ a {
 
 
 /*CREATE*/
+#containerCreate{
+    background: #FFFDFC;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 640px;
+    width: 100%;
+}
+
 .newPost{
     background: #FFFDFC;
     position: fixed;
@@ -305,7 +313,6 @@ a {
     flex-flow: column nowrap;
     height: 640px;
     width: 100%;
-    align-items: center;
 }
 
 #headerProfile{

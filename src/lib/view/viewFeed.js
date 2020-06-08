@@ -1,3 +1,5 @@
+import { showMenu } from './viewMenu.js';
+
 export const viewFeed = () => {
     const divFeed = document.createElement('div');
     divFeed.innerHTML = `
@@ -9,9 +11,14 @@ export const viewFeed = () => {
     <div class="containerPost" id="containerPost">
                   
     </div>
+    <footer id="footerMenu">
+    </footer>
   
         `;
   
     divFeed.setAttribute('id', 'containerFeed');
+    const footer = divFeed.querySelector("#footerMenu");
+    footer.appendChild(showMenu());
     return divFeed;
+    
   };

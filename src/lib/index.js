@@ -1,5 +1,5 @@
 //registrarse con correo y contraseña
-export const validateloginUser = (email, password) => {
+/*export const validateloginUser = (email, password) => {
   const regEx = /\S+@\S+\.\S+/;
   if (password !== '' & email !== '') {
     if (regEx.test(email)) {
@@ -26,5 +26,5 @@ export const validateloginUser = (email, password) => {
       message: 'Ingrese un email y un password'
     };
   };
-};
+};*/
 
