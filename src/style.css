@@ -9,16 +9,16 @@
 /*____________________________*/
 /*HOME*/
 #containerHomeFlex {
-    background-image: url("https://i.ibb.co/7Xytj0g/Fondo-celular.jpg");
+    background-image: url("https://i.ibb.co/KzYFwZH/fondo-celular-420x640.jpg");
     background-repeat: no-repeat;
-    height: 640px;
+    height: 100vh;
     width: 100%;
 }
 
 #home {
     background: rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -79,15 +79,16 @@
     width: 80px;
     margin: 0 30px 15px;
 }
+
 #containerRegister {
     background-image: url("http://imgfz.com/i/aqc1IS5.jpeg");
-    height: 640px;
+    height: 100vh;
     width: 100%;
 }
 
 #containerForm {
     background: rgba(0, 0, 0, 0.249);
-    height: 640px;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -99,6 +100,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 input {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 40px;
@@ -144,7 +146,7 @@ span {
 /*LOGIN*/
 #containerLogin {
     background-image: url("http://imgfz.com/i/aqc1IS5.jpeg");
-    height: 640px;
+    height: 100vh;
     width: 100%;
 }
 
@@ -154,7 +156,7 @@ span {
     background: #FFFDFC;
     display: flex;
     flex-flow: column nowrap;
-    height: 640px;
+    height: 100vh;
     width: 100%;
 }
 
@@ -196,13 +198,15 @@ a {
     margin: 0 28px;
 }
 
+
 /*CREATE*/
+
 .newPost{
     background: #FFFDFC;
     position: fixed;
     display: flex;
     flex-flow: column nowrap;
-    height: 640px;
+    height: 100vh;
     width: 100%;
 }
 
@@ -273,81 +277,6 @@ a {
     border-radius: 5px;
     align-self: flex-end;
     margin: 25px;
-}
-
-
-
-
-
-
-
-
-
-/*____________________________*/
-/*HOME*/
-@media (min-width: 420px) {
-    #containerHomeFlex {
-        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
-        height: 100vh;
-        margin-top: 0px;
-        display: flex;
-        justify-content: center;
- 
-    }
-    
-    #home {
-       /* background: rgba(0, 0, 0, 0.3);*/
-        width: 450px;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-content: flex-end;
-    }
-    
-    #containerTextYug {
-        /*background:rgba(115, 241, 255, 0.283);*/
-        width:75%;
-        height: 65%;
-        margin:5% 15% 0 15%;
-        padding: 10%;
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-    }
-
-    #textYug{
-        /*background:rgba(255, 180, 115, 0.42);*/
-        width:100%;
-    }
-    
-    #containerBtn {
-        margin-top: 10px;
-    }
-/*___________________________*/
-/*REGISTER*/
-    #containerRegister {
-        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-    }
-
-    #containerForm {
-        width: 450px;
-        height: 100vh;
-    }
-/*___________________________*/
-/*LOGIN*/
-#containerLogin {
-    background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    }
-
-
-
-
 }
 
 /*FEED*/
@@ -433,3 +362,221 @@ a {
     width: 90%;
     align-items: flex-start;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*________MEDIA____________*/
+/*HOME*/
+@media (min-width: 420px) {
+    #containerHomeFlex {
+        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+        height: 100vh;
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #home {
+       /* background: rgba(0, 0, 0, 0.3);*/
+        width: 450px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+    }
+    
+    #containerTextYug {
+        /*background:rgba(115, 241, 255, 0.283);*/
+        width:75%;
+        height: 65%;
+        margin:5% 15% 0 15%;
+        padding: 10%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+    }
+
+    #textYug{
+        /*background:rgba(255, 180, 115, 0.42);*/
+        width:100%;
+    }
+    
+    #containerBtn {
+        margin-top: 10px;
+    }
+/*___________________________*/
+/*REGISTER*/
+    #containerRegister {
+        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #containerForm {
+        width: 450px;
+        height: 100vh;
+    }
+/*___________________________*/
+/*LOGIN*/
+#containerLogin {
+    background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    }
+
+
+
+/*___________________________*/
+/*MENÚ*/
+
+#headerMenu{
+    background: #FFFDFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding-right: 12%;
+}
+
+#headerMenu img{
+    width: 70px;
+}
+
+#menu{
+    background: #25394A;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: center;
+    flex: 1;
+    width: 13%;
+    height: 100vh;
+}
+
+#start, #create, #profile{
+    border: none;
+    background: rgb(255, 159, 159);
+    background: url(https://i.ibb.co/4NQ5JQK/menu-home.png);
+}
+
+
+.title{
+    padding-right: 12%;
+}
+
+.newPost{
+    padding-right: 12%;
+}
+
+#writeText{
+    margin-top:150px;
+    width: 75%;
+}
+
+}
+
+
+/*__________________________*/
+@media (min-width: 1920px) {
+    #containerHomeFlex {
+        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    #home {
+         width: 700px;
+     }
+
+     #containerTextYug {
+        height: 65%;
+        font-size: 1.5rem;
+        line-height: 34px;
+    }
+
+    #logo img {
+        width: 260px;
+        margin-bottom: 20px;
+    }
+    #textYug {
+        margin-top: 8px;
+        width:100%;
+    }
+
+    #containerBtn {
+        width: 100%;
+        height: 35%;
+        margin-top: 30px;
+    }
+    
+    .btns {
+        width: 250px;
+        height: 63px;
+        font-size: 1.2rem;
+        margin: 0px 20px 35px 20px;
+    }
+    /*___________________________*/
+    /*REGISTER*/
+    #containerRegister {
+        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+    }
+
+    #containerForm {/*cuadro negro*/
+        width: 700px;
+    }
+
+    #form {
+        width:80%;
+        height: 100vh;
+        margin-top: 30px;
+    }
+
+    #arrowBack {
+        margin: 30px 0 0 30px;
+        font-size: 3rem;
+    }
+
+    #logo2 img {
+        width: 120px;
+        margin: 0 30px 15px;
+    }
+
+    input {
+        width: 320px;
+        height: 60px;
+        margin: 0px 20px 30px 20px;
+        font-size: 1.1rem;   
+    }
+    
+    .textInput {
+        padding: 33px;
+    }
+
+    #form p {
+        font-size: 1.2rem;
+      }
+
+    /*___________________________*/
+    /*LOGIN*/
+    #containerLogin {
+        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        }
+
+
+
+
+}
+

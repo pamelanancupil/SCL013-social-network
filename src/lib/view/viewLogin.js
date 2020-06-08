@@ -32,8 +32,16 @@ export const viewLogin = () => {
     btnLogIn.addEventListener("click",() => {
     let email = divLogin.querySelector("#email2").value;
     let password = divLogin.querySelector("#password2").value;
-    loginUser(email, password);
-    authState();
+
+    if (email === null || email === '') {
+        alert('Favor ingrese su email registrado');
+    } else if (password === null || password === '' ) {
+        alert('Favor ingrese su password')
+    } else {
+        loginUser(email, password);
+        authState();
+        //addingData(userName,email);
+    }   
 });
 
     return divLogin;
