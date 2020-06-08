@@ -184,16 +184,23 @@ span {
     box-shadow:  4px 4px rgba(0, 0, 0, 0.25);
 }
 
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #start, #create, #profile{
     border: none;
     background: #25394A;
+    margin: 0 28px;
 }
 
-/*modal nueva publicación*/
+/*CREATE*/
 .newPost{
     background: #FFFDFC;
     position: fixed;
-    display: none;
+    display: flex;
     flex-flow: column nowrap;
     height: 640px;
     width: 100%;
@@ -343,3 +350,86 @@ span {
 
 }
 
+/*FEED*/
+#containerFeed{
+    background: #FFFDFC;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 640px;
+    width: 100%;
+}
+
+#headerFeed{
+    background: #FFFDFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+/*PROFILE*/
+#containerProfile{
+    background: #FFFDFC;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 640px;
+    width: 100%;
+    align-items: center;
+}
+
+#headerProfile{
+    background: #FFFDFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#logOut{
+    border: none;
+    color: #25394A;
+    background: #FFFDFC;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.imageProfile{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.infoProfile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoProfile h3{
+    color: #000000;
+    margin-block-end: 5px;
+}
+.infoProfile h4{
+    color: #000000;
+}
+.infoProfile p{
+    color: #000000;
+    line-height: 23px;
+    margin-top: 8px;
+}
+
+.infoProfile .description{
+    margin-top: 40px;
+    width: 90%;
+    align-items: flex-start;
+}
