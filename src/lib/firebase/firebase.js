@@ -27,15 +27,16 @@ export const authState = () => {
       const isAnonymous = user.isAnonymous;
       const uid = user.uid;
       const providerData = user.providerData;
-      if (user.emailVerified === true) {
+      if (emailVerified === true) {
         alert('Usuario inicio sesión correctamente');
+        window.location.hash = '#/menu';
         //como hacemos para pasar a la pagina de publicaciones
       } else {
         alert('Por favor revisa tu correo y verifica tu cuenta');
       }
       // ...
     } else {
-      alert('Usuario esta registrado o no ha iniciado sesión');
+      alert('Usuario no esta registrado o no ha iniciado sesión');
       // User is signed out.
     }
   });
@@ -61,7 +62,7 @@ export const loginUser = (email, password) => {
       let errorCode = error.code;
       let errorMessage = error.message;
       // ...
-      alert('Ingresa correctamente tus datos');
+      alert('Ingresa correctamente tus datos' + errorMessage);
       console.log(errorCode);
     });
 };
