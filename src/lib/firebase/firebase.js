@@ -5,13 +5,14 @@ export const registerUser = (email, password) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
       verificationEmail();
-      alert('¡Éxito! verifica tu cuenta en la bandeja de entrada de tu correo')
+      
     })
     .catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorMessage);
+      console.log(errorMessage);
+      console.log(errorCode);
     });
 };
 
@@ -20,13 +21,13 @@ export const authState = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // User is signed in.
-      const displayName = user.displayName;
-      const email = user.email;
-      const emailVerified = user.emailVerified;
-      const photoURL = user.photoURL;
-      const isAnonymous = user.isAnonymous;
-      const uid = user.uid;
-      const providerData = user.providerData;
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
       if (emailVerified === true) {
         alert('Usuario inicio sesión correctamente');
         window.location.hash = '#/feed';
@@ -47,7 +48,8 @@ const verificationEmail = () => {
   const user = firebase.auth().currentUser;
   user.sendEmailVerification()
     .then(() => {
-      // Email sent.
+      alert('¡Éxito! verifica tu cuenta en la bandeja de entrada de tu correo');
+      window.location.hash = '#/login'; // Email sent.
     })
     .catch((error) => {
       // An error happened.
@@ -62,7 +64,7 @@ export const loginUser = (email, password) => {
       let errorCode = error.code;
       let errorMessage = error.message;
       // ...
-      alert('Ingresa correctamente tus datos' + errorMessage);
+      alert('Ingresa correctamente tus datos ' + errorMessage);
       console.log(errorCode);
     });
 };

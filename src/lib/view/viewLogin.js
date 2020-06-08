@@ -1,5 +1,12 @@
-import { loginUser } from '../firebase/firebase.js';
-import { authState } from '../firebase/firebase.js';
+import {
+    loginUser
+} from '../firebase/firebase.js';
+import {
+    authState
+} from '../firebase/firebase.js';
+import {
+    validateloginUser
+} from '../index.js';
 
 export const viewLogin = () => {
     const divLogin = document.createElement('div');
@@ -15,6 +22,7 @@ export const viewLogin = () => {
             <div id="form">
                 <input type="email" id="email2" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password2" class="textInput" placeholder="Contraseña">
+                <h6 id = errorMssg></h6>
                 <button href="#/loginMenu" id="btnLogin" class="btns">Iniciar sesión</button>
                 <p>o ingresa con</p>
                 <div id="logoG">
@@ -26,23 +34,28 @@ export const viewLogin = () => {
             </div>
     </div>
     `;
-    divLogin.setAttribute('id', 'containerLogin'); 
-    
-    const btnLogIn = divLogin.querySelector("#btnLogin");
-    btnLogIn.addEventListener("click",() => {
-    let email = divLogin.querySelector("#email2").value;
-    let password = divLogin.querySelector("#password2").value;
+    divLogin.setAttribute('id', 'containerLogin');
 
-    if (email === null || email === '') {
-        alert('Favor ingrese su email registrado');
-    } else if (password === null || password === '' ) {
-        alert('Favor ingrese su password')
-    } else {
-        loginUser(email, password);
-        authState();
-        //addingData(userName,email);
-    }   
-});
+    const btnLogIn = divLogin.querySelector("#btnLogin");
+    btnLogIn.addEventListener("click", () => {
+        event.preventDefault();
+        let email = divLogin.querySelector("#email2").value;
+        let password = divLogin.querySelector("#password2").value;
+        let errorM = divLogin.querySelector('#errorMssg');
+
+        if (email === '' || password === '' || email === null || password === null || password.length <= 6) {
+            errorM.innerHTML = validateloginUser(email, password);
+            // alert('Favor ingrese su email registrado');
+        }
+        /* else if (password === null || password === '' ) {
+                alert('Favor ingrese su password')
+            } */
+        else {
+            loginUser(email, password);
+            authState();
+            //addingData(userName,email);
+        }
+    });
 
     return divLogin;
 };
