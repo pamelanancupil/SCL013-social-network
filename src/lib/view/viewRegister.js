@@ -11,8 +11,8 @@ import {
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
     divRegister.innerHTML = `
-    <div id="containerForm">
-        <a href='#/home' id="arrowBack">
+    <div class="containerForm">
+        <a href='#/home' class="arrowBack">
             <i class="fas fa-chevron-left">
             </i>
         </a>
@@ -23,7 +23,7 @@ export const viewRegister = () => {
                 <input type="text" id="name" class="textInput" autocomplete= "off" placeholder="Nombre de usuario">
                 <input type="email" id="email" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password" class="textInput" placeholder="Contraseña">
-                <h6 id = errorMssg></h6>
+                <p id = "errorMssg"></p>
                 <button id="btnSignUp" class="btns">Registrarse</button>
                 <p>o ingresa con</p>
                 <div id="logoG">

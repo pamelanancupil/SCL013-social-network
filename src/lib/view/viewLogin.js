@@ -11,8 +11,8 @@ import {
 export const viewLogin = () => {
     const divLogin = document.createElement('div');
     divLogin.innerHTML = `
-    <div id="containerForm">
-        <a href='#/home' id="arrowBack">
+    <div class="containerForm">
+        <a href='#/home' class="arrowBack">
             <i class="fas fa-chevron-left">
             </i>
         </a>
@@ -22,7 +22,7 @@ export const viewLogin = () => {
             <div id="form">
                 <input type="email" id="email2" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password2" class="textInput" placeholder="Contraseña">
-                <h6 id = errorMssg></h6>
+                <p id = "errorMssg"></p>
                 <button href="#/loginMenu" id="btnLogin" class="btns">Iniciar sesión</button>
                 <p>o ingresa con</p>
                 <div id="logoG">
