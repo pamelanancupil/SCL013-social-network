@@ -6,13 +6,17 @@
     color: white;
     text-decoration:none;
 }
-/*____________________________*/
+
+/*_______________________________________________________________*/
 /*HOME*/
 #containerHomeFlex {
     background-image: url("https://i.ibb.co/KzYFwZH/fondo-celular-420x640.jpg");
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
+    background-repeat: no-repeat;    
+    background-position: top center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 #home {
@@ -57,7 +61,7 @@
     height: 48px;
     font-size: 0.9rem;
     font-weight: 300;
-    margin: 10px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +69,8 @@
     text-decoration: none;
     border: none;
 }
-/*____________________________*/
+
+/*_______________________________________________________________*/
 /*REGISTER*/
 #arrowBack {
     display: flex;
@@ -93,6 +98,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #form {
@@ -101,7 +107,7 @@
     align-items: center;
 }
 
-input {
+#form input {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     width: 240px;
@@ -142,7 +148,8 @@ input {
 span {
     font-weight: 600;
 }
-/*____________________________*/
+
+/*_______________________________________________________________*/
 /*LOGIN*/
 #containerLogin {
     background-image: url("http://imgfz.com/i/aqc1IS5.jpeg");
@@ -150,7 +157,7 @@ span {
     width: 100%;
 }
 
-/*___________________________*/
+/*_______________________________________________________________*/
 /*MENU*/
 #containerMenu{
     background: #FFFDFC;
@@ -198,7 +205,7 @@ a {
     margin: 0 28px;
 }
 
-
+/*_______________________________________________________________*/
 /*CREATE*/
 #containerCreate{
     background: #FFFDFC;
@@ -286,6 +293,7 @@ a {
     margin: 25px;
 }
 
+/*_______________________________________________________________*/
 /*FEED*/
 #containerFeed{
     background: #FFFDFC;
@@ -306,6 +314,7 @@ a {
     justify-content: center;
 }
 
+/*_______________________________________________________________*/
 /*PROFILE*/
 #containerProfile{
     background: #FFFDFC;
@@ -348,6 +357,7 @@ a {
     width: 85%;
     justify-content: center;
     align-items: center;
+    align-self: center;
 }
 
 .infoProfile h3{
@@ -370,24 +380,17 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
-
-/*________MEDIA____________*/
+/*________MEDIA TABLET____________*/
 /*HOME*/
 @media (min-width: 420px) {
     #containerHomeFlex {
-        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
+        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-repeat: no-repeat;
+        background-position: top center;
         height: 100vh;
-        margin-top: 0px;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     
     #home {
@@ -421,11 +424,12 @@ a {
 /*___________________________*/
 /*REGISTER*/
     #containerRegister {
-        background-image: url("https://i.ibb.co/b5SVBvT/fondo-desktop-opacidad.jpg");
-        background-repeat: no-repeat;
+        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-position: top center;
         height: 100vh;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     #containerForm {
@@ -495,94 +499,232 @@ a {
 }
 
 
-/*__________________________*/
+/*___________MEDIA PANTALLA PC_______________*/
 @media (min-width: 1280px) {
     #containerHomeFlex {
         background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
         background-repeat: no-repeat;
+        background-position: top center;
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #home {
-         width: 700px;
+         width: 400px;
+         height: 550px;
+         border-radius: 5px;
      }
 
      #containerTextYug {
-        height: 65%;
-        font-size: 1.5rem;
-        line-height: 34px;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        font-size: 1.1rem;
+        line-height: 32px;
     }
 
     #logo img {
-        width: 260px;
-        margin-bottom: 20px;
+        width: 140px;
+        margin-bottom: 5px;
     }
     #textYug {
         margin-top: 8px;
-        width:100%;
+        width:280px;
     }
 
     #containerBtn {
         width: 100%;
         height: 35%;
-        margin-top: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     
     .btns {
         width: 250px;
-        height: 63px;
-        font-size: 1.2rem;
-        margin: 0px 20px 35px 20px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin: 0px 10px 35px 20px;
+        cursor: pointer;
     }
     /*___________________________*/
     /*REGISTER*/
     #containerRegister {
         background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-position: top center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #containerForm {/*cuadro negro*/
-        width: 700px;
+        width: 400px;
+        height: 560px;
+        border-radius: 5px;
     }
 
     #form {
-        width:80%;
-        height: 100vh;
-        margin-top: 30px;
+        width:350px;
+        height: auto;
+        margin-top: 7px;
     }
 
     #arrowBack {
-        margin: 30px 0 0 30px;
-        font-size: 3rem;
+        margin: 0 0 0 25px;
+        font-size: 1.7rem;
     }
 
     #logo2 img {
-        width: 120px;
-        margin: 0 30px 15px;
+        width: 80px;
+        margin-bottom: 10px;
     }
 
-    input {
-        width: 320px;
-        height: 60px;
-        margin: 0px 20px 30px 20px;
-        font-size: 1.1rem;   
+    #form input {
+        width: 240px;
+        height: 40px;
+        margin: 0px 0 20px;
+        font-size: 0.8rem;
     }
     
     .textInput {
-        padding: 33px;
+        padding: 15px;
     }
 
     #form p {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        margin-top: 0;
       }
+    
+    #btnSignUp {
+        width: 240px;
+        height: 45px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    #logoG img {
+        width: 48px;
+        margin: 8px;
+    }
+
+    .question {
+        font-size: 0.9rem;
+        margin: 0;
+        line-height: 24px;
+    }
 
     /*___________________________*/
     /*LOGIN*/
     #containerLogin {
         background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
-        }
+        background-position: top center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    #containerForm {
+        width: 400px;
+        height: 550px;
+        border-radius: 5px;
+    }
 
+    /*___________________________*/
+    /*MENU*/
+    #containerMenu{
+        background: #FFFDFC;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    #headerFeed{
+        background: #FFFDFC;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        height: 80px;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #menu{
+        background: #FFFDFC;
+        justify-content: flex-start;
+        flex: 0;
+        width: 10%;
+        height: 85%;
+        margin-top:100px;
+    }
+        
+    #start, #create, #profile{
+        border: none;
+        background: #25394A;
+        border-radius: 500px;
+        padding: 20px 10px;
+        margin: 15px;
+    }
 
+    /*___________________________*/
+    /*CREATE*/
+    #containerCreate{
+        height: 100vh;
+    }
 
+    .title{
+        justify-content: space-between;
+    }
+
+    .title .btnClosePost{
+        margin-left: 25px;
+    }
+
+    #share{
+        border: none;
+        color: #25394A;
+        background: #FFFDFC;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    #writeText{
+        width: 50%;
+        align-self: flex-start;
+        margin-left: 70px;
+    }
+    
+    .text .btnImage{
+        align-self: flex-start;
+        margin-left: 600px;
+    }
+
+/*___________________________*/
+    /*PROFILE*/
+    #containerProfile{
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+    }
+
+    .infoProfile{
+        margin-top: 15px;
+        width: 600px;
+    }
+
+    .infoProfile .description{
+        margin-top: 40px;
+        width: 600px;
+    }
+    #containerMenu{
+        height: 85%;
+    }
 }
+
 
