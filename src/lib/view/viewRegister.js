@@ -1,8 +1,11 @@
 import {
     registerUser,
-    db,
-    
+    db
+
 } from '../firebase/firebase.js';
+import {
+    validateloginUser
+} from '../index.js'
 //import { authState } from '../index.js';
 
 export const viewRegister = () => {
@@ -20,6 +23,7 @@ export const viewRegister = () => {
                 <input type="text" id="name" class="textInput" autocomplete= "off" placeholder="Nombre de usuario">
                 <input type="email" id="email" class="textInput" autocomplete= "off" placeholder="Email">
                 <input type="password" id="password" class="textInput" placeholder="Contraseña">
+                <h6 id = errorMssg></h6>
                 <button id="btnSignUp" class="btns">Registrarse</button>
                 <p>o ingresa con</p>
                 <div id="logoG">
@@ -40,11 +44,16 @@ export const viewRegister = () => {
         let userName = divRegister.querySelector("#name").value;
         let email = divRegister.querySelector("#email").value;
         let password = divRegister.querySelector("#password").value;
+        let errorM = divRegister.querySelector('#errorMssg');
 
-        if (userName === null || userName === '') {
-            alert('Favor ingrese su nombre');
+        /*if (userName === null || userName === '') {
+            errorM.innerHTML ='Favor ingrese su nombre';
+        } */
+        if (email === '' || password === '' || email === null || password === null || password.length <= 6) {
+            errorM.innerHTML = validateloginUser(email, password, userName);
         } else {
             registerUser(email, password);
+            //window.location.hash = '#/login';
             //addingData(userName,email);
         }
     });
