@@ -1,6 +1,6 @@
 # YUG, Únete al mundo del Yoga
 
-![Logo del proyecto]()
+![Logo del proyecto](http://imgfz.com/i/TKBv2dp.png)
 
 ## Índice
 
@@ -16,9 +16,9 @@
 
 ## 1. Presentación del Producto
 
-Las redes sociales han invadido nuestras vidas, qué mejor manera de sacarle provecho que con perteneciendo a una red donde puedes socializar con otras personas interesadas en el Yoga y los beneficios que su práctica puede brindar a tu vida.
+Las redes sociales han invadido nuestras vidas, qué mejor manera de sacarle provecho que perteneciendo a una red donde puedes socializar con otras personas interesadas en el Yoga y los beneficios que su práctica puede brindar a tu vida.
 
-**Yug** es `Tú` red social por excelencia, donde podrás encontrar y compartir contenido sobre el mundo del Yoga, desde tips que desees descubrir, imágenes de tus avances que desees compartir, hasta recomendaciones sobre cómo mejorar tus habilidades en esta disciplina tan importante y relajante.
+**Yug** es `Tú` red social por excelencia, donde podrás encontrar y compartir contenido sobre el mundo del Yoga, desde tips que puedas descubrir, imágenes de tus avances que quieras compartir, hasta recomendaciones sobre cómo mejorar tus habilidades en esta completa disciplina.
 
 <!--Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
 en una ronda de financiamiento con inversionistas, se presentó una red social
@@ -41,46 +41,55 @@ En la actualidad, con la situación que se vive a nivel mundial, los usuarios ne
 
 **Historia 1**
 “**Yo** como usuario interesado en yoga **quiero** registrarme en YUG con un correo electrónico y contraseña **para** pertenecer a la Red Social.”
+
 **Criterios de aceptación:**
 El usuario puede registrarse usando cuenta de correo electrónico y contraseña válidos. Recibe un correo de confirmación en el que debe hacer click para activar su cuenta, de lo contrario no puede ingresar.
 
 **Historia 2**
 “Yo como usuario de YUG **quiero** iniciar sesión **para** ingresar a la página.”
+
 **Criterios de aceptación:**
 El usuario, ya registrado, puede iniciar sesión mediante un correo electrónico y contraseña, dirigiendolo al “muro”.
 
 **Historia 3**
 “Yo como usuario de YUG **quiero** crear y publicar contenido **para** aportar a la comunidad.”
+
 **Criterios de aceptación:**
 A través del menú el usuario puede crear y publicar contenido que se subirá al “muro” de la aplicación.
 
 **Historia 4**
 “Yo como usuario de YUG **quiero** editar el contenido que publique en la página **para** poder confirmar lo publicado.”
+
 **Criterios de aceptación:** 
 El usuario mediante un botón puede acceder a editar la publicación, para volver a publicarla.
 
 **Historia 5**
 “Yo como usuario de YUG **quiero** un botón de eliminar en las publicaciones **para** poder borrar contenido que divulgue.”
+
 **Criterios de aceptación:**
 El usuario mediante el botón de editar contenido puede optar por eliminar su publicación y guardar los cambios.
 
 **Historia 6**
 “Yo como usuario de YUG **quiero** leer publicaciones de otros miembros **para** descubrir información interesante.”
+
 **Criterios de aceptación:**
 En el menú el usuario puede acceder a Inicio donde estarán todas las publicaciones.
 
 **Historia 7**
 “Yo como usuario de YUG **quiero** un botón de dar y quitar “like” en una publicación, que los contabilice en tiempo real, **para** demostrar que es un buen contenido.”
+
 **Criterios de aceptación:**
 En la parte inferior de cada publicación se encuentra un icono de una flor de loto el cual el usuario puede hacer click para sumar un “like” y apretarlo nuevamente para quitar el “like”, los cuales se contabilizan en tiempo real.
 
 **Historia 8**
 “Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
+
 **Criterios de aceptación:** 
 En el home de la aplicación el usuario puede registrarse haciendo click en el logo de Google. Recibe un correo de confirmación en el que debe hacer click para activar su cuenta, de lo contrario no puede ingresar.
 
 **Historia 9**
 “Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
+
 **Criterios de aceptación:** 
 En el home de la aplicación el usuario puede iniciar sesión haciendo click en el logo de Google, dirigiendolo al “muro”.
 
@@ -88,11 +97,13 @@ En el home de la aplicación el usuario puede iniciar sesión haciendo click en 
 ## 3. Diseño de la Interfaz de Usuario
 
 **Nombre:** **”Yug”**. La palabra **YOGA** proviene de la palabra sánscrita Yug, que significa integración, unión. El yoga considera al ser humano como un ente holístico,  integral es decir cuerpo físico, mente, intelecto y alma en armonía con la naturaleza.
-**Colores:** Se utilizó un color naranjo tono claro, y un azul tono oscuro.
+
+**Colores:** Se utilizó un color naranjo tono claro, y un azul tono oscuro. A partir de ellos se creó un degradado que evoca el atardecer y la tranquilidad.
+
 **Tipografía:** "Montserrat Family" en color blanco. Los cuerpos utilizados son Light, Regular, Medium, Semibold y Bold.
 
 
-![imgDiseño](https://i.ibb.co/rc8qGZr/tipo-color.jpg)
+![imgDiseño](http://imgfz.com/i/baD5HQF.jpeg)
 
 ### 3.1 Flujograma
 
