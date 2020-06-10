@@ -7,6 +7,9 @@ import {
     validateloginUser
 } from '../index.js'
 //import { authState } from '../index.js';
+import {
+    loginGoogle
+} from '../firebase/firebase.js';
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
@@ -27,7 +30,7 @@ export const viewRegister = () => {
                 <button id="btnSignUp" class="btns">Registrarse</button>
                 <p>o ingresa con</p>
                 <div id="logoG">
-                <img src="http://imgfz.com/i/Cvlu08A.png">
+                <button href='#/feed' id="google"><img src="http://imgfz.com/i/Cvlu08A.png"></button>
                 </div>
                 <p class="question">¿Ya tienes una cuenta? 
                 <a href="#/login"><span>Iniciar sesión</span>
@@ -56,6 +59,11 @@ export const viewRegister = () => {
             //window.location.hash = '#/login';
             //addingData(userName,email);
         }
+    });
+
+    const btnG = divRegister.querySelector('#google');
+    btnG.addEventListener('click', () =>{
+        loginGoogle()
     });
 
     return divRegister;

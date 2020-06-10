@@ -7,6 +7,9 @@ import {
 import {
     validateloginUser
 } from '../index.js';
+import {
+    loginGoogle
+} from '../firebase/firebase.js';
 
 export const viewLogin = () => {
     const divLogin = document.createElement('div');
@@ -26,7 +29,7 @@ export const viewLogin = () => {
                 <button href="#/loginMenu" id="btnLogin" class="btns">Iniciar sesión</button>
                 <p>o ingresa con</p>
                 <div id="logoG">
-                <img src="http://imgfz.com/i/Cvlu08A.png">
+                <button href='#/feed' id="google"><img src="http://imgfz.com/i/Cvlu08A.png"></button>
                 </div>
                 <p class="question">¿No tienes una cuenta? 
                 <a href="#/register"><span>Regístrate</span></a>
@@ -57,5 +60,11 @@ export const viewLogin = () => {
         }
     });
 
+    const btnGoogle = divLogin.querySelector('#google');
+    btnGoogle.addEventListener('click', () =>{
+        loginGoogle()
+    });
+
     return divLogin;
 };
+

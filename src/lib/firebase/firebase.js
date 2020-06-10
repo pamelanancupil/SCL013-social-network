@@ -1,6 +1,6 @@
 export const db = firebase.firestore();
 
-//registrarse con correo y contraseña un nuevo usuario
+//REGISTRARSE CON CORREO Y CONTRASEÑA -> USUARIO NUEVO
 export const registerUser = (email, password) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
@@ -43,7 +43,7 @@ export const authState = () => {
   });
 };
 
-//enviar correo de verificación al crear nueva cuenta con correo y usuario
+//ENVIAR CORREO DE VERIFICACIÓN PARA USUARIOS CON CORREO Y CONTRASEÑA
 const verificationEmail = () => {
   const user = firebase.auth().currentUser;
   user.sendEmailVerification()
@@ -56,7 +56,7 @@ const verificationEmail = () => {
     });
 };
 
-//función para inicio de sesión de usuarios ya registrados
+//FUNCIÓN DE INICIO DE SESIÓN PARA USUARIOS REGISTRADOS
 export const loginUser = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .catch((error) => {
@@ -69,7 +69,7 @@ export const loginUser = (email, password) => {
     });
 };
 
-//creando colecciones y documentos de data
+//CREANDO COLECCIONES Y DOCUMENTOS DE DATA
 /*export const addingData = (userName, email) => {
   db.collection('users').add({
       name: userName,
@@ -82,3 +82,41 @@ export const loginUser = (email, password) => {
       console.error('Error adding document: ', error);
     });
 };*/
+
+//FUNCIÓN INGRESAR CON GOOGLE
+export const loginGoogle = () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+  .then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    window.location.hash = '#/feed';
+    // ...
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+    
+  });
+};
+
+
+//FUNCIÍN CERRAR SESIÓN
+export const logoutGoogle = () => {
+firebase.auth().signOut()
+.then(function() {
+  // Sign-out successful.
+  window.location.hash = '#/home';
+})
+.catch(function() {
+  // An error happened.
+});
+}
