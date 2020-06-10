@@ -83,11 +83,27 @@ export const addingData = (userName, email) => {
 };
 
 //CREANDO COLECCIÓN DOCUMENTOS EN LOS POST
-/*export const createPost = () => {
+export const createPost = (contentText) => {
   db.collection('post').add({
-
+    //name: userName,
+      content: contentText,
+    })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
   })
-}*/
+}
+
+//MOSTRAR POST
+export const showPost = (content) =>{
+db.collection("post").onSnapshot((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data().content}`);
+  });
+});
+}
 
 //FUNCIÓN INGRESAR CON GOOGLE
 export const logInGoogle = () => {
