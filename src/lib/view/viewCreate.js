@@ -6,8 +6,11 @@ export const viewCreate = () => {
 
             <div class="newPost" id="newPost">
                 <div class="title">
+                  <div class = "divClosePost">
                     <a href="#/feed" id="btnClosePost" class="btnClosePost"> <i class="fas fa-times"></i> </a> 
-                    <button id="share">Crear publicación</button>
+                    <p class="share">Crear publicación</p>
+                  </div>
+                    <button class="share">Compartir</button>
                      
                 </div>
                 <div class="text">
