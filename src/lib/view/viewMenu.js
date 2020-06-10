@@ -1,17 +1,16 @@
 export const showMenu = () => {
   const divMenu = document.createElement('div');
-  divMenu.innerHTML = `
-
-             
+  divMenu.innerHTML = `    
             <div id="menu">
               <a href="#/feed" id="start" >
-                <img src="http://imgfz.com/i/GPUk4f1.png" width="60%">
+                <i class="fas fa-home" id="iconHome">
+              </i>
               </a>
               <a href="#/create" id="create">
-                <img src="http://imgfz.com/i/x6904W7.png" width="60%">   
+                <i class="fas fa-plus-square" id="iconCreate"></i>  
               <a/>
               <a href="#/profile" id="profile" >
-                <img src="http://imgfz.com/i/druAwJ2.png" width="60%">
+                <i class="fas fa-user" id="iconProfile"></i> 
               </a>
             </div>
 
