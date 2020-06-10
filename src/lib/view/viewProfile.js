@@ -1,4 +1,5 @@
 import { showMenu } from './viewMenu.js';
+import {logoutGoogle} from '../firebase/firebase.js';
 
 export const viewProfile = () => {
     const divProfile = document.createElement('div');
@@ -6,7 +7,7 @@ export const viewProfile = () => {
   
     <header id="headerProfile">
         <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
-        <button id="logOut">Cerrar sesión</button>
+        <button href="#/home" id="logOut">Cerrar sesión</button>
     </header> 
     <div class="imageProfile">
         <img src="http://imgfz.com/i/TKBv2dp.png" width="180px">
@@ -27,5 +28,11 @@ export const viewProfile = () => {
     divProfile.setAttribute('id', 'containerProfile');
     const footer = divProfile.querySelector("#footerMenu");
     footer.appendChild(showMenu());
+
+    const btnLogout = divProfile.querySelector('#logOut');
+    btnLogout.addEventListener('click', () =>{
+        logoutGoogle()
+    });
+
     return divProfile;
 };
