@@ -8,7 +8,7 @@ export const viewFeed = () => {
             <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
         </header>          
         
-        <div class="containerPost" id="containerPost">
+        <div class="containerFeedBody" id="containerFeedBody">
                     
         </div>
         <footer id="footerMenu">
