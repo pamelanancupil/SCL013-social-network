@@ -8,7 +8,7 @@ import {
     validateloginUser
 } from '../index.js';
 import {
-    loginGoogle
+    logInGoogle
 } from '../firebase/firebase.js';
 
 export const viewLogin = () => {
@@ -62,7 +62,7 @@ export const viewLogin = () => {
 
     const btnGoogle = divLogin.querySelector('#google');
     btnGoogle.addEventListener('click', () =>{
-        loginGoogle()
+        logInGoogle();
     });
 
     return divLogin;
