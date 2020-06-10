@@ -14,41 +14,44 @@
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
-    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 #home {
     background: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 #containerTextYug {
-    /*background:rgba(115, 241, 255, 0.283);*/
     height: 65%;
-    padding: 10%;
+    width:100%;
     font-size: 1rem;
     font-weight: 300;
     line-height: 24px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+#textYug {
+    margin-top: 8px;
+    width: 70%;
 }
 
 #logo img {
-    width: 190px;
-    margin-bottom: 10px;
+    width: 11.9rem;
+    margin-bottom: 0.6rem;
 }
 
 #containerBtn {
-    /* background:rgba(255, 115, 234, 0.283);*/
     width: 100%;
     height: 35%;
-    margin-top: 30px;
+    margin-top: 1.9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,14 +59,14 @@
 
 .btns {
     background: linear-gradient(90deg, #F3A674 0%, #25394A 97.33%);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.249);
-    border-radius: 40px;
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.249);
+    border-radius: 2.5rem;
     color: rgba(255, 255, 255, 0.762);
-    width: 190px;
-    height: 48px;
-    font-size: 0.9rem;
+    width: 12.5rem;
+    height: 3rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    margin-top: 13px;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,20 +75,28 @@
     border: none;
 }
 
+#btnSignUp{
+    margin-top: 10px;
+}
+
+#btnLogin{
+    margin-top: 10px;
+}
+
 /*_______________________________________________________________*/
 /*REGISTER*/
-    .arrowBack {
-        margin: 0 0 0 20px;
-        font-weight: 700;
-        font-size: 2rem;
-        text-decoration: none;
-        display: flex;
-        align-self: flex-start; 
+.arrowBack {
+    margin: 0 0 0 1.25rem;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    display: flex;
+    align-self: flex-start; 
 }
 
 #logo2 img {
-    width: 80px;
-    margin: 0 30px 15px;
+    width: 5rem;
+    margin: 0 1.9rem 0.9rem;
 }
 
 #containerRegister {
@@ -107,7 +118,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
 }
 
 #form {
@@ -119,19 +129,19 @@
 #form input {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 40px;
-    width: 240px;
-    height: 48px;
-    margin: 12px;
+    width: 260px;
+    height: 50px;
+    margin: 10px;
     border: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .textInput {
-    padding: 20px;
+    padding-left: 30px;
 }
 
 ::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.646);
     font-weight: 300;
     font-style: italic;
 }
@@ -142,18 +152,13 @@
     font-size: 0.95rem;
 }
 
-
 #form p {
-    margin-top: 8px;
-}
-
-#textYug {
-    margin-top: 8px;
+    margin-top: 1px;
 }
 
 #logoG img {
     width: 70px;
-    margin: 15px;
+    margin: 10px;
 }
 
 .question {
@@ -176,7 +181,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 /*_______________________________________________________________*/
@@ -204,13 +208,12 @@ span {
     background: #25394A;
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
     align-items: center;
     flex: 1;
     width: 100%;
     height: 60px;
     bottom: 0;
-    justify-content: space-around;
+    justify-content: center;
     position: fixed;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -227,7 +230,10 @@ a {
     border: none;
     background: #25394A;
     margin: 0 28px;
+    font-size: 30px;
 }
+
+
 
 /*_______________________________________________________________*/
 /*CREATE*/
@@ -259,14 +265,18 @@ a {
     justify-content: space-around;
 }
 
+.divClosePost{
+    display: flex;
+    align-items: center;
+}
+
 .title p {
     color: #000000;
     font-weight: 400;
     font-size: 0.95rem;
-
 }
 
-#share {
+.share {
     border: none;
     color: #25394A;
     background: #FFFDFC;
@@ -282,6 +292,7 @@ a {
 .title .btnClosePost {
     background: #FFFDFC;
     border: none;
+    margin-right: 10px;
 }
 
 .text {
@@ -319,23 +330,23 @@ a {
 
 /*_______________________________________________________________*/
 /*FEED*/
+#headerFeed {
+    background: #FFFDFC;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    height: 110px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
 #containerFeed {
     background: #FFFDFC;
     display: flex;
     flex-flow: column nowrap;
     height: 640px;
     width: 100%;
-}
-
-#headerFeed {
-    background: #FFFDFC;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    height: 80px;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
 }
 
 /*_______________________________________________________________*/
@@ -351,7 +362,7 @@ a {
 #headerProfile {
     background: #FFFDFC;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    height: 80px;
+    height: 110px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -370,7 +381,7 @@ a {
 
 .imageProfile {
     display: flex;
-    margin-top: 100px;
+    margin-top: 170px;
     justify-content: center;
 }
 
@@ -417,9 +428,8 @@ a {
     }
 
     #home {
-        /* background: rgba(0, 0, 0, 0.3);*/
         width: 500px;
-        height: 750px;
+        height: 85%;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -427,25 +437,32 @@ a {
     }
 
     #containerTextYug {
-        /*background:rgba(115, 241, 255, 0.283);*/
+        font-size: 1.3rem;
+        line-height: 2.2rem;
         width: 75%;
         height: 65%;
         margin: 5% 15% 0;
-        padding: 10%;
+        padding: 7%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     #textYug {
-        /*background:rgba(255, 180, 115, 0.42);*/
         width: 100%;
     }
 
     #containerBtn {
         margin-top: 10px;
-
     }
+
+    .btns {
+        border-radius: 2.5rem;
+        width: 13.5rem;
+        height: 3.2rem;
+        font-size:1.1rem;
+    }
+    
     /*___________________________*/
     /*REGISTER*/
     #containerRegister {
@@ -463,6 +480,24 @@ a {
         border-radius: 10px;
     }
 
+    #form input {
+        width: 280px;
+        height: 53px;
+    }
+
+    /*__________________________________*/
+    #form {
+        width: 21.9rem;
+        height: auto;
+    }
+
+    .arrowBack {
+        font-size: 2.2rem;
+    }
+
+    #form p {
+        font-size: 1.1rem;
+    }
 
 
     /*___________________________*/
@@ -478,13 +513,12 @@ a {
 
     .containerForm {
         width: 500px;
-        height: 750px;
+        height: 85%;
         border-radius: 10px;
     }
 
     /*___________________________*/
     /*MENÚ*/
-
     #headerMenu {
         background: #FFFDFC;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
@@ -500,203 +534,11 @@ a {
         width: 70px;
     }
 
-    #menu {
-        background: #25394A;
-        display: flex;
-        flex-direction: column;
-        align-self: flex-end;
-        align-items: center;
-        flex: 1;
-        width: 13%;
-        height: 100vh;
-    }
-
-    #create,
-    #profile,
-    #start {
-        border: none;
-        background: rgb(255, 159, 159);
-        background: url("https://i.ibb.co/4NQ5JQK/menu-home.png");
-    }
-
-    .title {
-        padding-right: 12%;
-    }
-
-    .newPost {
-        padding-right: 12%;
-    }
-
-    #writeText {
-        margin-top: 150px;
-        width: 75%;
-    }
-
-}
-
-/*___________MEDIA PANTALLA PC_______________*/
-@media (min-width: 1280px) {
-    #containerHomeFlex {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
-        background-repeat: no-repeat;
-        background-position: top center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #home {
-        width: 30%;
-        height: 80%;
-        border-radius: 10px;
-    }
-
-    #containerTextYug {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        font-size: 1.2rem;
-        line-height: 36px;
-    }
-
-    #logo img {
-        width: 170px;
-        margin-bottom: 5px;
-    }
-    #textYug {
-        margin-top: 20px;
-        width: 280px;
-        width: 80%;
-
-    }
-
-    #containerBtn {
-        width: 100%;
-        height: 35%;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .btns {
-        width: 210px;
-        height: 58px;
-        font-size: 1.1rem;
-        margin-bottom: 13px;
-        cursor: pointer;
-    }
-    /*___________________________*/
-    /*REGISTER*/
-    #containerRegister {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
-        background-position: top center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .containerForm {
-        /*cuadro negro*/
-        width: 30%;
-        height: 80%;
-        border-radius: 10px;
-    }
-
-    #form {
-        width: 350px;
-        height: auto;
-    }
-
-    .arrowBack {
-        margin: 25px 0 0 25px;
-        font-size: 3rem;
-        display: flex;
-        align-self: start;
-    }
-
-    #logo2 img {
-        width: 90px;
-        margin-bottom: 10px;
-    }
-
-    #form input {
-        width: 270px;
-        height: 50px;
-        margin: 0 0 23px;
-        font-size: 1rem;
-    }
-
-    .textInput {
-        padding-left: 30px;
-    }
-
-    #form p {
-        font-size: 1.2rem;
-        margin-top: 0;
-    }
-
-    #btnSignUp {
-        width: 210px;
-        height: 58px;
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-        cursor: pointer;
-    }
-
-    #logoG img {
-        width: 70px;
-        margin: 15px;
-    }
-
-    .question {
-        font-size: 1.2rem;
-        margin: 0;
-        line-height: 24px;
-    }
-
-    /*___________________________*/
-    /*LOGIN*/
-    #containerLogin {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
-        background-position: top center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .containerForm {
-        width: 30%;
-        height: 80%;
-        border-radius: 10px;
-    }
-
-    #btnLogin {
-        width: 210px;
-        height: 58px;
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-        cursor: pointer;
-    }
-
-    
-
-    /*___________________________*/
-    /*MENU*/
-    #containerMenu {
-        background: #FFFDFC;
-        display: flex;
-        flex-flow: column nowrap;
-        height: 100vh;
-        width: 100%;
-    }
 
     #headerFeed {
         background: #FFFDFC;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-        height: 80px;
+        box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.25);
+        height: 110px;
         width: 100%;
         display: flex;
         position: fixed;
@@ -705,76 +547,172 @@ a {
     }
 
     #menu {
-        background: #FFFDFC;
-        justify-content: flex-start;
-        flex: 0;
-        width: 10%;
-        height: 85%;
-        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        background: rgb(255, 255, 255);
+        width: 25%;
+        height: 30%;
+        bottom: 0;
+        justify-content:center;
+        align-self: flex-end;
+        position: fixed;
+        padding-right: 3%;
+       
     }
 
     #create,
     #profile,
     #start {
         border: none;
-        background: #25394A;
-        border-radius: 500px;
-        padding: 20px 10px;
-        margin: 15px;
+        background: rgb(255, 255, 255);
+        margin:0px 1rem 0px 1rem;
+        width: 100px;
+    }
+
+    #iconHome,
+    #iconProfile,
+    #iconCreate
+    {
+        color:#25394A;
+        font-size: 40px;
+    }
+
+    .title {
+        padding-right: 12%;
+    }
+
+    .newPost {
+        padding-right: 12%;
+        height:110px;
+    }
+
+    #writeText {
+        margin-top: 150px;
+        width: 75%;
+    }
+
+     /*___________________________*/
+    /*FEED*/
+    #headerFeed {
+        background: #FFFDFC;
+        box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.25);
+        height: 110px;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #containerFeed{
+        height: 100vh;
+        background: rgb(255, 170, 170);
+        
+        /*fondo de color*/
+    }
+
+    #containerPost{
+        width:70%;
+        height: 100vh;
+       background: rgb(255, 255, 255);
+       
+       /*contenedor publicación tiene que ser blanco*/
     }
 
     /*___________________________*/
     /*CREATE*/
     #containerCreate {
         height: 100vh;
+        background: rgb(255, 255, 255);
+        /*fondo color*/
+    }
+
+    #newPost {
+        background: rgb(255, 255, 255);
+        position: fixed;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+        width: 100%;
+        /*contenedor publicación deberia ser blanco*/
     }
 
     .title {
         justify-content: space-between;
+        height:110px;
     }
 
     .title .btnClosePost {
-        margin-left: 25px;
+        margin-left: 4rem;
+        font-size: 1.2rem;
     }
 
-    #share {
-        border: none;
-        color: #25394A;
-        background: #FFFDFC;
-        font-weight: 600;
-        font-size: 0.95rem;
+    .share {
+        font-size: 1.2rem;
     }
 
     #writeText {
-        width: 50%;
-        align-self: flex-start;
-        margin-left: 70px;
+        width: 70%;
+        margin-left: 4.4rem;
     }
 
-    .text .btnImage {
-        align-self: flex-start;
-        margin-left: 600px;
+    .text{
+        width: 75%;
+        height: 500px;
     }
 
     /*___________________________*/
     /*PROFILE*/
+    #headerProfile {
+        height: 110px;
+    }
+
     #containerProfile {
+        background: rgb(255, 255, 255);
         height: 100vh;
+        /*height: 120px;*/
         display: flex;
         flex-flow: column nowrap;
         align-content: center;
+        /*fondo color*/
     }
 
+    #containerProfile2{
+        background: rgb(255, 255, 255);
+        height: 100vh;
+        width:100%;
+        /*contenedor info perfil deberia ser blanco*/
+    }
+
+    #logOut{
+        font-size: 1.2rem;
+    }
+
+    
+
+    .imageProfile {
+            display: flex;
+            margin-top: 170px;
+            justify-content: center;
+        
+    }
     .infoProfile {
         margin-top: 15px;
         width: 600px;
     }
 
-    .infoProfile .description {
-        margin-top: 40px;
-        width: 600px;
-    }
+   
     #containerMenu {
         height: 85%;
     }
+
+}
+
+/*___________MEDIA PANTALLA PC_______________*/
+@media (min-width: 1400px) {
+    
+
+   
+
+   
 }
