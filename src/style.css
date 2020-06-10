@@ -156,6 +156,11 @@
     margin-top: 1px;
 }
 
+#google {
+    background: none;
+    border: none;
+}
+
 #logoG img {
     width: 70px;
     margin: 10px;
@@ -233,8 +238,6 @@ a {
     font-size: 30px;
 }
 
-
-
 /*_______________________________________________________________*/
 /*CREATE*/
 #containerCreate {
@@ -245,7 +248,7 @@ a {
     width: 100%;
 }
 
-.newPost {
+.containerCreateBody {
     background: #FFFDFC;
     position: fixed;
     display: flex;
@@ -499,7 +502,6 @@ a {
         font-size: 1.1rem;
     }
 
-
     /*___________________________*/
     /*LOGIN*/
     #containerLogin {
@@ -533,7 +535,6 @@ a {
     #headerMenu img {
         width: 70px;
     }
-
 
     #headerFeed {
         background: #FFFDFC;
@@ -581,7 +582,7 @@ a {
         padding-right: 12%;
     }
 
-    .newPost {
+    .containerCreateBody {
         padding-right: 12%;
         height:110px;
     }
@@ -607,15 +608,13 @@ a {
     #containerFeed{
         height: 100vh;
         background: rgb(255, 170, 170);
-        
         /*fondo de color*/
     }
 
-    #containerPost{
+    #containerFeedBody{
         width:70%;
         height: 100vh;
        background: rgb(255, 255, 255);
-       
        /*contenedor publicación tiene que ser blanco*/
     }
 
@@ -627,7 +626,7 @@ a {
         /*fondo color*/
     }
 
-    #newPost {
+    #containerCreateBody {
         background: rgb(255, 255, 255);
         position: fixed;
         display: flex;
@@ -677,7 +676,7 @@ a {
         /*fondo color*/
     }
 
-    #containerProfile2{
+    #containerProfileBody{
         background: rgb(255, 255, 255);
         height: 100vh;
         width:100%;
@@ -688,20 +687,17 @@ a {
         font-size: 1.2rem;
     }
 
-    
-
     .imageProfile {
             display: flex;
             margin-top: 170px;
             justify-content: center;
-        
     }
+    
     .infoProfile {
         margin-top: 15px;
         width: 600px;
     }
 
-   
     #containerMenu {
         height: 85%;
     }

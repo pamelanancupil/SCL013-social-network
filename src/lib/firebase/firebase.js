@@ -31,7 +31,6 @@ export const authState = () => {
       if (emailVerified === true) {
         alert('Usuario inicio sesión correctamente');
         window.location.hash = '#/feed';
-        //como hacemos para pasar a la pagina de publicaciones
       } else {
         alert('Por favor revisa tu correo y verifica tu cuenta');
       }
@@ -70,7 +69,7 @@ export const loginUser = (email, password) => {
 };
 
 //CREANDO COLECCIONES Y DOCUMENTOS DE DATA
-/*export const addingData = (userName, email) => {
+export const addingData = (userName, email) => {
   db.collection('users').add({
       name: userName,
       email: email
@@ -81,10 +80,17 @@ export const loginUser = (email, password) => {
     .catch((error) => {
       console.error('Error adding document: ', error);
     });
-};*/
+};
+
+//CREANDO COLECCIÓN DOCUMENTOS EN LOS POST
+/*export const createPost = () => {
+  db.collection('post').add({
+
+  })
+}*/
 
 //FUNCIÓN INGRESAR CON GOOGLE
-export const loginGoogle = () => {
+export const logInGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
 
   firebase.auth().signInWithPopup(provider)
@@ -109,8 +115,8 @@ export const loginGoogle = () => {
 };
 
 
-//FUNCIÍN CERRAR SESIÓN
-export const logoutGoogle = () => {
+//FUNCIÓN CERRAR SESIÓN
+export const logOut = () => {
 firebase.auth().signOut()
 .then(function() {
   // Sign-out successful.

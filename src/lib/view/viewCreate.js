@@ -4,7 +4,7 @@ export const viewCreate = () => {
   const divCreate = document.createElement('div');
   divCreate.innerHTML = `
 
-            <div class="newPost" id="newPost">
+            <div class="containerCreateBody" id="containerCreateBody">
                 <div class="title">
                   <div class = "divClosePost">
                     <a href="#/feed" id="btnClosePost" class="btnClosePost"> <i class="fas fa-times"></i> </a> 
@@ -23,7 +23,7 @@ export const viewCreate = () => {
       `;
 
   divCreate.setAttribute('id', 'containerCreate');
-  const footer = divCreate.querySelector("#footerMenu");
+  const footer = divCreate.querySelector('#footerMenu');
     footer.appendChild(showMenu());
   return divCreate;
 };

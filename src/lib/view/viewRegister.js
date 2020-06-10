@@ -8,7 +8,7 @@ import {
 } from '../index.js'
 //import { authState } from '../index.js';
 import {
-    loginGoogle
+    logInGoogle
 } from '../firebase/firebase.js';
 
 export const viewRegister = () => {
@@ -63,7 +63,7 @@ export const viewRegister = () => {
 
     const btnG = divRegister.querySelector('#google');
     btnG.addEventListener('click', () =>{
-        loginGoogle()
+        logInGoogle();
     });
 
     return divRegister;
