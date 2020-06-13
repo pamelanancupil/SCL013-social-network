@@ -97,13 +97,20 @@ export const createPost = (contentText) => {
 }
 
 //MOSTRAR POST
-export const showPost = (content) =>{
-db.collection("post").onSnapshot((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data().content}`);
-  });
-});
-}
+/*export const showPost = (viewPost) => {
+  db.collection("post").onSnapshot((querySnapshot) => {
+    let post = [];
+    querySnapshot.forEach((doc) => {
+      post.push(doc.data().content);
+    });
+      //console.log(`${doc.id} => ${doc.data().content}`);
+      console.log('contenido: ', post.join(','));
+      viewPost(post);
+    });
+    
+    //console.log(post);
+  };*/
+  
 
 //FUNCIÓN INGRESAR CON GOOGLE
 export const logInGoogle = () => {
