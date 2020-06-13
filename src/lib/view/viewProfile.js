@@ -4,13 +4,13 @@ import {logOut} from '../firebase/firebase.js';
 export const viewProfile = () => {
     const divProfile = document.createElement('div');
     divProfile.innerHTML = `
-    <header id="headerProfile">
+    <header id="headerProfile" class="headerFCP">
         <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
         <button href="#/home" id="logOut">Cerrar sesión</button>
     </header> 
     <div id="containerProfileBody">
         <div class="imageProfile">
-            <img src="http://imgfz.com/i/TKBv2dp.png" width="180px">
+            <img src="https://i.ibb.co/4J9JFF0/perfil.png" width="180px">
         </div>
         <div class="infoProfile" id="infoProfile">
             <h3>Nombre de usuario</h3>

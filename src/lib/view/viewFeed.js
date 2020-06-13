@@ -4,7 +4,7 @@ export const viewFeed = () => {
     const divFeed = document.createElement('div');
     divFeed.innerHTML = `
     
-        <header id="headerFeed">
+        <header id="headerFeed" class="headerFCP">
             <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
         </header>          
         
