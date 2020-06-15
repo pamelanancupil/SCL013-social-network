@@ -1,6 +1,6 @@
 import { showMenu } from './viewMenu.js';
 import { createPost } from '../firebase/firebasePost.js';
-import { db } from '../firebase/firebaseAuth.js';
+//import { db } from '../firebase/firebaseAuth.js';
 //import { showPost } from '../firebase/firebasePost.js';
 
 
@@ -17,7 +17,7 @@ export const viewCreate = () => {
                     <textarea id="writeText" placeholder="Escribe tu publicación"></textarea>
                     <button id="btnImage" class="btnImage"> <i class="far fa-images"></i> </button>
                     </div>
-                    <div id="postFeed"></div>
+                    
                 
             </div>
             
@@ -35,17 +35,9 @@ export const viewCreate = () => {
     const contentText = divCreate.querySelector('#writeText').value;
     //const showingPost= divCreate.querySelector('#showingPost');
       createPost(contentText);
-      const showingPost = divCreate.querySelector('#postFeed');
-      db.collection("post").onSnapshot((querySnapshot) => {
-      showingPost.innerHTML = '';
-        querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} => ${doc.data().content}`);
-          showingPost.innerHTML += `
-          <p id='printPost'>${doc.data().content}</p>
-          <h5 id='date'>${doc.data().date}</h5>`; 
-          divCreate.querySelector('#writeText').value='';
-    });
-  });
+      divCreate.querySelector('#writeText').value = '';
+      window.location.hash = '#/feed';
+      
 });
 return divCreate;
 };

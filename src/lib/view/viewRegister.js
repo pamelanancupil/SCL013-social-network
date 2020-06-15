@@ -1,15 +1,11 @@
 import {
-    registerUser,
-    db
-
+    registerUser, logInGoogle, addingUserData
 } from '../firebase/firebaseAuth.js';
 import {
     validateloginUser
 } from '../index.js'
 //import { authState } from '../index.js';
-import {
-    logInGoogle
-} from '../firebase/firebaseAuth.js';
+
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
@@ -56,8 +52,7 @@ export const viewRegister = () => {
             errorM.innerHTML = validateloginUser(email, password, userName);
         } else {
             registerUser(email, password);
-            //window.location.hash = '#/login';
-            //addingData(userName,email);
+            addingUserData(userName,email, displayName, photoURL, uidUser);
         }
     });
 
