@@ -2,21 +2,25 @@ import { db, getCurrentUser } from '../firebase/firebaseAuth.js';
 
 //CREANDO COLECCIÓN DOCUMENTOS EN LOS POST
 const datePost = new Date();
-const user = getCurrentUser();
+const actualUser = getCurrentUser();
   
 export const createPost = (contentText) => {
+    
     db.collection('post').add({
       //name: userName,
+        //uid: actualUser.uid,
+        //authorName: actualUser.name,
+        //photo: actualUser.photoURL,
         date: datePost.toLocaleString(),
         content: contentText
-         
-      })
+    })
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
     })
+  
   }
   
   //MOSTRAR POST
