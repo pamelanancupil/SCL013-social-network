@@ -2,14 +2,14 @@ import {
     registerUser,
     db
 
-} from '../firebase/firebase.js';
+} from '../firebase/firebaseAuth.js';
 import {
     validateloginUser
 } from '../index.js'
 //import { authState } from '../index.js';
 import {
     logInGoogle
-} from '../firebase/firebase.js';
+} from '../firebase/firebaseAuth.js';
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
