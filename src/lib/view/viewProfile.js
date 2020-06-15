@@ -1,5 +1,5 @@
 import { showMenu } from './viewMenu.js';
-import {logOut} from '../firebase/firebase.js';
+import {logOut} from '../firebase/firebaseAuth.js';
 
 export const viewProfile = () => {
     const divProfile = document.createElement('div');

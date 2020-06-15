@@ -1,7 +1,7 @@
 import { showMenu } from './viewMenu.js';
-import { createPost } from '../firebase/firebase.js';
-//import { showPost } from '../firebase/firebase.js';
-import { db } from '../firebase/firebase.js';
+import { createPost } from '../firebase/firebasePost.js';
+import { db } from '../firebase/firebaseAuth.js';
+//import { showPost } from '../firebase/firebasePost.js';
 
 
 export const viewCreate = () => {
@@ -40,7 +40,9 @@ export const viewCreate = () => {
       showingPost.innerHTML = '';
         querySnapshot.forEach((doc) => {
           console.log(`${doc.id} => ${doc.data().content}`);
-          showingPost.innerHTML += `<p id='printPost'>${doc.data().content}</p>`; 
+          showingPost.innerHTML += `
+          <p id='printPost'>${doc.data().content}</p>
+          <h5 id='date'>${doc.data().date}</h5>`; 
           divCreate.querySelector('#writeText').value='';
     });
   });

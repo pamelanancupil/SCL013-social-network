@@ -1,15 +1,15 @@
 import {
     loginUser
-} from '../firebase/firebase.js';
+} from '../firebase/firebaseAuth.js';
 import {
     authState
-} from '../firebase/firebase.js';
+} from '../firebase/firebaseAuth.js';
 import {
     validateloginUser
 } from '../index.js';
 import {
     logInGoogle
-} from '../firebase/firebase.js';
+} from '../firebase/firebaseAuth.js';
 
 export const viewLogin = () => {
     const divLogin = document.createElement('div');

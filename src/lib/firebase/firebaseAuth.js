@@ -68,48 +68,7 @@ export const loginUser = (email, password) => {
     });
 };
 
-//CREANDO COLECCIONES Y DOCUMENTOS DE DATA
-export const addingData = (userName, email) => {
-  db.collection('users').add({
-      name: userName,
-      email: email
-    })
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-    });
-};
 
-//CREANDO COLECCIÓN DOCUMENTOS EN LOS POST
-export const createPost = (contentText) => {
-  db.collection('post').add({
-    //name: userName,
-      content: contentText,
-    })
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-  })
-}
-
-//MOSTRAR POST
-/*export const showPost = (viewPost) => {
-  db.collection("post").onSnapshot((querySnapshot) => {
-    let post = [];
-    querySnapshot.forEach((doc) => {
-      post.push(doc.data().content);
-    });
-      //console.log(`${doc.id} => ${doc.data().content}`);
-      console.log('contenido: ', post.join(','));
-      viewPost(post);
-    });
-    
-    //console.log(post);
-  };*/
   
 
 //FUNCIÓN INGRESAR CON GOOGLE
@@ -149,3 +108,17 @@ firebase.auth().signOut()
   // An error happened.
 });
 }
+
+//CREANDO COLECCIONES Y DOCUMENTOS DE DATA
+export const addingData = (userName, email) => {
+  db.collection('users').add({
+      name: userName,
+      email: email
+    })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
+};
