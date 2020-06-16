@@ -1,6 +1,5 @@
 import {
-    registerUser, logInGoogle, addingUserData
-} from '../firebase/firebaseAuth.js';
+    registerUser, logInGoogle } from '../firebase/firebaseAuth.js';
 import {
     validateloginUser
 } from '../index.js'
@@ -51,8 +50,8 @@ export const viewRegister = () => {
         if (email === '' || password === '' || email === null || password === null || password.length <= 6) {
             errorM.innerHTML = validateloginUser(email, password, userName);
         } else {
-            registerUser(email, password);
-            addingUserData(userName,email);
+            registerUser(email, password, userName);
+            //addingUserData(userName,email);
         }
     });
 

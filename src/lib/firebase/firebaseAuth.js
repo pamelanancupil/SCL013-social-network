@@ -1,10 +1,18 @@
 export const db = firebase.firestore();
 
 //REGISTRARSE CON CORREO Y CONTRASEÑA -> USUARIO NUEVO
-export const registerUser = (email, password) => {
+export const registerUser = (email, password, userName) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
       verificationEmail();
+    })
+    .then(() => {
+      let user = getCurrentUser();
+      return db.collection('users').doc(user.uid).set({
+        name: userName,
+        email: email,
+        userId: user.uid,
+      })
     })
     .catch((error) => {
       // Handle Errors here.
