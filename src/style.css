@@ -258,14 +258,18 @@ a {
     align-items: center;
     scroll-behavior: smooth;
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 #containerFeedBody{
     background: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
     width: 90%;
-    height: 100vh;
+    height: auto;
+    padding-top:130px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 /*_______________________________________________________________*/
@@ -369,16 +373,21 @@ a {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.447);
     border-radius: 20px;
     height: auto;
-    width: 85%;
-    margin-top: 130px;
-    margin-bottom: 50px;
+    width: 300px;
+    margin-top: 30px;
     padding: 20px;
 }
 
-#printPost{
+#namePost{
     color: rgb(0, 0, 0);
-    font-size: larger;
+    font-size: 19px;
+}
 
+#contentPost{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    width: 280px;
+    padding: 10px 10px 10px 0;
 }
 
 #date{

@@ -27,15 +27,15 @@ export const viewFeed = () => {
     footer.appendChild(showMenu());
 
     const showingPost = divFeed.querySelector('#containerPost');
-    db.collection("post").onSnapshot((querySnapshot) => {
+    db.collection("post").orderBy('date','asc').onSnapshot((querySnapshot) => {
         showingPost.innerHTML = '';
           querySnapshot.forEach((doc) => {
             console.log(`${doc.id} => ${doc.data().content}`);
             showingPost.innerHTML += `
             <div id = 'postFeed'>
-            <h2 id='printPost'>${user.name}</h2>
-            <p id='printPost'>${doc.data().content}</p>
-            <h5 id='date'>${doc.data().date}</h5>
+            <h2 id='namePost'>${user.name}</h2>
+            <p id='contentPost'>${doc.data().content}</p>
+            <h6 id='date'>${doc.data().date}</h6>
             </div>
             `; 
            

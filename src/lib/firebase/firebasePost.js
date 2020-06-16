@@ -7,7 +7,7 @@ const actualUser = getCurrentUser();
 export const createPost = (contentText) => {
     
     db.collection('post').add({
-      //name: userName,
+       //name: userName,
         //uid: actualUser.uid,
         //authorName: actualUser.name,
         //photo: actualUser.photoURL,

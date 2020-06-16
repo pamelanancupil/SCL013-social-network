@@ -109,14 +109,14 @@ export const logOut = () => {
 };
 
 //CREANDO COLECCIONES Y DOCUMENTOS DE DATA
-export const addingUserData = (userName, email, displayName, photoURL, uidUser) => {
+export const addingUserData = (userName, email) => {
   const actualUser = getCurrentUser();
   db.collection('users').add({
       name: userName,
       email: email,
-      displayName: actualUser.displayName,
+      /*displayName: actualUser.displayName,
       photoURL: actualUser.photoURL,
-      uidUser: actualUser.uid
+      uidUser: actualUser.uid*/
     })
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);
