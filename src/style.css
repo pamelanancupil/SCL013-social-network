@@ -368,7 +368,7 @@ a {
     margin: 25px;
 }
 
-#postFeed{
+.postFeed{
     background: rgb(255, 255, 255);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.447);
     border-radius: 20px;
@@ -378,19 +378,19 @@ a {
     padding: 20px;
 }
 
-#namePost{
+.namePost{
     color: rgb(0, 0, 0);
     font-size: 19px;
 }
 
-#contentPost{
+.contentPost{
     color: rgb(0, 0, 0);
     font-size: 17px;
     width: 280px;
     padding: 10px 10px 10px 0;
 }
 
-#date{
+.date{
     color:black;
     font-weight: 300;
 }

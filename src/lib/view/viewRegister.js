@@ -52,7 +52,7 @@ export const viewRegister = () => {
             errorM.innerHTML = validateloginUser(email, password, userName);
         } else {
             registerUser(email, password);
-            addingUserData(userName,email, displayName, photoURL, uidUser);
+            addingUserData(userName,email);
         }
     });
 
