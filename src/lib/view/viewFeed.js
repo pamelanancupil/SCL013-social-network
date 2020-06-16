@@ -14,7 +14,7 @@ export const viewFeed = () => {
         </header>          
         
         <div class="containerFeedBody" id="containerFeedBody">
-        <div id="postFeed"></div>
+        <div id="containerPost"></div>
                     
         </div>
         <footer id="footerMenu">
@@ -26,14 +26,18 @@ export const viewFeed = () => {
     const footer = divFeed.querySelector("#footerMenu");
     footer.appendChild(showMenu());
 
-    const showingPost = divFeed.querySelector('#postFeed');
+    const showingPost = divFeed.querySelector('#containerPost');
     db.collection("post").onSnapshot((querySnapshot) => {
         showingPost.innerHTML = '';
           querySnapshot.forEach((doc) => {
             console.log(`${doc.id} => ${doc.data().content}`);
             showingPost.innerHTML += `
+            <div id = 'postFeed'>
+            <h2 id='printPost'>${user.name}</h2>
             <p id='printPost'>${doc.data().content}</p>
-            <h5 id='date'>${doc.data().date}</h5>`; 
+            <h5 id='date'>${doc.data().date}</h5>
+            </div>
+            `; 
            
       });
     });
