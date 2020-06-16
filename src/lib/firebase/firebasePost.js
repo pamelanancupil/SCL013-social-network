@@ -1,14 +1,14 @@
-import { db, getCurrentUser } from '../firebase/firebaseAuth.js';
+import { db } from '../firebase/firebaseAuth.js';
 
 //CREANDO COLECCIÓN DOCUMENTOS EN LOS POST
 const datePost = new Date();
-const actualUser = getCurrentUser();
+//const actualUser = getCurrentUser();
   
-export const createPost = (contentText) => {
-    
+export const createPost = (contentText, user) => {
+    console.log(user);
     db.collection('post').add({
-       //name: userName,
-        //uid: actualUser.uid,
+       name: user.displayName,
+        userId: user.uid,
         //authorName: actualUser.name,
         //photo: actualUser.photoURL,
         date: datePost.toLocaleString(),

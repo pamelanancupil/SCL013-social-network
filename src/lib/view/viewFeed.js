@@ -33,7 +33,7 @@ export const viewFeed = () => {
             console.log(`${doc.id} => ${doc.data().content}`);
             showingPost.innerHTML += `
             <div class = 'postFeed'>
-            <h2 class='namePost'>${user.name}</h2>
+            <h2 class='namePost'>${doc.data().name}</h2>
             <p class='contentPost'>${doc.data().content}</p>
             <h6 class='date'>${doc.data().date}</h6>
             </div>

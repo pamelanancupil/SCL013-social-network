@@ -1,5 +1,6 @@
 import { showMenu } from './viewMenu.js';
 import { createPost } from '../firebase/firebasePost.js';
+import { getCurrentUser }from '../firebase/firebaseAuth.js';
 //import { db } from '../firebase/firebaseAuth.js';
 //import { showPost } from '../firebase/firebasePost.js';
 
@@ -34,7 +35,7 @@ export const viewCreate = () => {
       event.preventDefault();
     const contentText = divCreate.querySelector('#writeText').value;
     //const showingPost= divCreate.querySelector('#showingPost');
-      createPost(contentText);
+      createPost(contentText, getCurrentUser());
       divCreate.querySelector('#writeText').value = '';
       window.location.hash = '#/feed';
       
