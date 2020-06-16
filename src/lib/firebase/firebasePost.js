@@ -7,8 +7,9 @@ const datePost = new Date();
 export const createPost = (contentText, user) => {
     console.log(user);
     db.collection('post').add({
-       name: user.displayName,
+        name: user.displayName,
         userId: user.uid,
+        photoURL: user.photoURL,
         //authorName: actualUser.name,
         //photo: actualUser.photoURL,
         date: datePost.toLocaleString(),
