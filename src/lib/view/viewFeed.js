@@ -48,12 +48,12 @@ export const viewFeed = () => {
             </div>
             <div class = 'contentIconsPost'>
             <div class ='contentLike'>
-            <a class = 'iconLike'><i class="icon-like fas fa-spa"></i></a>
+            <button class = 'iconLike'><i class="icon-like fas fa-spa"></i></button>
             <h6 class='date'>${doc.data().date}</h6>
             </div>
             <div class ='editAndDelete'>
-            <a class = 'iconEdit'><i class="icon-edit fas fa-pen"></i></a>
-            <a class = 'iconDelete'><i class="icon-delete fas fa-trash-alt"></i></a>
+            <button class = 'iconEdit'><i class="icon-edit fas fa-pen"></i></button>
+            <button class = 'iconDelete'><i class="icon-delete fas fa-trash-alt"></i></button>
             </div>
             
             </div>
