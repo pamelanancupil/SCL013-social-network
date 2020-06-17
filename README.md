@@ -39,59 +39,53 @@ En la actualidad, con la situación que se vive a nivel mundial, los usuarios ne
 
 #### 2.3. Historias de Usuario
 
-**Historia 1**
-“**Yo** como usuario interesado en yoga **quiero** registrarme en YUG con un correo electrónico y contraseña **para** pertenecer a la Red Social.”
+##### Historia 1
+“Yo como usuario interesado en yoga **quiero** registrarme en YUG con un correo electrónico y contraseña **para** pertenecer a la Red Social.”
 
 **Criterios de aceptación:**
 El usuario puede registrarse usando cuenta de correo electrónico y contraseña válidos. Recibe un correo de confirmación en el que debe hacer click para activar su cuenta, de lo contrario no puede ingresar.
 
-**Historia 2**
+##### Historia 2
 “Yo como usuario de YUG **quiero** iniciar sesión **para** ingresar a la página.”
 
 **Criterios de aceptación:**
 El usuario, ya registrado, puede iniciar sesión mediante un correo electrónico y contraseña, dirigiendolo al “muro”.
 
-**Historia 3**
+##### Historia 3
+“Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
+
+**Criterios de aceptación:** 
+En el home de la aplicación el usuario puede registrarse haciendo click en el logo de Google, dirigiendolo al “muro". 
+
+##### Historia 4
 “Yo como usuario de YUG **quiero** crear y publicar contenido **para** aportar a la comunidad.”
 
 **Criterios de aceptación:**
 A través del menú el usuario puede crear y publicar contenido que se subirá al “muro” de la aplicación.
 
-**Historia 4**
+##### Historia 5
 “Yo como usuario de YUG **quiero** editar el contenido que publique en la página **para** poder confirmar lo publicado.”
 
 **Criterios de aceptación:** 
 El usuario mediante un botón puede acceder a editar la publicación, para volver a publicarla.
 
-**Historia 5**
+##### Historia 6
 “Yo como usuario de YUG **quiero** un botón de eliminar en las publicaciones **para** poder borrar contenido que divulgue.”
 
 **Criterios de aceptación:**
 El usuario mediante el botón de editar contenido puede optar por eliminar su publicación y guardar los cambios.
 
-**Historia 6**
-“Yo como usuario de YUG **quiero** leer publicaciones de otros miembros **para** descubrir información interesante.”
-
-**Criterios de aceptación:**
-En el menú el usuario puede acceder a Inicio donde estarán todas las publicaciones.
-
-**Historia 7**
+##### Historia 7
 “Yo como usuario de YUG **quiero** un botón de dar y quitar “like” en una publicación, que los contabilice en tiempo real, **para** demostrar que es un buen contenido.”
 
 **Criterios de aceptación:**
 En la parte inferior de cada publicación se encuentra un icono de una flor de loto el cual el usuario puede hacer click para sumar un “like” y apretarlo nuevamente para quitar el “like”, los cuales se contabilizan en tiempo real.
 
-**Historia 8**
-“Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
+##### Historia 8
+“Yo como usuario de YUG **quiero** tener acceso a mi perfil de Usuario **para** editar mi información.”
 
-**Criterios de aceptación:** 
-En el home de la aplicación el usuario puede registrarse haciendo click en el logo de Google. Recibe un correo de confirmación en el que debe hacer click para activar su cuenta, de lo contrario no puede ingresar.
-
-**Historia 9**
-“Yo como usuario de YUG **quiero** registrarme con Google en la app **para** ingresar a la Red Social.”
-
-**Criterios de aceptación:** 
-En el home de la aplicación el usuario puede iniciar sesión haciendo click en el logo de Google, dirigiendolo al “muro”.
+**Criterios de aceptación:**
+El usuario puede acceder a su perfil mediante el menú, en el que hay un icono editar donde puede modificar su información.
 
 
 ## 3. Diseño de la Interfaz de Usuario
