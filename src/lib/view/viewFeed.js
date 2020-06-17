@@ -35,6 +35,8 @@ export const viewFeed = () => {
 
     readPost();
 
+    
+
     /*const showingPost = divFeed.querySelector('.containerPost');
     db.collection("post").orderBy('date', 'desc').onSnapshot((querySnapshot) => {
       showingPost.innerHTML = '';
@@ -75,3 +77,4 @@ export const viewFeed = () => {
   }
   return divFeed;
 };
+
