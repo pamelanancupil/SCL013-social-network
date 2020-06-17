@@ -6,6 +6,8 @@ import {
   getCurrentUser
 } from '../firebase/firebaseAuth.js';
 
+import { readPost } from '../firebase/firebasePost.js';
+
 export const viewFeed = () => {
   const divFeed = document.createElement('div');
   let user = getCurrentUser();
@@ -31,7 +33,9 @@ export const viewFeed = () => {
     const footer = divFeed.querySelector("#footerMenu");
     footer.appendChild(showMenu());
 
-    const showingPost = divFeed.querySelector('.containerPost');
+    readPost();
+
+    /*const showingPost = divFeed.querySelector('.containerPost');
     db.collection("post").orderBy('date', 'desc').onSnapshot((querySnapshot) => {
       showingPost.innerHTML = '';
       querySnapshot.forEach((doc) => {
@@ -64,7 +68,7 @@ export const viewFeed = () => {
         console.log(doc.data().date);
 
       });
-    });
+    });*/
     //return divFeed;
   } else {
     window.location.hash = '#/home';

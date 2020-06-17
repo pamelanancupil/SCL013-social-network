@@ -1,5 +1,5 @@
 import {
-    registerUser, logInGoogle } from '../firebase/firebaseAuth.js';
+    registerUser, logInGoogle, updateUserProfile } from '../firebase/firebaseAuth.js';
 import {
     validateloginUser
 } from '../index.js'
@@ -50,7 +50,7 @@ export const viewRegister = () => {
         if (email === '' || password === '' || email === null || password === null || password.length <= 6) {
             errorM.innerHTML = validateloginUser(email, password, userName);
         } else {
-            registerUser(email, password, userName);
+            registerUser(email, password, userName, onSuccess, onError);
             //addingUserData(userName,email);
         }
     });
@@ -63,6 +63,18 @@ export const viewRegister = () => {
     return divRegister;
 };
 
+const onSuccess = (result) => {
+    const userName = document.getElementById('name').value;
+    updateUserProfile(userName, '', '', ()=>{}, ()=>{})
+    window.location.hash = '#/login';
+    console.log(result.user);
+};
+
+const onError = (error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+}
 
 
 
@@ -70,5 +82,3 @@ export const viewRegister = () => {
 
 
 
-
-//window.onload = showRegister();
