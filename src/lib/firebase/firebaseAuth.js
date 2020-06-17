@@ -1,10 +1,11 @@
 export const db = firebase.firestore();
 
 //REGISTRARSE CON CORREO Y CONTRASEÑA -> USUARIO NUEVO
-export const registerUser = (email, password, userName) => {
+export const registerUser = (email, password, userName, onSuccess, onError) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(() => {
+    .then((result) => {
       verificationEmail();
+      onSuccess(result);
     })
     .then(() => {
       let user = getCurrentUser();
@@ -20,7 +21,22 @@ export const registerUser = (email, password, userName) => {
       const errorMessage = error.message;
       console.log(errorMessage);
       console.log(errorCode);
+      onError(error);
     });
+};
+
+//FUNCIÓN DE ACTUALIZAR PERFIL
+export const updateUserProfile = (userName, descriptionUser, photoURL, onSuccess, onError) => {
+  const actualUser = getCurrentUser();
+  actualUser.updateProfile({
+    displayName: userName,
+    description: descriptionUser,
+    photoURL: photoURL
+  }).then((result) => {
+    onSuccess(result)
+  }).catch((error) => {
+    onError(error);
+  });
 };
 
 //observador auth de estado de autenticación para obtener datos del usuario, se llama cada vez que cambia el estado de acceso del usuario 
@@ -57,7 +73,7 @@ const verificationEmail = () => {
   user.sendEmailVerification()
     .then(() => {
       alert('¡Éxito! verifica tu cuenta en la bandeja de entrada de tu correo');
-      window.location.hash = '#/login'; // Email sent.
+      //window.location.hash = '#/login'; // Email sent.
     })
     .catch((error) => {
       // An error happened.
