@@ -422,7 +422,7 @@ a {
     justify-content: flex-end;
     width: 25%;
 }
-.iconLike, .iconEdit, .iconDelete, .iconSave {
+.iconLike, .iconEdit, .iconDelete, .iconSave, .iconClose {
     background: none;
     border: none;
 }
@@ -438,6 +438,12 @@ a {
 }
 
 .icon-save {
+    color: rgb(207, 207, 207);
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.icon-close {
     color: rgb(207, 207, 207);
     font-size: 17px;
 }

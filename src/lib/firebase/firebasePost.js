@@ -48,6 +48,7 @@ export const readPost = () => {
             <h6 class='date'>${doc.data().date}</h6>
             </div>
             <div class ='editAndDelete'>
+            <button class = 'iconClose' id='closeBtn${doc.id}' style = 'display:none'><i class="icon-close fas fa-times"></i></button>
             <button class = 'iconSave' id ='saveBtn${doc.id}' style = 'display:none'><i class="icon-save fas fa-check"></i></button>
             <button class = 'iconEdit' id ='editBtn${doc.id}'><i class="icon-edit fas fa-pen"></i></button>
             <button class = 'iconDelete' id ='deleteBtn${doc.id}'><i class="icon-delete fas fa-trash-alt"></i></button>
@@ -68,19 +69,20 @@ export const readPost = () => {
 
 
 };
+
+//FUNCIÓN EVENTOS EN POST
 export const eventEditPost = (doc, docid, user) => {
 
   if (user) {
-    console.log(user.uid, 'userID');
-    console.log(doc.data().userId, 'docUSerId');
+    //console.log(user.uid, 'userID');
+    //console.log(doc.data().userId, 'docUSerId');
     if (user.uid === doc.data().userId) {
       const btnEdit = document.getElementById('editBtn' + doc.id);
       btnEdit.addEventListener('click', () => {
-        editPost(doc.id);
+        editPost(docid);
 
-        console.log(docid, 'docID');
+        //console.log(docid, 'docID');
       });
-
     } else {
       document.getElementById('editBtn' + doc.id).style.display = "none";
       document.getElementById('deleteBtn' + doc.id).style.display = 'none';
@@ -89,6 +91,7 @@ export const eventEditPost = (doc, docid, user) => {
 
 };
 
+//FUNCIÓN EDITAR POST
 export const editPost = (id) => {
   let contentRef = db.collection("post").doc(id);
   console.log(contentRef.id, 'funcion editpost')
@@ -102,8 +105,21 @@ export const editPost = (id) => {
     document.getElementById('editBtn' + doc.id).style.display = 'none';
     document.getElementById('deleteBtn' + doc.id).style.display = 'none';
     document.getElementById('saveBtn' + doc.id).style.display = 'block';
+    document.getElementById('closeBtn' + doc.id).style.display = 'block';
 
     const btnSavePostEdited = document.getElementById('saveBtn' + doc.id);
+    const btnCloseEdit = document.getElementById('closeBtn' + doc.id);
+
+    btnCloseEdit.addEventListener('click', () => {
+      document.getElementById('postMessagge' + doc.id).style.display = 'block';
+      document.getElementById('editBtn' + doc.id).style.display = 'block';
+      document.getElementById('deleteBtn' + doc.id).style.display = 'block';
+      document.getElementById('saveBtn' + doc.id).style.display = 'none';
+      document.getElementById('closeBtn' + doc.id).style.display = 'none';
+      document.getElementById('editArea' + contentRef.id).style.display = 'none';
+    });
+
+
     btnSavePostEdited.addEventListener('click', () => {
       let contentTextEdited = document.getElementById('editArea' + contentRef.id).value;
       // Set the "capital" field of the city 'DC'
@@ -117,18 +133,31 @@ export const editPost = (id) => {
           document.getElementById('editBtn' + doc.id).style.display = 'block';
           document.getElementById('deleteBtn' + doc.id).style.display = 'block';
           document.getElementById('saveBtn' + doc.id).style.display = 'none';
+          document.getElementById('closeBtn' + doc.id).style.display = 'none';
         })
         .catch((error) => {
           // The document probably doesn't exist.
           console.error("Error updating document: ", error);
         });
-
-
-
     });
   });
-
 };
+
+//FUNCIÓN ELIMINAR POST
+/*const deletePost = (id) => {
+
+  db.collection("post").doc(id).delete().then(() => {
+    console.log("Document successfully deleted!");
+  }).catch((error) => {
+    console.error("Error removing document: ", error);
+  });
+
+
+
+
+
+};*/
+
 
 
 
