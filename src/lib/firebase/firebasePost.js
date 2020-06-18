@@ -5,6 +5,7 @@ const datePost = new Date();
 
 export const createPost = (contentText, user) => {
   //console.log(user);
+  if (validatePost(contentText)){
   db.collection('post').add({
       name: user.displayName,
       userId: user.uid,
@@ -18,7 +19,7 @@ export const createPost = (contentText, user) => {
     .catch((error) => {
       //console.error('Error adding document: ', error);
     })
-}
+}}
 
 //MOSTRAR POST
 export const readPost = () => {
@@ -161,4 +162,12 @@ const deletePost = (id) => {
   };
 };
 
-
+//Valida si el input está vacío
+export const validatePost = contentText => {
+  if (contentText === "" || contentText.length < 4) {
+    alert('Por favor ingresa un texto de mas de 4 caracteres');
+    return false;
+  } else {
+    return true;
+  }
+};
