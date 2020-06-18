@@ -1,15 +1,6 @@
-import {
-  showMenu
-} from './viewMenu.js';
-import {
-  createPost
-} from '../firebase/firebasePost.js';
-import {
-  getCurrentUser
-} from '../firebase/firebaseAuth.js';
-//import { db } from '../firebase/firebaseAuth.js';
-//import { showPost } from '../firebase/firebasePost.js';
-
+import { showMenu } from './viewMenu.js';
+import { createPost } from '../firebase/firebasePost.js';
+import { getCurrentUser } from '../firebase/firebaseAuth.js';
 
 export const viewCreate = () => {
   const divCreate = document.createElement('div');

@@ -19,8 +19,8 @@ export const registerUser = (email, password, userName, onSuccess, onError) => {
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorMessage);
-      console.log(errorCode);
+      //console.log(errorMessage);
+      //console.log(errorCode);
       onError(error);
     });
 };
@@ -43,7 +43,7 @@ export const updateUserProfile = (userName, descriptionUser, photoURL, onSuccess
 export const authState = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log(user, 'usuario');
+      //console.log(user, 'usuario');
       // User is signed in.
       let displayName = user.displayName;
       let email = user.email;
@@ -53,8 +53,7 @@ export const authState = () => {
       let uid = user.uid;
       let providerData = user.providerData;
       if (emailVerified === true) {
-        alert('Usuario inicio sesión correctamente');
-
+        //alert('Usuario inicio sesión correctamente');
         window.location.hash = '#/feed';
       } else {
         alert('Por favor revisa tu correo y verifica tu cuenta para iniciar sesión');
@@ -80,20 +79,20 @@ const verificationEmail = () => {
     });
 };
 
-//FUNCIÓN DE INICIO DE SESIÓN PARA USUARIOS REGISTRADOS
+//FUNCIÓN DE INICIO DE SESIÓN PARA USUARIOS REGISTRADOS CON CORREO Y CONTRASEÑA
 export const loginUser = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ...
-      alert('Ingresa correctamente tus datos ' + errorMessage);
-      console.log(errorCode);
+      alert('Ingresa correctamente tus datos');
+      //alert('Ingresa correctamente tus datos ' + errorMessage);
+      //console.log(errorCode);
     });
 };
 
-//FUNCIÓN INGRESAR CON GOOGLE
+//FUNCIÓN DE INICIO DE SESIÓN PARA USUARIOS REGISTRADOS CON GOOGLE
 export const logInGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -117,18 +116,17 @@ export const logInGoogle = () => {
     });
 };
 
-
 //FUNCIÓN CERRAR SESIÓN
 export const logOut = () => {
   firebase.auth().signOut()
     .then(() => {
       // Sign-out successful.
       window.location.hash = '#/home';
-      console.log('cerrando sesión')
+      //console.log('cerrando sesión')
     })
     .catch((error) => {
       // An error happened.
-      console.log(error);
+      //console.log(error);
     });
 };
 
@@ -138,9 +136,6 @@ export const addingUserData = (userName, email) => {
   db.collection('users').add({
       name: userName,
       email: email,
-      /*displayName: actualUser.displayName,
-      photoURL: actualUser.photoURL,
-      uidUser: actualUser.uid*/
     })
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);

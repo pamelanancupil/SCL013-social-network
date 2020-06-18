@@ -1,4 +1,3 @@
-
 export const viewError = () => {
     const divError = document.createElement('div');
     divError.innerHTML = `

@@ -1,13 +1,5 @@
-import {
-    registerUser,
-    logInGoogle,
-    updateUserProfile
-} from '../firebase/firebaseAuth.js';
-import {
-    validateloginUser
-} from '../index.js'
-//import { authState } from '../index.js';
-
+import { registerUser, logInGoogle, updateUserProfile } from '../firebase/firebaseAuth.js';
+import { validateloginUser } from '../index.js'
 
 export const viewRegister = () => {
     const divRegister = document.createElement('div');
@@ -68,7 +60,7 @@ const onSuccess = (result) => {
     const userName = document.getElementById('name').value;
     updateUserProfile(userName, '', '', () => {}, () => {})
     window.location.hash = '#/login';
-    console.log(result.user);
+    //console.log(result.user);
 };
 
 const onError = (error) => {
