@@ -39,8 +39,8 @@ export const readPost = () => {
             <h2 class='namePost'>${doc.data().name}</h2>            
             </div>
             <div class = 'contentDiv'>
-            <p class='contentPost'>${doc.data().content}</p>
-            <textarea id='edit${doc.id}' class = 'editContent' style = 'display:none'></textarea>
+            <p class='contentPost' id = 'postMessagge${doc.id}'>${doc.data().content}</p>
+            <textarea id='editArea${doc.id}' class = 'editContent' style = 'display:none'></textarea>
             </div>
             <div class = 'contentIconsPost'>
             <div class ='contentLike'>
@@ -48,9 +48,9 @@ export const readPost = () => {
             <h6 class='date'>${doc.data().date}</h6>
             </div>
             <div class ='editAndDelete'>
-            <button class = 'iconSave' style = 'display:none'><i class="icon-save fas fa-check"></i></button>
-            <button class = 'iconEdit' id ='${doc.id}'><i class="icon-edit fas fa-pen"></i></button>
-            <button class = 'iconDelete'><i class="icon-delete fas fa-trash-alt"></i></button>
+            <button class = 'iconSave' id ='saveBtn${doc.id}' style = 'display:none'><i class="icon-save fas fa-check"></i></button>
+            <button class = 'iconEdit' id ='editBtn${doc.id}'><i class="icon-edit fas fa-pen"></i></button>
+            <button class = 'iconDelete' id ='deleteBtn${doc.id}'><i class="icon-delete fas fa-trash-alt"></i></button>
             </div>
             
             </div>
@@ -71,19 +71,20 @@ export const readPost = () => {
 export const eventEditPost = (doc, docid, user) => {
 
   if (user) {
-        console.log(user.uid, 'userID');
-        console.log(doc.data().userId, 'docUSerId');
+    console.log(user.uid, 'userID');
+    console.log(doc.data().userId, 'docUSerId');
     if (user.uid === doc.data().userId) {
-      const btnEdit = document.getElementById(doc.id);
+      const btnEdit = document.getElementById('editBtn' + doc.id);
       btnEdit.addEventListener('click', () => {
         editPost(doc.id);
-        
+
         console.log(docid, 'docID');
       });
 
-    } /*else {
-      document.querySelector('#edit').style.display = "none";
-    }*/
+    } else {
+      document.getElementById('editBtn' + doc.id).style.display = "none";
+      document.getElementById('deleteBtn' + doc.id).style.display = 'none';
+    }
   }
 
 };
@@ -94,17 +95,17 @@ export const editPost = (id) => {
 
   contentRef.get().then(doc => {
 
-    const textAreaEditPost = document.getElementById('edit' + contentRef.id);
+    const textAreaEditPost = document.getElementById('editArea' + contentRef.id);
     textAreaEditPost.style.display = 'block';
     textAreaEditPost.innerHTML = doc.data().content;
-    document.querySelectorAll('.contentPost').style.display = 'none';
-    document.querySelectorAll('.iconEdit').style.display = 'none';
-    document.querySelectorAll('.iconDelete').style.display = 'none';
-    document.querySelectorAll('.iconSave').style.display = 'block';
+    document.getElementById('postMessagge' + doc.id).style.display = 'none';
+    document.getElementById('editBtn' + doc.id).style.display = 'none';
+    document.getElementById('deleteBtn' + doc.id).style.display = 'none';
+    document.getElementById('saveBtn' + doc.id).style.display = 'block';
 
-    const btnSavePostEdited = document.querySelector('.iconSave');
+    const btnSavePostEdited = document.getElementById('saveBtn' + doc.id);
     btnSavePostEdited.addEventListener('click', () => {
-      let contentTextEdited = document.getElementById('edit' + contentRef.id).value;
+      let contentTextEdited = document.getElementById('editArea' + contentRef.id).value;
       // Set the "capital" field of the city 'DC'
       return contentRef.update({
           content: contentTextEdited
@@ -112,10 +113,10 @@ export const editPost = (id) => {
         .then(() => {
           console.log("Document successfully updated!");
           textAreaEditPost.style.display = 'none';
-          document.querySelectorAll('.contentPost').style.display = 'block';
-          document.querySelectorAll('.iconEdit').style.display = 'block';
-          document.querySelectorAll('.iconDelete').style.display = 'block';
-          document.querySelectorAll('.iconSave').style.display = 'none';
+          document.getElementById('postMessagge' + doc.id).style.display = 'block';
+          document.getElementById('editBtn' + doc.id).style.display = 'block';
+          document.getElementById('deleteBtn' + doc.id).style.display = 'block';
+          document.getElementById('saveBtn' + doc.id).style.display = 'none';
         })
         .catch((error) => {
           // The document probably doesn't exist.
