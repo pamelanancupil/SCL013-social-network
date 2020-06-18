@@ -1,6 +1,12 @@
-import { showMenu } from './viewMenu.js';
-import { createPost } from '../firebase/firebasePost.js';
-import { getCurrentUser }from '../firebase/firebaseAuth.js';
+import {
+  showMenu
+} from './viewMenu.js';
+import {
+  createPost
+} from '../firebase/firebasePost.js';
+import {
+  getCurrentUser
+} from '../firebase/firebaseAuth.js';
 //import { db } from '../firebase/firebaseAuth.js';
 //import { showPost } from '../firebase/firebasePost.js';
 
@@ -28,17 +34,17 @@ export const viewCreate = () => {
 
   divCreate.setAttribute('id', 'containerCreate');
   const footer = divCreate.querySelector('#footerMenu');
-    footer.appendChild(showMenu());
-//guarda e imprime post
-    const btnShare = divCreate.querySelector('#share');
-    btnShare.addEventListener('click', () =>{
-      event.preventDefault();
+  footer.appendChild(showMenu());
+  //guarda e imprime post
+  const btnShare = divCreate.querySelector('#share');
+  btnShare.addEventListener('click', () => {
+    event.preventDefault();
     const contentText = divCreate.querySelector('#writeText').value;
     //const showingPost= divCreate.querySelector('#showingPost');
-      createPost(contentText, getCurrentUser());
-      divCreate.querySelector('#writeText').value = '';
-      window.location.hash = '#/feed';
-      
-});
-return divCreate;
+    createPost(contentText, getCurrentUser());
+    divCreate.querySelector('#writeText').value = '';
+    window.location.hash = '#/feed';
+
+  });
+  return divCreate;
 };

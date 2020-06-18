@@ -54,7 +54,7 @@ export const authState = () => {
       let providerData = user.providerData;
       if (emailVerified === true) {
         alert('Usuario inicio sesión correctamente');
-        
+
         window.location.hash = '#/feed';
       } else {
         alert('Por favor revisa tu correo y verifica tu cuenta para iniciar sesión');

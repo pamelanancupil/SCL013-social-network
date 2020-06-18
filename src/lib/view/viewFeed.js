@@ -6,7 +6,9 @@ import {
   getCurrentUser
 } from '../firebase/firebaseAuth.js';
 
-import { readPost } from '../firebase/firebasePost.js';
+import {
+  readPost
+} from '../firebase/firebasePost.js';
 
 export const viewFeed = () => {
   const divFeed = document.createElement('div');
@@ -35,7 +37,9 @@ export const viewFeed = () => {
 
     readPost();
 
-    
+
+
+
 
     /*const showingPost = divFeed.querySelector('.containerPost');
     db.collection("post").orderBy('date', 'desc').onSnapshot((querySnapshot) => {
@@ -77,4 +81,3 @@ export const viewFeed = () => {
   }
   return divFeed;
 };
-

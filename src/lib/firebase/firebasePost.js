@@ -1,5 +1,6 @@
 import {
-  db
+  db,
+  getCurrentUser
 } from '../firebase/firebaseAuth.js';
 
 //CREANDO COLECCIÓN DOCUMENTOS EN LOS POST
@@ -48,7 +49,7 @@ export const readPost = () => {
             </div>
             <div class ='editAndDelete'>
             <button class = 'iconSave' style = 'display:none'><i class="icon-save fas fa-check"></i></button>
-            <button class = 'iconEdit'><i class="icon-edit fas fa-pen"></i></button>
+            <button class = 'iconEdit' id ='edit'><i class="icon-edit fas fa-pen"></i></button>
             <button class = 'iconDelete'><i class="icon-delete fas fa-trash-alt"></i></button>
             </div>
             
@@ -60,49 +61,66 @@ export const readPost = () => {
       console.log(doc.data().date);
 
     });
+    querySnapshot.forEach(doc => {
+      eventEditPost(doc, getCurrentUser());
+    });
   });
+
+
 };
-export const eventEditPost = () => {
-  document.querySelector('.iconEdit').addEventListener('click', () => {
-    editPost(id);
-  });
+export const eventEditPost = (doc, user) => {
+
+  if (user) {
+    if (user.userId === doc.userId) {
+      const btnEdit = document.querySelector('#edit');
+      btnEdit.addEventListener('click', () => {
+        editPost(doc.id);
+      });
+
+    } else {
+      document.querySelector('#edit').style.display = "none";
+    }
+  }
+
 };
 
 export const editPost = (id) => {
   let contentRef = db.collection("post").doc(id);
-  
-  const textAreaEditPost = document.querySelector('#editContentPost');
-  textAreaEditPost.innerHTML = doc.data().content;
-  textAreaEditPost.style.display = 'block';
-  document.querySelector('.contentPost').style.display = 'none';
-  document.querySelector('.iconEdit').style.display = 'none';
-  document.querySelector('.iconDelete').style.display = 'none';
-  document.querySelector('.iconSave').style.display = 'block';
-  
-  const btnSavePostEdited = document.querySelector('.iconSave');
-  btnSavePostEdited.addEventListener('click', () => {
-    const contentTextEdited = document.querySelector('#editContentPost').value;
-    // Set the "capital" field of the city 'DC'
-    return contentRef.update({
-      content: contentTextEdited
-      })
-      .then(() => {
-        console.log("Document successfully updated!");
-        textAreaEditPost.style.display = 'none';
-        document.querySelector('.contentPost').style.display = 'block';
-        document.querySelector('.iconEdit').style.display = 'block';
-        document.querySelector('.iconDelete').style.display = 'block';
-        document.querySelector('.iconSave').style.display = 'none';
-      })
-      .catch((error) => {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-      });
+
+  contentRef.get().then(doc => {
+
+    const textAreaEditPost = document.querySelector('#editContentPost');
+    textAreaEditPost.style.display = 'block';
+    textAreaEditPost.innerHTML = doc.data().content;
+    document.querySelector('.contentPost').style.display = 'none';
+    document.querySelector('.iconEdit').style.display = 'none';
+    document.querySelector('.iconDelete').style.display = 'none';
+    document.querySelector('.iconSave').style.display = 'block';
+
+    const btnSavePostEdited = document.querySelector('.iconSave');
+    btnSavePostEdited.addEventListener('click', () => {
+      let contentTextEdited = document.querySelector('#editContentPost').value;
+      // Set the "capital" field of the city 'DC'
+      return contentRef.update({
+          content: contentTextEdited
+        })
+        .then(() => {
+          console.log("Document successfully updated!");
+          textAreaEditPost.style.display = 'none';
+          document.querySelector('.contentPost').style.display = 'block';
+          document.querySelector('.iconEdit').style.display = 'block';
+          document.querySelector('.iconDelete').style.display = 'block';
+          document.querySelector('.iconSave').style.display = 'none';
+        })
+        .catch((error) => {
+          // The document probably doesn't exist.
+          console.error("Error updating document: ", error);
+        });
 
 
 
-  })
-
+    });
+  });
 
 };
 

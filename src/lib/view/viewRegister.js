@@ -1,5 +1,8 @@
 import {
-    registerUser, logInGoogle, updateUserProfile } from '../firebase/firebaseAuth.js';
+    registerUser,
+    logInGoogle,
+    updateUserProfile
+} from '../firebase/firebaseAuth.js';
 import {
     validateloginUser
 } from '../index.js'
@@ -44,9 +47,7 @@ export const viewRegister = () => {
         let password = divRegister.querySelector("#password").value;
         let errorM = divRegister.querySelector('#errorMssg');
 
-        /*if (userName === null || userName === '') {
-            errorM.innerHTML ='Favor ingrese su nombre';
-        } */
+
         if (email === '' || password === '' || email === null || password === null || password.length <= 6) {
             errorM.innerHTML = validateloginUser(email, password, userName);
         } else {
@@ -56,7 +57,7 @@ export const viewRegister = () => {
     });
 
     const btnG = divRegister.querySelector('#google');
-    btnG.addEventListener('click', () =>{
+    btnG.addEventListener('click', () => {
         logInGoogle();
     });
 
@@ -65,7 +66,7 @@ export const viewRegister = () => {
 
 const onSuccess = (result) => {
     const userName = document.getElementById('name').value;
-    updateUserProfile(userName, '', '', ()=>{}, ()=>{})
+    updateUserProfile(userName, '', '', () => {}, () => {})
     window.location.hash = '#/login';
     console.log(result.user);
 };
@@ -74,11 +75,4 @@ const onError = (error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
 
-}
-
-
-
-
-
-
-
+};
