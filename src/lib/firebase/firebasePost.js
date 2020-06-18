@@ -40,7 +40,7 @@ export const readPost = () => {
             </div>
             <div class = 'contentDiv'>
             <p class='contentPost'>${doc.data().content}</p>
-            <textarea id='editContentPost' class = 'editContent' style = 'display:none'></textarea>
+            <textarea id='edit${doc.id}' class = 'editContent' style = 'display:none'></textarea>
             </div>
             <div class = 'contentIconsPost'>
             <div class ='contentLike'>
@@ -49,7 +49,7 @@ export const readPost = () => {
             </div>
             <div class ='editAndDelete'>
             <button class = 'iconSave' style = 'display:none'><i class="icon-save fas fa-check"></i></button>
-            <button class = 'iconEdit' id ='edit'><i class="icon-edit fas fa-pen"></i></button>
+            <button class = 'iconEdit' id ='${doc.id}'><i class="icon-edit fas fa-pen"></i></button>
             <button class = 'iconDelete'><i class="icon-delete fas fa-trash-alt"></i></button>
             </div>
             
@@ -62,44 +62,49 @@ export const readPost = () => {
 
     });
     querySnapshot.forEach(doc => {
-      eventEditPost(doc, getCurrentUser());
+      eventEditPost(doc, doc.id, getCurrentUser());
     });
   });
 
 
 };
-export const eventEditPost = (doc, user) => {
+export const eventEditPost = (doc, docid, user) => {
 
   if (user) {
-    if (user.userId === doc.userId) {
-      const btnEdit = document.querySelector('#edit');
+        console.log(user.uid, 'userID');
+        console.log(doc.data().userId, 'docUSerId');
+    if (user.uid === doc.data().userId) {
+      const btnEdit = document.getElementById(doc.id);
       btnEdit.addEventListener('click', () => {
         editPost(doc.id);
+        
+        console.log(docid, 'docID');
       });
 
-    } else {
+    } /*else {
       document.querySelector('#edit').style.display = "none";
-    }
+    }*/
   }
 
 };
 
 export const editPost = (id) => {
   let contentRef = db.collection("post").doc(id);
+  console.log(contentRef.id, 'funcion editpost')
 
   contentRef.get().then(doc => {
 
-    const textAreaEditPost = document.querySelector('#editContentPost');
+    const textAreaEditPost = document.getElementById('edit' + contentRef.id);
     textAreaEditPost.style.display = 'block';
     textAreaEditPost.innerHTML = doc.data().content;
-    document.querySelector('.contentPost').style.display = 'none';
-    document.querySelector('.iconEdit').style.display = 'none';
-    document.querySelector('.iconDelete').style.display = 'none';
-    document.querySelector('.iconSave').style.display = 'block';
+    document.querySelectorAll('.contentPost').style.display = 'none';
+    document.querySelectorAll('.iconEdit').style.display = 'none';
+    document.querySelectorAll('.iconDelete').style.display = 'none';
+    document.querySelectorAll('.iconSave').style.display = 'block';
 
     const btnSavePostEdited = document.querySelector('.iconSave');
     btnSavePostEdited.addEventListener('click', () => {
-      let contentTextEdited = document.querySelector('#editContentPost').value;
+      let contentTextEdited = document.getElementById('edit' + contentRef.id).value;
       // Set the "capital" field of the city 'DC'
       return contentRef.update({
           content: contentTextEdited
@@ -107,10 +112,10 @@ export const editPost = (id) => {
         .then(() => {
           console.log("Document successfully updated!");
           textAreaEditPost.style.display = 'none';
-          document.querySelector('.contentPost').style.display = 'block';
-          document.querySelector('.iconEdit').style.display = 'block';
-          document.querySelector('.iconDelete').style.display = 'block';
-          document.querySelector('.iconSave').style.display = 'none';
+          document.querySelectorAll('.contentPost').style.display = 'block';
+          document.querySelectorAll('.iconEdit').style.display = 'block';
+          document.querySelectorAll('.iconDelete').style.display = 'block';
+          document.querySelectorAll('.iconSave').style.display = 'none';
         })
         .catch((error) => {
           // The document probably doesn't exist.
