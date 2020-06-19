@@ -99,12 +99,29 @@ export const logInGoogle = () => {
   firebase.auth().signInWithPopup(provider)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
-      const token = result.credential.accessToken;
+      //const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      window.location.hash = '#/feed';
-      // ...
-    }).catch(function (error) {
+      let userName = user.displayName;
+      db.collection('users').doc(user.uid).get().then((doc) => {
+        if(doc.exists) {
+          alert('Iniciaste sesión');
+          window.location.hash = '#/feed';
+        } else {
+          db.collection('users').doc(user.uid).set({
+            displayName: userName,
+            email: user.email,
+            photoURL: user.photoURL,
+            userId: user.uid,
+          })
+          window.location.hash = '#/feed';
+        }
+      })
+      console.log(token);
+      console.log(user);
+     // ...
+    })
+    .catch(function (error) {
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;

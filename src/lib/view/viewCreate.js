@@ -34,8 +34,7 @@ export const viewCreate = () => {
     //const showingPost= divCreate.querySelector('#showingPost');
     createPost(contentText, getCurrentUser());
     divCreate.querySelector('#writeText').value = '';
-    window.location.hash = '#/feed';
-
+    
   });
   return divCreate;
 };
