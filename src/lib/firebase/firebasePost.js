@@ -65,7 +65,8 @@ export const readPost = () => {
       //toma como argumentos documento, id del documento y el usuario actual
       eventEditPost(doc, doc.id, getCurrentUser());
       eventDeletePost(doc, doc.id, getCurrentUser());
-      eventLikeUnlikePost(doc , getCurrentUser());
+      //eventLikePost(doc.id);
+      //eventLikeUnlikePost(doc.id , getCurrentUser());
     });
   });
 };
@@ -105,24 +106,44 @@ const eventDeletePost = (doc, docid, user) => {
   }
 };
 
+//evento likes
+/*const eventLikePost = (doc) => {
+  const btnLike = document.querySelector('#likesBtn' + doc.id);
+  btnLike.addEventListener('click', () => {
+    likePost(doc.id);
+  });
+};*/
+
 //DAR Y QUITAR LIKE EN POST
-const eventLikeUnlikePost = (doc, user) => {
+/*const eventLikeUnlikePost = (id, user) => {
   if(user) {
-    if(doc.data().like.includes(user.userId)){
-      const btnLikePost = document.getElementById('likesBtn' + doc.id);
-      btnLikePost.addEventListener('click', () => {
-        unlikePost(doc.id, doc.data().like);
-        //document.getElementsByClassName('icon-like').style.color = '#cfcfcf';
-      })      
-    } else {
-      const btnLikePost = document.getElementById('likesBtn' + doc.id);
-      btnLikePost.addEventListener('click', () => {
-        likePost(doc.id, doc.data().like);
-       // document.getElementsByClassName('icon-like').style.color = '#f3a674';
-      })
-    }
+    db.collection('post').doc(id).get().then((result) => {
+      const postUser = result.data();
+
+      if(postUser.like == null || postUser.like == '') {
+        postUser.like = [];
+      }
+
+      if(postUser.like.includes(user.uid)){
+        const btnLikePost = document.getElementById('likesBtn' + doc.id);
+        btnLikePost.addEventListener('click', () => {
+          unlikePost(doc.id, postUser.like);
+          //document.getElementsByClassName('icon-like').style.color = '#cfcfcf';
+        })      
+      } else {
+        const btnLikePost = document.getElementById('likesBtn' + doc.id);
+        btnLikePost.addEventListener('click', () => {
+          likePost(doc.id, postUser.like);
+         // document.getElementsByClassName('icon-like').style.color = '#f3a674';
+        })
+      }
+    })
+    .catch(() => {
+
+    })    
   }
-};
+};*/
+
 
 //FUNCIÓN EDITAR POST
 const editPost = (id) => {
@@ -187,7 +208,7 @@ const deletePost = (id) => {
     });
   };
 };
-
+/*
 //FUNCIÓN DAR LIKE
 const likePost = (id, like) => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -209,7 +230,7 @@ const unlikePost = (id, like) => {
     })
     .then(e => {});
   });
-};
+};*/
 
 //VALIDA SI EL INPUT DEL POST ESTA VACIO
 export const validatePost = contentText => {
@@ -220,3 +241,41 @@ export const validatePost = contentText => {
     return true;
   }
 };
+
+//intento dar like
+/*const likePost = (id) => {
+  const user = getCurrentUser();
+
+  db.collection('post').doc(id).get().then((result) => {
+    const postUser = result.data();
+
+    if(postUser.like == null || postUser.like == '') {
+      postUser = [];
+      console.log('like vacio');
+    }
+    if (postUser.like.includes(user.uid)) {
+      for(let i = 0; i < postUser.like.length; i++) {
+        if(postUser.like[i] === user.uid) {
+          postUser.like.splice(i, 1);
+
+          db.collection('post').doc(id).update({
+            like: postUser.like
+          });
+        }
+
+
+      }
+    } else {
+      postUser.like.push(user.uid);
+      db.collection('post').doc(id).update({
+        like: postUser.like
+      });
+    }
+
+
+  })
+  .catch(() => {
+
+  });
+};*/
+
