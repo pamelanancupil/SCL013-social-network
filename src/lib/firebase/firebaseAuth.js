@@ -13,6 +13,7 @@ export const registerUser = (email, password, userName, onSuccess, onError) => {
         name: userName,
         email: email,
         userId: user.uid,
+        description: ''
       })
     })
     .catch((error) => {
