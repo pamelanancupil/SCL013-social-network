@@ -8,8 +8,8 @@ export const viewProfile = () => {
     let user = getCurrentUser();
     
     if(user) {
-      const userInfo = db.collection('users').doc()
-        divProfile.innerHTML = `
+       db.collection('users').doc(user.uid).onSnapshot((doc) => {
+          divProfile.innerHTML = `
     <header id="headerProfile" class="headerFCP">
         <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
         <button href="#/home" id="logOut">Cerrar sesión</button>
@@ -28,7 +28,7 @@ export const viewProfile = () => {
                       <button class = 'iconEdit' id ='editBtnDescription${user.uid}'><i class="icon-edit fas fa-pen"></i></button>
                     </div>
                     <div class ='containerP-Descrition'>
-                      <p class = 'userDescriptionProfile' id ='userDescription${user.uid}'>Hola + ${userInfo.description}</p>
+                      <p class = 'userDescriptionProfile' id ='userDescription${user.uid}'>${doc.data().description}</p>
                       <textarea id='editDescription${user.uid}' class = 'editDescription' style = 'display:none'></textarea>
                     </div>
                     <div class = containerBtnProfile>
@@ -55,15 +55,16 @@ export const viewProfile = () => {
 
     const editProfile = (user) => {
       let profileRef = db.collection('users').doc(user.uid);
-      profileRef.get().then(() => {
+      profileRef.get().then((doc) => {
         const parrafoDescription = document.getElementById('userDescription' + user.uid);
-        const textareaDescription = document.getElementById('editDescription' + user.uid);
+        const textareaDescription = document.getElementById('editDescription' + profileRef.id);
         const btnSaveDescription = document.getElementById('saveBtnDescription' + user.uid);
         const btnCloseDescription = document.getElementById('closeBtn' + user.uid);
         parrafoDescription.style.display = 'none';
         textareaDescription.style.display = 'block';
         btnSaveDescription.style.display = 'block';
         btnCloseDescription.style.display = 'block';
+        textareaDescription.innerHTML = doc.data().description;
 
         btnCloseDescription.addEventListener('click', () => {
           parrafoDescription.style.display = 'block';
@@ -73,7 +74,7 @@ export const viewProfile = () => {
         });
 
         btnSaveDescription.addEventListener('click', () => {
-          let descriptionUser1 = document.getElementById('editDescription' + user.uid).value;
+          let descriptionUser1 = document.getElementById('editDescription' + profileRef.id).value;
           return profileRef.update({
             description: descriptionUser1
           })
@@ -95,77 +96,23 @@ export const viewProfile = () => {
     };
 
     const btnEditProfile = divProfile.querySelector('#editBtnDescription'+ user.uid);
-    btnEditProfile.addEventListener('click', () => {
-      editProfile(getCurrentUser());
-    })
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*const btnEditProfile = divProfile.querySelector('#editBtnDescription' + user.uid);
-    btnEditProfile.addEventListener('click', () => {
-      const parrafoDescription = document.getElementById('userDescription' + user.uid);
-      const textareaDescription = document.getElementById('editDescription' + user.uid);
-      const btnSaveDescription = document.getElementById('saveBtnDescription' + user.uid);
-      //const userDisplayName = document.getElementById('displayName' + user.uid);
-      //const inputName = document.getElementById('userNameInput' + user.uid);
-      const btnCloseDescription = document.getElementById('closeBtn' + user.uid);
-      parrafoDescription.style.display = 'none';
-      textareaDescription.style.display = 'block';
-      //userDisplayName.style.display = 'none';
-      //inputName.style.display = 'block';
-      btnSaveDescription.style.display = 'block';
-      btnCloseDescription.style.display = 'block';
-
-      btnCloseDescription.addEventListener('click', () => {
-        parrafoDescription.style.display = 'block';
-        textareaDescription.style.display = 'none';
-        //userDisplayName.style.display = 'block';
-        //inputName.style.display = 'none';
-        btnSaveDescription.style.display = 'none';
-        btnCloseDescription.style.display = 'none';
-      });
-
-      let profileRef = db.collection('users').doc(user.uid);
-      profileRef.get().then((doc) => {
+    btnEditProfile.addEventListener('click', (doc) => {
+      editProfile(getCurrentUser(doc));
+    });
 
 
 
 
 
-      })
 
-      btnSaveDescription.addEventListener('click', () => {
-        let descriptionUser = document.getElementById('editDescription' + user.uid).value;
-        let userName = document.getElementById('userNameInput' + user.uid).value;
-        updateUserProfile(userName, descriptionUser, '', () => {}, () => {});
-        
-        parrafoDescription.style.display = 'block';
-        textareaDescription.style.display = 'none';
-        //userDisplayName.style.display = 'block';
-        //inputName.style.display = 'none';
-        btnSaveDescription.style.display = 'none';
-        btnCloseDescription.style.display = 'none';
-      });
+
+        })
+
+
 
       
-
-    });*/
-
+      
+      //const userInfo = db.collection('users').doc(user.uid)
     } else {
         window.location.hash = '#/home';
     }
