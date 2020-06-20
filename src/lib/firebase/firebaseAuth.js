@@ -106,7 +106,7 @@ export const logInGoogle = () => {
       let userName = user.displayName;
       db.collection('users').doc(user.uid).get().then((doc) => {
         if(doc.exists) {
-          alert('Iniciaste sesión');
+          //alert('Iniciaste sesión');
           window.location.hash = '#/feed';
         } else {
           db.collection('users').doc(user.uid).set({

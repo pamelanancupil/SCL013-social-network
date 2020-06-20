@@ -307,8 +307,7 @@ a {
 }
 .contentLike {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
 }
 .editAndDelete {
     display: flex;
@@ -350,6 +349,7 @@ a {
 .numberLikes {
     color: rgb(207, 207, 207);
     font-size: 12px;
+    margin-left: 5px;
 }
 
 /*_______________________________________________________________*/

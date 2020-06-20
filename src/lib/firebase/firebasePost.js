@@ -48,7 +48,6 @@ export const readPost = () => {
               <div class ='contentLike'>
                 <button class = 'iconLike' id='likesBtn${doc.id}'><i class="icon-like fas fa-spa"></i></button>
                 <p class = 'numberLikes' id = 'likesCount${doc.id}'></p>
-                <h6 class='date'>${doc.data().date}</h6>
               </div>
               <div class ='editAndDelete'>
                 <button class = 'iconClose' id='closeBtn${doc.id}' style = 'display:none'><i class="icon-close fas fa-times"></i></button>
@@ -57,6 +56,7 @@ export const readPost = () => {
                 <button class = 'iconDelete' id ='deleteBtn${doc.id}'><i class="icon-delete fas fa-trash-alt"></i></button>
               </div>
             </div>
+            <h6 class='date'>${doc.data().date}</h6>
         </div>
             `;
       //console.log(doc.data().date);
