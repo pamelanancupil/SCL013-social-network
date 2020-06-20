@@ -44,14 +44,14 @@
 }
 
 #logo img {
-    width: 11.9rem;
-    margin-bottom: 0.6rem;
+    width: 190.4px;
+    margin-bottom: 9.6px;
 }
 
 #containerBtn {
     width: 100%;
     height: 35%;
-    margin-top: 1.9rem;
+    margin-top: 30.4px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +133,7 @@
     height: 50px;
     margin: 10px;
     border: none;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .textInput {
@@ -168,7 +168,7 @@
 }
 
 .question {
-    font-size: 0.95rem;
+    font-size: 16px;
     margin-top: 0;
 }
 
@@ -197,16 +197,6 @@ span {
     width: 100%;
 
 }
-
-/*#headerMenu {
-    background: #fffcfc;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-}*/
 
 #menu {
     background: #25394A;
@@ -270,6 +260,96 @@ a {
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
+}
+
+.postFeed{
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.447);
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.authorPost {
+    display: flex;
+    height: 30%;
+    align-items: center;
+}
+
+.authorPost img {
+    border-radius: 30px;
+}
+.namePost{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.contentPost{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    width: 270px;
+    padding: 25px 10px 25px 5px;  
+}
+
+.editContent {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    width: 260px;
+    padding: 5px 10px 5px 5px;
+    margin-bottom: 20px;
+}
+.contentIconsPost {
+    display: flex;
+    justify-content: space-between;
+}
+.contentLike {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.editAndDelete {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 25%;
+}
+.iconLike, .iconEdit, .iconDelete, .iconSave, .iconClose {
+    background: none;
+    border: none;
+}
+.icon-like {
+    color: rgb(207, 207, 207);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+.icon-edit, .icon-delete {
+    color: rgb(207, 207, 207);
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.icon-save {
+    color: rgb(207, 207, 207);
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.icon-close {
+    color: rgb(207, 207, 207);
+    font-size: 17px;
+}
+
+.date{
+    color:black;
+    font-weight: 300;
+    font-size: 10px;
+}
+.numberLikes {
+    color: rgb(207, 207, 207);
+    font-size: 12px;
 }
 
 /*_______________________________________________________________*/
@@ -368,95 +448,7 @@ a {
     margin: 25px;
 }
 
-.postFeed{
-    background: rgb(255, 255, 255);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.447);
-    border-radius: 20px;
-    height: auto;
-    width: 300px;
-    margin-top: 30px;
-    padding: 20px;
-}
 
-.authorPost {
-    display: flex;
-    height: 30%;
-    align-items: center;
-}
-
-.authorPost img {
-    border-radius: 30px;
-}
-.namePost{
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    margin-left: 10px;
-}
-
-.contentPost{
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    width: 270px;
-    padding: 25px 10px 25px 5px;
-    
-}
-.editContent {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    width: 260px;
-    padding: 5px 10px 5px 5px;
-    margin-bottom: 20px;
-}
-.contentIconsPost {
-    display: flex;
-    justify-content: space-between;
-}
-.contentLike {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.editAndDelete {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    width: 25%;
-}
-.iconLike, .iconEdit, .iconDelete, .iconSave, .iconClose {
-    background: none;
-    border: none;
-}
-.icon-like {
-    color: rgb(207, 207, 207);
-    font-size: 17px;
-    margin-bottom: 8px;
-}
-.icon-edit, .icon-delete {
-    color: rgb(207, 207, 207);
-    font-size: 15px;
-    margin-left: 10px;
-}
-
-.icon-save {
-    color: rgb(207, 207, 207);
-    font-size: 17px;
-    margin-left: 10px;
-}
-
-.icon-close {
-    color: rgb(207, 207, 207);
-    font-size: 17px;
-}
-
-.date{
-    color:black;
-    font-weight: 300;
-    font-size: 10px;
-}
-.numberLikes {
-    color: rgb(207, 207, 207);
-    font-size: 12px;
-}
 
 /*_______________________________________________________________*/
 /*PROFILE*/
@@ -543,28 +535,37 @@ a {
     }
 
     #home {
-        width: 500px;
-        height: 85%;
+        /*background: rgba(255, 208, 208, 0.755);*/
+        width: 450px;
+        height: 86%;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        align-content: flex-end;
+        align-items: center;
     }
 
     #containerTextYug {
-        font-size: 1.3rem;
-        line-height: 2.2rem;
-        width: 75%;
+        /*background: rgba(228, 255, 184, 0.838);*/
+        font-size: 18px;
+        line-height: 28px;
+        width: 76%;
         height: 65%;
-        margin: 5% 15% 0;
-        padding: 7%;
+        /*margin: 5% 15% 0 15%;
+        padding: 7%;*/
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+    }
+
+    #logo img {
+        /*background: rgba(255, 222, 164, 0.755);*/
+        width: 135px;
+        margin-bottom: 9.6px;
     }
 
     #textYug {
-        width: 100%;
+        /*background: rgba(184, 255, 236, 0.838);*/
+        width: 80%;
     }
 
     #containerBtn {
@@ -572,10 +573,10 @@ a {
     }
 
     .btns {
-        border-radius: 2.5rem;
-        width: 13.5rem;
-        height: 3.2rem;
-        font-size:1.1rem;
+        border-radius: 40px;
+        width: 200px;
+        height: 45px;
+        font-size:16px;
     }
 
     #btnSignUp{
@@ -600,25 +601,26 @@ a {
     }
 
     .containerForm {
-        width: 500px;
-        height: 750px;
+        width: 450px;
+        height: 86%;
         border-radius: 10px;
     }
 
     #logo2 img {
-        width: 4.5rem;
+        width: 68px;
         margin: 0 1.7rem 0.7rem;
     }
 
     #form input {
-        width: 300px;
-        height: 53px;
+        font-size: 14px;
+        width: 270px;
+        height: 44px;
         margin:7px;
     }
 
     /*__________________________________*/
     #form {
-        width: 21.9rem;
+        width: 350px;
         height: auto;
     }
 
@@ -627,12 +629,17 @@ a {
     }
 
     #form p {
-        font-size: 1.1rem;
+        font-size: 14px;
     }
 
     #logoG img {
-        width: 55px;
+        width: 50px;
         margin: 8px;
+    }
+
+    .question {
+        font-size: 14px;
+        margin-top: 0;
     }
 
     /*___________________________*/
@@ -646,57 +653,23 @@ a {
         align-items: center;
     }
 
-    .containerForm {
-        width: 500px;
-        height: 85%;
-        border-radius: 10px;
-    }
-
     /*___________________________*/
     /*MENÚ*/
-    #headerMenu {
-        background: #FFFDFC;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-        height: 100px;
-        width: 100%;
-        display: flex;
-        position: fixed;
-        align-items: center;
-        padding-right: 12%;
-    }
-
-    #headerMenu img {
-        width: 70px;
-    }
-
     #menu{
-        height: 90px;
+        height: 65px;
     }
 
-    #create,
-    #profile,
-    #start {
-        font-size: 45px;
+    #create, #profile, #start {
+        font-size: 35px;
         margin: 0 70px 0 70px;
     }
 
      /*___________________________*/
     /*FEED*/
-    .headerFCP{
-        background: #FFFDFC;
-        box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.25);
-        height: 130px;
-        width: 100%;
-        display: flex;
-        position: fixed;
-        align-items: center;
-        justify-content: center;
-    }
-
     #headerFeed {
         background: #FFFDFC;
         box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.25);
-        height: 110px;
+        height: 75px;
         width: 100%;
         display: flex;
         position: fixed;
@@ -705,22 +678,96 @@ a {
     }
 
     .headerFCP img{
-        width:85px;
+        width:50px;
     }
 
     #containerFeed{
-        height: 100vh;
+        height: auto;
         background: #dee4eb;
+        width:100%;
         /*fondo de color*/
     }
 
     #containerFeedBody{
         width:80%;
-        height: 100vh;
+        height: auto;
         background: white;
         box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
        /*contenedor publicación tiene que ser blanco*/
     }
+
+    .containerPost{
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+
+    .postFeed{
+        border-radius: 20px;
+        height: auto;
+        width: 85%;
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .authorPost {
+        display: flex;
+        height: 30%;
+        align-items: center;
+    }
+    
+    .authorPost img {
+        border-radius: 60px;
+        width: 60px;
+    }
+    .namePost{
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .contentPost{
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        width: 100%;
+        padding: 30px 15px 30px 10px;  
+    }
+
+   .icon-like{
+       font-size: 25px;
+   }
+
+   .icon-like {
+    font-size: 25px;
+    }
+
+    .icon-edit, .icon-delete, .icon-close, .icon-save {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .editContent{
+        width:100%;
+        margin-top: 26px;
+    }
+
+    .date{
+        color:black;
+        font-weight: 300;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    .numberLikes {
+        color: rgb(207, 207, 207);
+        font-size: 15px;
+    }
+
+
+
+    
 
     /*___________________________*/
     /*CREATE*/
@@ -753,7 +800,7 @@ a {
     }
 
     .share {
-        font-size: 1.2rem;
+        font-size:16px;
         border: none;
         color: #25394A;
         font-weight: 700;
@@ -765,7 +812,6 @@ a {
         margin-left: 0rem;
     }
 
-    
    .text{
        width: 90%;
        padding-left: 20px;
@@ -775,17 +821,18 @@ a {
     /*___________________________*/
     /*PROFILE*/
     #headerProfile {
+        height: 75px;
         padding-left: 48%;
         padding-right: 12%;
     }
 
     #logOut{
-        font-size:1.2rem;
+        font-size:16px;
     }
 
     #containerProfile {
         background: #dee4eb;
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-flow: column nowrap;
         align-content: center;
@@ -804,33 +851,33 @@ a {
     }
 
     .imageProfile{
-        margin-top: 170px;
+        margin-top: 120px;
     }
     .imageProfile img{
-        width: 300px;
+        width: 230px;
         border-radius: 200px;
     }
     
     .infoProfile h3 {
         margin-block-end: 15px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .infoProfile h4 {
         margin-block-end: 15px;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .infoProfile p {
         line-height: 26px;
         margin-top: 10px;
         font-size: 0.9rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
     .infoProfile .description {
-        margin-top: 40px;
+        margin-top: 10px;
         width: 80%;
         align-items: flex-start;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
 

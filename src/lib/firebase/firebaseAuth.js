@@ -56,7 +56,7 @@ export const authState = () => {
         //alert('Usuario inicio sesión correctamente');
         window.location.hash = '#/feed';
       } else {
-        alert('Por favor revisa tu correo y verifica tu cuenta para iniciar sesión');
+        //alert('Por favor revisa tu correo y verifica tu cuenta para iniciar sesión');
       }
       // ...
     } else {
@@ -71,7 +71,7 @@ const verificationEmail = () => {
   const user = firebase.auth().currentUser;
   user.sendEmailVerification()
     .then(() => {
-      alert('¡Éxito! verifica tu cuenta en la bandeja de entrada de tu correo');
+      alert('Por favor revisa tu correo y verifica tu cuenta para iniciar sesión');
       //window.location.hash = '#/login'; // Email sent.
     })
     .catch((error) => {
