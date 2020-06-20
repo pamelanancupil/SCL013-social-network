@@ -108,25 +108,28 @@ const eventDeletePost = (doc, docid, user) => {
 
 //DAR Y QUITAR LIKE EN POST
 const eventLikeUnlikePost = (doc, id, user) => {
+  const likesCounter = doc.data().like.length;
+  const likeP = document.getElementById('likesCount' + doc.id);
   if(user) {
     db.collection('post').doc(id).get().then((result) => {
       const postUser = result.data();
-
+      likeP.innerHTML = likesCounter + ` Me gusta`;
       /*if(postUser.like == null || postUser.like == '') {
         postUser.like = [];
       }*/
-
+      
       if(postUser.like.includes(user.uid)){
         const btnLikePost = document.getElementById('likesBtn' + doc.id);
         btnLikePost.addEventListener('click', () => {
           unlikePost(doc.id, postUser.like);
-          //document.getElementById('likesBtn' + doc.id).style.color = '#cfcfcf';
+          btnLikePost.style.color = '#cfcfcf';
         })      
       } else {
         const btnLikePost = document.getElementById('likesBtn' + doc.id);
         btnLikePost.addEventListener('click', () => {
           likePost(doc.id, postUser.like);
-          //document.getElementById('likesBtn' + doc.id).style.color = '#f3a674';
+
+          btnLikePost.style.color = '#f3a674';
         })
       }
     })
