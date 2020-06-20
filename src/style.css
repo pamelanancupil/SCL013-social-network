@@ -294,7 +294,7 @@ a {
     padding: 25px 10px 25px 5px;  
 }
 
-.editContent {
+.editContent, .editDescription {
     color: rgb(0, 0, 0);
     font-size: 16px;
     width: 260px;
@@ -479,8 +479,10 @@ a {
 #containerProfileBody{
     background: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    height: 800px;
-    width: 90%;
+    /*height: 800px;*/
+    width: 90%;    
+    height: auto;
+    padding-bottom: 100px;
 }
 
 .imageProfile {
@@ -511,7 +513,7 @@ a {
 .infoProfile p {
     color: #000000;
     line-height: 23px;
-    margin-top: 8px;
+    margin: 8px 0px;
     font-size: 0.9rem;
 }
 
@@ -520,6 +522,22 @@ a {
     width: 80%;
     align-items: flex-start;
 }
+
+.containerDescription {
+    display: flex;
+}
+.containerBtnProfile {
+    display: flex;
+    justify-content: space-between;
+}
+.userNameClass {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
 
 /*________MEDIA TABLET____________*/
 /*HOME*/
