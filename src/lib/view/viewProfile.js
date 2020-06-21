@@ -11,10 +11,14 @@ export const viewProfile = () => {
        db.collection('users').doc(user.uid).onSnapshot((doc) => {
           divProfile.innerHTML = `
     <header id="headerProfile" class="headerFCP">
+        <div id="logoImgProfile">
         <img src="http://imgfz.com/i/TKBv2dp.png" width="50px">
+        </div>
+        <div id="logOutProfile">
         <button href="#/home" id="logOut">Cerrar sesión</button>
+        </div>
     </header> 
-    <div id="containerProfileBody">
+    <div class= "containerProfileBody" id="containerProfileBody">
         <div class="imageProfile">
             <img src='${user.photoURL ? user.photoURL : "https://i.ibb.co/4J9JFF0/perfil.png" }' width='180px'>
         </div>

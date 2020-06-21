@@ -380,7 +380,7 @@ a {
     color: #25394A;
     background: #FFFDFC;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 #shareP {
@@ -388,7 +388,7 @@ a {
     color: #25394A;
     background: #FFFDFC;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 #containerCreate {
@@ -406,8 +406,7 @@ a {
     height: 100vh;
     width: 90%;
     display: flex;
-    align-items:center;
-    flex-direction: column;
+    justify-content: center;
 }
 
 #writeText {
@@ -415,7 +414,7 @@ a {
     background: #ffffff;
     margin-top: 140px;
     width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 3px;
     font-size: 0.9rem;
     padding-left: 20px;
@@ -426,17 +425,17 @@ a {
 .text{
     width: 100%;
     height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
+    margin-left: 3%;
+    margin-right: 3%;
+    /*display: flex;
+    flex-direction: column;*/
     background: rgb(255, 255, 255);
     padding-left: 10%;
     padding-right: 10%;
 }
 
 .text i {
-    color: #EFA373;
+    color: #ffffff;
     font-size: 2.7rem;
 }
 
@@ -455,16 +454,32 @@ a {
 #headerProfile {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 30px 0px 40px;
+    
+}
+
+#logoImgProfile{
+    width:55%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logOutProfile{
+    width:45%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#headerProfile img{
+    width:50px;
 }
 
 #logOut {
     border: none;
     color: #25394A;
-    background: #FFFDFC;
+    background: #ffffff;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 14px;
 }
 
 #containerProfile {
@@ -476,13 +491,13 @@ a {
     align-items: center;
 }
 
-#containerProfileBody{
+.containerProfileBody{
     background: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    /*height: 800px;*/
+    height: 100vh;
     width: 90%;    
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 250px;
 }
 
 .imageProfile {
@@ -521,14 +536,16 @@ a {
     margin-top: 40px;
     width: 80%;
     align-items: flex-start;
+    padding-bottom: 30px;
 }
 
 .containerDescription {
     display: flex;
 }
 .containerBtnProfile {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .userNameClass {
     color: rgb(0, 0, 0);
@@ -536,6 +553,12 @@ a {
     width: 180px;
     padding: 5px;
     margin-bottom: 10px;
+}
+
+.editDescription{
+    width:100%;
+    height: 60px;
+    margin-top: 10px;
 }
 
 
@@ -783,10 +806,6 @@ a {
         font-size: 15px;
     }
 
-
-
-    
-
     /*___________________________*/
     /*CREATE*/
     #headerCreate{
@@ -794,16 +813,14 @@ a {
     }
 
     .containerCreateBody {
-        padding-right: 12%;
-        height:110px;
     }
 
     #containerCreate {
         height: 100vh;
         background: #dee4eb;
-        display: flex;
+        /*display: flex;
         flex-flow: column;
-        align-content: center;
+        align-content: center;*/
         /*fondo color*/
     }
 
@@ -812,9 +829,9 @@ a {
         box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
         height: 100vh;
         width: 80%;
-        /*contenedor publicación deberia ser blanco*/
-        display:flex;
-        flex-direction: column;
+        /*display:flex;
+        align-items: center;*/
+        margin-right: 0px;
     }
 
     .share {
@@ -826,14 +843,18 @@ a {
 
     #writeText {
         width: 100%;
-        margin-top: 200px;
-        margin-left: 0rem;
+        margin-top: 170px;
+        
     }
 
    .text{
-       width: 90%;
-       padding-left: 20px;
-       padding-right: 20px;
+        /*width: 100%;
+        height: auto;
+        margin-left: 0%;
+        margin-right: 0%;
+        background: rgb(255, 255, 255);
+        padding-left: 0%;
+        padding-right: 0%;*/
    }
 
     /*___________________________*/
@@ -842,6 +863,19 @@ a {
         height: 75px;
         padding-left: 48%;
         padding-right: 12%;
+    }
+
+    #logoImgProfile{
+        width:100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #logOutProfile{
+        width:45%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
     }
 
     #logOut{
