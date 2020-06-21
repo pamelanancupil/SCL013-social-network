@@ -103,25 +103,11 @@ export const viewProfile = () => {
     btnEditProfile.addEventListener('click', (doc) => {
       editProfile(getCurrentUser(doc));
     });
+  })
 
-
-
-
-
-
-
-        })
-
-
-
-      
-      
       //const userInfo = db.collection('users').doc(user.uid)
     } else {
         window.location.hash = '#/home';
     }
     return divProfile;
 };
-
-
-//Profesora de yoga y medicina alternativa en Narayan Estudio Chile
