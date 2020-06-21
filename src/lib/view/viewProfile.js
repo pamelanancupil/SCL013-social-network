@@ -25,7 +25,7 @@ export const viewProfile = () => {
         <div class="infoProfile" id="infoProfile">
             <h3 id = 'displayName${user.uid}'>${user.displayName}</h3>
             <input class = 'userNameClass' type="text" id="userNameInput${user.uid}" autocomplete= "off" placeholder="Nombre de usuario" style = 'display:none'>
-            <h4>${user.email}</h4>
+            <h5>${user.email}</h5>
                 <div class="description">
                     <div class = 'containerDescription'>
                       <h4>Descripción</h4>
