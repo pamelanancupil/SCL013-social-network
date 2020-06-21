@@ -139,11 +139,17 @@ En la actualidad, con la situación que se vive a nivel mundial, los usuarios ne
 
 ## 5. Imagen Final del Producto
 
-![imgMaze1]()
-![imgMaze2]()
-![imgMaze2]()
+Visita [aqui](https://alekristen.github.io/SCL013-social-network/src/index.html) la aplicación Yug
 
-[Link de Yug]()
+![img1](https://i.ibb.co/rczJpSz/1.jpg)
+![img2](https://i.ibb.co/qgMB9Rb/2.jpg)
+![img3](https://i.ibb.co/Kjc3D20/3.jpg)
+![img4](https://i.ibb.co/rH2z9PR/4.jpg)
+![img5](https://i.ibb.co/4WXtPMR/5.jpg)
+![img6](https://i.ibb.co/bbhnPYQ/6.jpg)
+![img7](https://i.ibb.co/SncgPQJ/7.jpg)
+![img8](https://i.ibb.co/pRQLJ9N/8.jpg)
+
 
 ## 6. Objetivos de aprendizaje
 
