@@ -139,7 +139,7 @@ En la actualidad, con la situación que se vive a nivel mundial, los usuarios ne
 
 ## 5. Imagen Final del Producto
 
-Visita [aqui](https://alekristen.github.io/SCL013-social-network/src/index.html) la aplicación Yug
+Visita [aqui](https://proyecto-yug-8d1f2.web.app/) la aplicación Yug
 
 ![img1](https://i.ibb.co/rczJpSz/1.jpg)
 ![img2](https://i.ibb.co/qgMB9Rb/2.jpg)
@@ -194,9 +194,9 @@ Visita [aqui](https://alekristen.github.io/SCL013-social-network/src/index.html)
 
 ### Buenas prácticas de desarrollo
 
-* [ ] Modularización
+* [x] Modularización
 * [x] Nomenclatura / Semántica
-* [x] Linting
+* [ ] Linting
 
 ***
 
