@@ -3,16 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
-    color: white;
+    color: #fafafa;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 /*_______________________________________________________________*/
 /*HOME*/
 #containerHomeFlex {
-    background-image: url("https://i.ibb.co/y8f6B0F/prueba.jpg");
+    background-image: url("img/fondo-mobile-tablet-opacidad.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position:top center;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -20,7 +21,7 @@
 }
 
 #home {
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
     width: 100%;
     height: 100vh;
 }
@@ -28,7 +29,7 @@
 #containerTextYug {
     height: 65%;
     width:100%;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 300;
     line-height: 24px;
     text-align: center;
@@ -59,14 +60,14 @@
 
 .btns {
     background: linear-gradient(90deg, #F3A674 0%, #25394A 97.33%);
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.249);
-    border-radius: 2.5rem;
+    box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.249);
+    border-radius: 2.5em;
     color: rgba(255, 255, 255, 0.762);
-    width: 12.5rem;
-    height: 3rem;
-    font-size: 1.1rem;
+    width: 12.5em;
+    height: 3em;
+    font-size: 1.1em;
     font-weight: 300;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,21 +87,21 @@
 /*_______________________________________________________________*/
 /*REGISTER*/
 .arrowBack {
-    margin: 0 0 0 1.25rem;
+    margin: 0 0 0 1.25em;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2em;
     text-decoration: none;
     display: flex;
     align-self: flex-start; 
 }
 
 #logo2 img {
-    width: 5rem;
-    margin: 0 1.9rem 0.9rem;
+    width: 5em;
+    margin: 0 1.9em 0.9em;
 }
 
 #containerRegister {
-    background-image: url("https://i.ibb.co/y8f6B0F/prueba.jpg");
+    background-image: url("img/fondo-mobile-tablet-opacidad.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
@@ -111,7 +112,7 @@
 }
 
 .containerForm {
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
     height: 100vh;
     width: 100%;
     display: flex;
@@ -131,9 +132,11 @@
     border-radius: 40px;
     width: 260px;
     height: 50px;
-    margin: 10px;
+    margin: 20px;
     border: none;
-    font-size: 16px;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
 }
 
 .textInput {
@@ -149,7 +152,7 @@
 #errorMssg{
     color:rgb(255, 110, 110);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.95em;
 }
 
 #form p {
@@ -167,7 +170,7 @@
 }
 
 .question {
-    font-size: 16px;
+    font-size: 1em;
     margin-top: 0;
 }
 
@@ -178,7 +181,7 @@ span {
 /*_______________________________________________________________*/
 /*LOGIN*/
 #containerLogin {
-    background-image: url("https://i.ibb.co/y8f6B0F/prueba.jpg");
+    background-image: url("img/fondo-mobile-tablet-opacidad.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
@@ -218,7 +221,7 @@ a {
 #create, #profile, #start {
     border: none;
     background: #25394A;
-    font-size: 30px;
+    font-size: 1.8em;
     margin: 0 40px 0 40px;
 }
 
@@ -277,20 +280,20 @@ a {
 }
 .namePost{
     color: rgb(0, 0, 0);
-    font-size: 14px;
+    font-size: 0.8em;
     margin-left: 10px;
 }
 
 .contentPost{
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 1em;
     width: 270px;
     padding: 25px 10px 25px 5px;  
 }
 
 .editContent, .editDescription {
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 1em;
     width: 260px;
     padding: 5px 10px 5px 5px;
     margin-bottom: 20px;
@@ -315,34 +318,34 @@ a {
 }
 .icon-like {
     color: #EFA373;
-    font-size: 17px;
+    font-size: 1.1em;
     margin-bottom: 8px;
 }
 .icon-edit, .icon-delete {
     color: rgb(207, 207, 207);
-    font-size: 15px;
+    font-size: 0.9em;
     margin-left: 10px;
 }
 
 .icon-save {
     color: rgb(207, 207, 207);
-    font-size: 17px;
+    font-size: 1.06em;
     margin-left: 10px;
 }
 
 .icon-close {
     color: rgb(207, 207, 207);
-    font-size: 17px;
+    font-size: 1.06em;
 }
 
 .date{
     color:black;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 0.6em;
 }
 .numberLikes {
     color: rgb(143, 143, 143);
-    font-size: 12px;
+    font-size: 0.75em;
     margin-left: 8px;
     margin-top:3px;
 }
@@ -356,12 +359,12 @@ a {
 #headerCreate p {
     color: #25394A;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.95em;
 }
 
 #headerCreate i {
     color: #25394A;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 #headerCreate .btnClosePost {
@@ -375,7 +378,7 @@ a {
     color: #25394A;
     background: #FFFDFC;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 #shareP {
@@ -383,7 +386,7 @@ a {
     color: #25394A;
     background: #FFFDFC;
     font-style: italic;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 #containerCreate {
@@ -411,7 +414,7 @@ a {
     width: 100%;
     height: 200px;
     border-radius: 3px;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     padding-left: 20px;
     padding-top: 20px;
     resize: none;
@@ -429,7 +432,7 @@ a {
 
 .text i {
     color: #ffffff;
-    font-size: 2.7rem;
+    font-size: 2.7em;
 }
 
 .btnImage {
@@ -469,7 +472,7 @@ a {
     color: #25394A;
     background: #ffffff;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.87em;
 }
 
 #containerProfile {
@@ -511,7 +514,7 @@ a {
 .infoProfile h3 {
     color: #000000;
     margin-block-end: 5px;
-    font-size: 20px;
+    font-size: 1.25em;
     width: 70%;
     text-align: center;
 }
@@ -522,7 +525,7 @@ a {
     color: #000000;
     line-height: 23px;
     margin: 8px 0px;
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 
 .infoProfile .description {
@@ -542,7 +545,7 @@ a {
 }
 .userNameClass {
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 1em;
     width: 180px;
     padding: 5px;
     margin-bottom: 10px;
@@ -560,368 +563,110 @@ a {
 }
 
 
+
+
 /*________________________MEDIA TABLET___________________________*/
-/*HOME*/
-@media (min-width: 420px) {
+
+/*________________________MEDIA PC_______________________________*/
+@media (min-width: 800px) {
     #containerHomeFlex {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-image: url("img/img-1920x1080-opacidad-flip.jpg");
         background-repeat: no-repeat;
         background-position: top center;
         height: 100vh;
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #home {
-        width: 450px;
-        height: 86%;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #containerTextYug {
-        font-size: 18px;
-        line-height: 28px;
-        width: 76%;
-        height: 65%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #logo img {
-        width: 135px;
-        margin-bottom: 9.6px;
-    }
-    #textYug {
-        width: 80%;
-    }
-    #containerBtn {
-        margin-top: 10px;
-    }
-    .btns {
-        border-radius: 40px;
-        width: 200px;
-        height: 45px;
-        font-size:16px;
-    }
-    #btnSignUp{
-        margin-top: 6px;
-        margin-bottom: 17px;
-    }
-    #btnLogin{
-        margin-top: 6px;
-        margin-bottom: 17px;
-    }
-    
-    /*_______________________________________________________________*/
-    /*REGISTER*/
-    #containerRegister {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
-        background-position: top center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .containerForm {
-        width: 450px;
-        height: 86%;
-        border-radius: 10px;
-    }
-    #logo2 img {
-        width: 68px;
-        margin: 0 1.7rem 0.7rem;
-    }
-    #form input {
-        font-size: 14px;
-        width: 270px;
-        height: 44px;
-        margin:7px;
-    }
-
-    /*_______________________________________________________________*/
-    #form {
-        width: 350px;
-        height: auto;
-    }
-    .arrowBack {
-        font-size: 2.2rem;
-    }
-    #form p {
-        font-size: 14px;
-    }
-    #logoG img {
-        width: 50px;
-        margin: 8px;
-    }
-    .question {
-        font-size: 14px;
-        margin-top: 0;
-    }
-
-    /*_______________________________________________________________*/
-    /*LOGIN*/
-    #containerLogin {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
-        background-position: top center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /*_______________________________________________________________*/
-    /*MENÚ*/
-    #menu{
-        height: 65px;
-    }
-    #create, #profile, #start {
-        font-size: 35px;
-        margin: 0 70px 0 70px;
-    }
-
-    /*_______________________________________________________________*/
-    /*FEED*/
-    #headerFeed {
-        background: #FFFDFC;
-        box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.25);
-        height: 75px;
-        width: 100%;
-        display: flex;
-        position: fixed;
-        align-items: center;
-        justify-content: center;
-    }
-    .headerFCP img{
-        width:50px;
-    }
-    #containerFeed{
-        height: auto;
-        background: #dee4eb;
-        width:100%;
-    }
-    #containerFeedBody{
-        width:80%;
-        height: auto;
-        background: white;
-        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
-    }
-    .containerPost{
-        width: 100%;
-        height: auto;
-        padding-bottom: 20px;
-        display: flex;
-        align-items: center;
-        flex-flow: column wrap;
-    }
-    .postFeed{
-        border-radius: 20px;
-        height: auto;
-        width: 80%;
-        margin-top: 30px;
-        padding: 40px;
-    }
-    .authorPost {
-        display: flex;
-        height: 30%;
-        align-items: center;
-    }
-    .authorPost img {
-        border-radius: 60px;
-        width: 60px;
-    }
-    .namePost{
-        color: rgb(0, 0, 0);
-        font-size: 16px;
-        margin-left: 20px;
-    }
-    .contentPost{
-        color: rgb(0, 0, 0);
-        font-size: 16px;
-        width: 100%;
-        padding: 30px 15px 30px 10px;  
-    }
-   .icon-like{
-       font-size: 25px;
-   }
-   .icon-like {
-    font-size: 25px;
-    }
-    .icon-edit, .icon-delete, .icon-close, .icon-save {
-        font-size: 20px;
-        margin-left: 20px;
-    }
-    .editContent{
-        width:100%;
-        margin-top: 26px;
-    }
-    .date{
-        color:black;
-        font-weight: 300;
-        font-size: 13px;
-        margin-top: 8px;
-    }
-    .numberLikes {
-        font-size: 15px;
-        margin-top:5px;
-    }
-
-    /*_______________________________________________________________*/
-    /*CREATE*/
-    #headerCreate{
-        width: 80%;
-    }
-    #containerCreate {
-        height: 100vh;
-        background: #dee4eb;
-    }
-    #containerCreateBody {
-        background: #ffffff;
-        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
-        height: 100vh;
-        width: 80%;
-        margin-right: 0px;
-    }
-    .share {
-        font-size:16px;
-        border: none;
-        color: #25394A;
-        font-weight: 700;
-    }
-    #writeText {
-        width: 100%;
-        margin-top: 170px;
-    }
-
-    /*_______________________________________________________________*/
-    /*PROFILE*/
-    #headerProfile {
-        height: 75px;
-        padding-left: 48%;
-        padding-right: 12%;
-    }
-    #logoImgProfile{
-        width:100%;
-        display: flex;
-        justify-content: flex-start;
-    }
-    #logOutProfile{
-        width:45%;
-        display: flex;
         justify-content: flex-end;
-        padding-right: 20px;
+        align-items: center;
     }
-    #logOut{
-        font-size:16px;
-    }
-    #containerProfile {
-        background: #dee4eb;
-        height: auto;
-        display: flex;
-        flex-flow: column nowrap;
-        align-content: center;
-    }
-    .containerProfileBody{
-        width:80%;
-        height: auto;
-        background: white;
-        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
-        display: flex;
-        flex-flow: column;
-        align-content: center;
-    }
-    .imageProfile{
-        margin-top: 120px;
-    }
-    .imageProfile img{
-        width: 230px;
-        border-radius: 200px;
-    }
-    .infoProfile h3 {
-        margin-block-end: 15px;
-        font-size: 1.2rem;
-    }
-    .infoProfile h4 {
-        margin-block-end: 15px;
-        font-size: 1rem;
-    }
-    .infoProfile p {
-        line-height: 26px;
-        margin-top: 10px;
-        font-size: 0.9rem;
-        font-size: 1rem;
-    }
-    .infoProfile .description {
-        margin-top: 30px;
-        width: 80%;
-        align-items: flex-start;
-        font-size: 1rem;
-    }
-    #containerMenu {
-        height: 85%;
-    }
-    .infoProfile h3{
-        font-size: 23px;
-    }
-    .infoProfile h5{
-        color: #000000fe;
-        font-style: italic;
-        font-size: 17px;
-    }
-    .containerDescription h4{
-        font-size: 17px;
-    }
-}
-
-/*________________________MEDIA PC_______________________________*/
-@media (min-height: 850px) {
     #home {
-        height: 80%;
+        height: 100%;
+        width:50%;
+        background: #25394acf;
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
     #containerTextYug {
-        width: 80%;
-        font-size: 22px; 
+        font-size: 1.1em; 
+        height:50%;
     }
+
+    #containerTextYug p{
+        font-size: 1.1em; 
+        line-height: 26px;
+    }
+
+    #textYug {
+        width: 60%;
+        margin-bottom: 40px;
+    }
+
     #logo img {
         width: 155px;
     }
     .btns {
-        width: 210px;
-        height: 50px;
-        font-size:17px;
+        width: 9.7em;
+        height: 2.7em;
+        font-size: 1.1em;
+        margin: 18px 0;
     }
-    #btnSignUp{
-        margin-top: 6px;
-        margin-bottom: 22px;
-    }
-    #btnLogin{
-        margin-top: 6px;
-        margin-bottom: 22px;
+    .ctn-btn{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width:100%;
     }
 
     /*_______________________________________________________________*/
     /*REGISTER*/
+
+    .fas{
+        font-size: 1em;
+    }
+    
+    #containerRegister,  #containerLogin{
+        background-image: url("img/img-1920x1080-opacidad-flip.jpg");
+        justify-content: flex-end;
+    }
+    
     .containerForm {
-        height: 80%;
+        background: #25394acf;
+        width: 50%;
     }
-    #logo2 img {
-        width: 78px;
-        margin: 0 1.7rem 0.7rem;
-    }
+    
     #form input {
-        font-size: 15px;
-        width: 280px;
-        height: 54px;
-        margin:13px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 40px;
+        width: 270px;
+        height: 45px;
+        margin: 20px;
+        border: none;
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
     }
-    #logoG img {
-        width: 80px;
-        margin: 10px;
+    
+    .textInput {
+        padding-left: 30px;
     }
+    
     #form p {
-        font-size: 18px;
+        margin-top: 1px;
     }
+    
+    #logo2 img {
+        width: 70px;
+        margin: 0px;
+    }
+    
+    .question {
+        font-size: 1em;
+        margin-top: 0;
+    }
+    
 
     /*_______________________________________________________________*/
     /*FEED*/
@@ -941,13 +686,13 @@ a {
         height: 140px;
     }
     #headerCreate i {
-        font-size: 26px;
+        font-size: 1.62em;
     }
     #shareP {
-        font-size: 20px;
+        font-size: 1.25em;
     }
     .share {
-        font-size:20px;
+        font-size:1.25em;
     }
     #writeText{
         margin-top: 200px;
@@ -964,7 +709,7 @@ a {
         width:65px;
     }
     #logOut {
-        font-size: 20px;
+        font-size: 1.25em;
     }
     .imageProfile {
         margin-top: 165px;

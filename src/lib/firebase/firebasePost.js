@@ -236,3 +236,9 @@ export const validatePost = contentText => {
     return true;
   }
 };
+
+// PRUEBA IMG
+// export const uploadImagePost = (file, userId) => {
+//   const refStorage = firebase.storage().ref(`ColeccionImg/${userId}/${file.name}`);
+//   return refStorage.put(file).then(snapshot => snapshot.ref.getDownloadURL());
+// };
