@@ -13,9 +13,11 @@ export const viewRegister = () => {
                 <img src="http://imgfz.com/i/i2tPzH4.png">
             </div>
             <div id="form">
-                <input type="text" id="name" class="textInput" autocomplete= "off" placeholder="Nombre de usuario">
-                <input type="email" id="email" class="textInput" autocomplete= "off" placeholder="Email">
-                <input type="password" id="password" class="textInput" placeholder="Contraseña">
+                <div class="ctn-input">
+                    <input type="text" id="name" class="textInput" autocomplete= "off" placeholder="Nombre de usuario">
+                    <input type="email" id="email" class="textInput" autocomplete= "off" placeholder="Email">
+                    <input type="password" id="password" class="textInput" placeholder="Contraseña">
+                </div>
                 <p id = "errorMssg"></p>
                 <button id="btnSignUp" class="btns">Registrarse</button>
                 <p>o ingresa con</p>

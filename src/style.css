@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
-    color: white;
+    color: #fafafa;
     text-decoration: none;
 }
 
@@ -560,11 +560,14 @@ a {
 }
 
 
+
+
 /*________________________MEDIA TABLET___________________________*/
+
 /*HOME*/
 @media (min-width: 420px) {
     #containerHomeFlex {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-image: url("img/img-1920x1080-opacidad-flip.jpg");
         background-repeat: no-repeat;
         background-position: top center;
         height: 100vh;
@@ -617,7 +620,7 @@ a {
     /*_______________________________________________________________*/
     /*REGISTER*/
     #containerRegister {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-image: url("img/img-1920x1080-opacidad-flip.jpg");
         background-position: top center;
         height: 100vh;
         display: flex;
@@ -663,7 +666,7 @@ a {
     /*_______________________________________________________________*/
     /*LOGIN*/
     #containerLogin {
-        background-image: url("https://i.ibb.co/9bPrGf0/img-1920x1080-opacidad.jpg");
+        background-image: url("img/img-1920x1080-opacidad-flip.jpg");
         background-position: top center;
         height: 100vh;
         display: flex;
@@ -875,45 +878,84 @@ a {
 }
 
 /*________________________MEDIA PC_______________________________*/
-@media (min-height: 850px) {
+@media (min-width: 850px) {
+    #containerHomeFlex {
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
     #home {
-        height: 80%;
+        height: 100%;
+        width:50%;
+        background: #25394acf;
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
     #containerTextYug {
         width: 80%;
         font-size: 22px; 
+        height:50%;
+        line-height: 35px;
     }
     #logo img {
         width: 155px;
     }
     .btns {
-        width: 210px;
-        height: 50px;
-        font-size:17px;
+        width: 280px;
+        height: 60px;
+        font-size:20px;
+        margin: 20px 0;
     }
-    #btnSignUp{
-        margin-top: 6px;
-        margin-bottom: 22px;
-    }
-    #btnLogin{
-        margin-top: 6px;
-        margin-bottom: 22px;
+    .ctn-btn{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width:100%;
     }
 
     /*_______________________________________________________________*/
     /*REGISTER*/
+    #containerRegister, #containerLogin{
+        width:100%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+    }
     .containerForm {
-        height: 80%;
+        width:50%;
+        height: 100%;
+        align-items: center;
+        background: #25394acf;
+        border-radius: 0px;
+    }
+    .ctn-input{
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .arrowBack {
+        margin: 0 0 0 3rem;
+        font-size: 2rem;
     }
     #logo2 img {
-        width: 78px;
+        width: 100px;
         margin: 0 1.7rem 0.7rem;
+    }
+    #form{
+        width:100%;
+        display: flex;
+        justify-content: center;
     }
     #form input {
         font-size: 15px;
-        width: 280px;
-        height: 54px;
-        margin:13px;
+        width: 350px;
+        height: 60px;
+        margin:15px;
     }
     #logoG img {
         width: 80px;

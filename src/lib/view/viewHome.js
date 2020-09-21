@@ -11,7 +11,7 @@ export const viewHome = () => {
               <p>Únete al mundo del yoga. Descubre y comparte contenido y trae a tu vida todos sus beneficios.</p>
               </div>
             </div>
-            <div id="containerBtn">
+            <div id="containerBtn" class="ctn-btn">
             <a href="#/login" id="btnLogin" class="btns">Iniciar sesión</a>
             <a href="#/register" id="btnRegister" class="btns">Registrarse</a>
             </div>

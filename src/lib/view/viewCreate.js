@@ -16,6 +16,11 @@ export const viewCreate = () => {
                   <div class="text">
                       <textarea id="writeText" placeholder="Escribe tu publicación"></textarea>
                       <button id="btnImage" class="btnImage"> <i class="far fa-images"></i> </button>
+                      
+                      <img id="fotoPublicacion">
+                      <input type="file" id="inputImg">
+                      <button id="btnPublicar" style="display: block" > Publicar</button>
+
                       </div>
                       
                   
@@ -24,6 +29,8 @@ export const viewCreate = () => {
               <footer id="footerMenu">
               </footer>
         `;
+
+
 
     divCreate.setAttribute('id', 'containerCreate');
     const footer = divCreate.querySelector('#footerMenu');
@@ -42,4 +49,5 @@ export const viewCreate = () => {
     window.location.hash = '#/home';
   }
   return divCreate;
+
 };
